@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://clkiltgskp8vu"]
+
+[ext_resource type="Script" path="res://scenes/settings/Settings.gd" id="1_n7qdk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dses6"]
+font_size = 111
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n7qdk")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.233073
+anchor_top = -0.0200617
+anchor_right = 0.75651
+anchor_bottom = 0.257716
+grow_horizontal = 2
+grow_vertical = 2
+text = "SETTINGS"
+label_settings = SubResource("LabelSettings_dses6")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ButtonBack" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0451389
+anchor_top = 0.066358
+anchor_right = 0.101563
+anchor_bottom = 0.166667
+grow_horizontal = 2
+grow_vertical = 2
+text = "<"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="ButtonBack" to="." method="_on_button_back_pressed"]
