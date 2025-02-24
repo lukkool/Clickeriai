@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://bj5e5ooygsyw7"]
+[gd_scene load_steps=2 format=3 uid="uid://bj5e5ooygsyw7"]
+
+[ext_resource type="PackedScene" uid="uid://lvqht05hsf30" path="res://scenes/gameScene/InputNode.tscn" id="1_w6okk"]
 
 [node name="GameScene" type="Control"]
 layout_mode = 3
@@ -7,3 +9,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="NeuronNode" parent="." instance=ExtResource("1_w6okk")]
+position = Vector2(463, 285)

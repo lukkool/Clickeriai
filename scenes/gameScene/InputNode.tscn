@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://lvqht05hsf30"]
+
+[ext_resource type="Texture2D" uid="uid://bkjhyb7iyb3xn" path="res://scenes/gameScene/circle.png" id="1_41ct4"]
+[ext_resource type="Script" path="res://scenes/gameScene/sprite_2d.gd" id="2_qm501"]
+
+[node name="NeuronNode" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.0228466, 0.021972)
+texture = ExtResource("1_41ct4")
+script = ExtResource("2_qm501")
