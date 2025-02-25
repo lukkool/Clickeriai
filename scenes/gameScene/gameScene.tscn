@@ -30,4 +30,3 @@ offset_bottom = -289.0
 script = ExtResource("3_2sikp")
 
 [connection signal="pressed" from="InputNode" to="InputNode" method="_on_pressed"]
-[connection signal="pressed" from="InputNode" to="OutputNode" method="_on_input_node_pressed"]
