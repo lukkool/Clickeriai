@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://ba7xr7emiqkau"]
+[gd_scene load_steps=5 format=3 uid="uid://ba7xr7emiqkau"]
 
 [ext_resource type="Script" path="res://scenes/gameScene/upgrades/upgradeMenu.gd" id="1_5hc3g"]
+[ext_resource type="Script" path="res://scenes/gameScene/upgrades/upgradeTooltip.gd" id="2_b4xg1"]
 
 [sub_resource type="Theme" id="Theme_lc8ih"]
 
@@ -8,28 +9,27 @@
 
 [node name="UpgradeMenu" type="Control"]
 layout_mode = 3
-anchors_preset = 15
+anchors_preset = 1
+anchor_left = 1.0
 anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+grow_horizontal = 0
 theme = SubResource("Theme_lc8ih")
 script = ExtResource("1_5hc3g")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 997.0
-offset_top = 22.0
-offset_right = 1126.0
-offset_bottom = 73.0
+offset_left = -179.0
+offset_top = 39.0
+offset_right = -50.0
+offset_bottom = 90.0
 text = "UPGRADES"
 
 [node name="Panel" type="Panel" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 258.0
+offset_left = -870.0
 offset_top = 40.0
-offset_right = 884.0
+offset_right = -244.0
 offset_bottom = 610.0
 
 [node name="Button" type="Button" parent="Panel"]
@@ -56,17 +56,50 @@ offset_right = 616.0
 offset_bottom = 546.0
 theme = SubResource("Theme_38oqk")
 
-[node name="Button" type="Button" parent="Panel/VBoxContainer"]
+[node name="Button" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
 layout_mode = 2
 theme = SubResource("Theme_lc8ih")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Upgrade (0) | cost: 0"
+metadata/tooltip_text = "Specific information for this upgrade. FIRST example"
 
-[node name="Button2" type="Button" parent="Panel/VBoxContainer"]
+[node name="Button2" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
 layout_mode = 2
 theme = SubResource("Theme_lc8ih")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Upgrade (0) | cost: 0"
+metadata/tooltip_text = "Specific information for this upgrade. SECOND example"
+
+[node name="Tooltip" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_left = -784.0
+offset_top = 257.0
+offset_right = -400.0
+offset_bottom = 372.0
+script = ExtResource("2_b4xg1")
+
+[node name="Panel_Tooltip" type="Panel" parent="Tooltip"]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 370.0
+offset_bottom = 111.0
+
+[node name="Label" type="Label" parent="Tooltip/Panel_Tooltip"]
+offset_left = 125.0
+offset_top = 2.0
+offset_right = 234.0
+offset_bottom = 30.0
+text = "UPGRADE"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Tooltip/Panel_Tooltip"]
+offset_left = 7.0
+offset_top = 27.0
+offset_right = 363.0
+offset_bottom = 104.0
+text = "Upgrade information window."
+autowrap_mode = 3
 
 [connection signal="pressed" from="Button" to="." method="_toggle_panel"]
 [connection signal="pressed" from="Panel/Button" to="." method="_toggle_panel"]
