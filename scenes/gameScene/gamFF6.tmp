@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bj5e5ooygsyw7"]
+[gd_scene load_steps=6 format=3 uid="uid://bj5e5ooygsyw7"]
 
 [ext_resource type="PackedScene" uid="uid://lvqht05hsf30" path="res://scenes/gameScene/inputNode/InputNode.tscn" id="1_w6okk"]
 [ext_resource type="Script" path="res://scenes/gameScene/inputNode/input_node.gd" id="2_2uk3s"]
 [ext_resource type="PackedScene" uid="uid://dbnd03h46tvoy" path="res://scenes/gameScene/outputNode/outputNode.tscn" id="2_4hplx"]
 [ext_resource type="Script" path="res://scenes/gameScene/outputNode/output_node.gd" id="3_2sikp"]
 [ext_resource type="Script" path="res://scenes/gameScene/currency_label.gd" id="5_0tvsb"]
-[ext_resource type="PackedScene" uid="uid://ba7xr7emiqkau" path="res://scenes/gameScene/upgrades/upgradeMenu.tscn" id="5_abvow"]
 
 [node name="GameScene" type="Control"]
 layout_mode = 3
@@ -20,11 +19,22 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="InputNode" parent="." instance=ExtResource("1_w6okk")]
-layout_mode = 1
+layout_mode = 0
+offset_left = 298.0
+offset_top = 289.0
+offset_right = 376.0
+offset_bottom = 364.0
 script = ExtResource("2_2uk3s")
 
 [node name="OutputNode" parent="." instance=ExtResource("2_4hplx")]
 layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 844.0
+offset_top = 286.0
+offset_right = 919.0
+offset_bottom = 361.0
 script = ExtResource("3_2sikp")
 
 [node name="CurrencyLabel" type="Label" parent="."]
@@ -32,16 +42,12 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -94.0
-offset_right = 94.0
+offset_left = -126.0
+offset_right = 62.0
 offset_bottom = 35.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 25
-text = "100"
-horizontal_alignment = 1
+text = "Currency: "
 script = ExtResource("5_0tvsb")
-
-[node name="UpgradeMenu" parent="." instance=ExtResource("5_abvow")]
-layout_mode = 1
 
 [connection signal="pressed" from="InputNode" to="InputNode" method="_on_pressed"]
