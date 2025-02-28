@@ -1,7 +1,7 @@
 extends Button
 
-signal input_activated
+signal input_activated(val)
+var score_generated = 1
 
 func _on_pressed() -> void:
-	print(name, " pressed")
-	input_activated.emit()
+	input_activated.emit(score_generated)

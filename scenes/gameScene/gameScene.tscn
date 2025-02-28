@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://bj5e5ooygsyw7"]
+[gd_scene load_steps=8 format=3 uid="uid://bj5e5ooygsyw7"]
 
+[ext_resource type="Script" path="res://scenes/gameScene/gameScene.gd" id="1_88gci"]
 [ext_resource type="PackedScene" uid="uid://lvqht05hsf30" path="res://scenes/gameScene/inputNode/InputNode.tscn" id="1_w6okk"]
 [ext_resource type="Script" path="res://scenes/gameScene/inputNode/input_node.gd" id="2_2uk3s"]
 [ext_resource type="PackedScene" uid="uid://dbnd03h46tvoy" path="res://scenes/gameScene/outputNode/outputNode.tscn" id="2_4hplx"]
@@ -18,6 +19,7 @@ offset_right = 1.0
 offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_88gci")
 
 [node name="InputNode" parent="." instance=ExtResource("1_w6okk")]
 layout_mode = 1
