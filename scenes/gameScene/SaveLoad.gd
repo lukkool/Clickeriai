@@ -1,7 +1,7 @@
 extends Node
 
 var save_path = "user://savegame.save"
-var save_interval = 30.0
+var save_interval = 10.0
 var save_timer: float = 0.0
 
 @onready var game_scene = get_parent()
