@@ -3,13 +3,17 @@ extends Control
 @onready var score_label:Label = $CurrencyLabel
 @onready var output_node:Control = $OutputNode
 
+
 var score:int:
 	set(val):
 		score = val
 		score_label.text = "Bits:\n" + str(score)
 
+var should_load: bool
 
 func _ready() -> void:
+	if should_load:
+		get_node("SaveLoadManager").load_game()
 	output_node.output_activated.connect(func(val): score += val)
 
 

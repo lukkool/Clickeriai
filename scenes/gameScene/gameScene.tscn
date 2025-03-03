@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bj5e5ooygsyw7"]
+[gd_scene load_steps=9 format=3 uid="uid://bj5e5ooygsyw7"]
 
 [ext_resource type="Script" path="res://scenes/gameScene/gameScene.gd" id="1_88gci"]
 [ext_resource type="PackedScene" uid="uid://lvqht05hsf30" path="res://scenes/gameScene/inputNode/InputNode.tscn" id="1_w6okk"]
+[ext_resource type="Script" path="res://scenes/gameScene/SaveLoad.gd" id="1_xrb4c"]
 [ext_resource type="Script" path="res://scenes/gameScene/inputNode/input_node.gd" id="2_2uk3s"]
 [ext_resource type="PackedScene" uid="uid://dbnd03h46tvoy" path="res://scenes/gameScene/outputNode/outputNode.tscn" id="2_4hplx"]
 [ext_resource type="Script" path="res://scenes/gameScene/outputNode/output_node.gd" id="3_2sikp"]
@@ -47,5 +48,8 @@ script = ExtResource("5_0tvsb")
 layout_mode = 1
 offset_left = -2.0
 offset_right = -2.0
+
+[node name="SaveLoadManager" type="Node" parent="."]
+script = ExtResource("1_xrb4c")
 
 [connection signal="pressed" from="InputNode" to="InputNode" method="_on_pressed"]
