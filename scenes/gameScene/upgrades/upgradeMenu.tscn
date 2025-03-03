@@ -60,15 +60,9 @@ theme = SubResource("Theme_38oqk")
 layout_mode = 2
 theme = SubResource("Theme_lc8ih")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-text = "Upgrade (0) | cost: 0"
+text = "Upgrade 1 (0) | cost: 10"
 metadata/tooltip_text = "Specific information for this upgrade. FIRST example"
-
-[node name="Button2" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
-layout_mode = 2
-theme = SubResource("Theme_lc8ih")
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-text = "Upgrade (0) | cost: 0"
-metadata/tooltip_text = "Specific information for this upgrade. SECOND example"
+metadata/name = "Upgrade 1"
 
 [node name="Tooltip" type="Control" parent="."]
 visible = false

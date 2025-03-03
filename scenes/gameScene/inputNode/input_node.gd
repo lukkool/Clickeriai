@@ -35,3 +35,5 @@ func _on_pressed() -> void:
 		self.modulate = multiplier_color
 	score_generated = multiplier * 1
 	input_activated.emit(score_generated)
+	
+	Sound.play_button_click()
