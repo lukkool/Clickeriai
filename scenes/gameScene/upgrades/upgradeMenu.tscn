@@ -64,6 +64,30 @@ text = "Upgrade 1 (0) | cost: 10"
 metadata/tooltip_text = "Specific information for this upgrade. FIRST example"
 metadata/name = "Upgrade 1"
 
+[node name="Button2" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+layout_mode = 2
+text = "Auto Input Node1 (0) | cost: 15"
+metadata/name = "AutoInputNode1"
+metadata/tooltip_text = "Automatically generates income every second."
+
+[node name="Button3" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+layout_mode = 2
+text = "Auto Input Node2 (0) | cost: 15"
+metadata/name = "AutoInputNode2"
+metadata/tooltip_text = "Automatically generates income every second."
+
+[node name="Button4" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+layout_mode = 2
+text = "Auto Input Node3 (0) | cost: 15"
+metadata/name = "AutoInputNode3"
+metadata/tooltip_text = "Automatically generates income every second."
+
+[node name="Button5" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+layout_mode = 2
+text = "Auto Input Node4 (0) | cost: 15"
+metadata/name = "AutoInputNode4"
+metadata/tooltip_text = "Automatically generates income every second."
+
 [node name="Tooltip" type="Control" parent="."]
 visible = false
 anchors_preset = 0

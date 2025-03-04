@@ -58,6 +58,19 @@ func load_game():
 		game_scene.upgr_auto_input_node3 = save_data["upgr_auto_input_node3"]
 		game_scene.upgr_auto_input_node4 = save_data["upgr_auto_input_node4"]
 		
+		if game_scene.upgr_auto_input_node1:
+			game_scene.auto_input_node.set_enabled(true)
+			game_scene.auto_input_node.output_activated.connect(func(val): game_scene.score += val)
+		if game_scene.upgr_auto_input_node2:
+			game_scene.auto_input_node2.set_enabled(true)
+			game_scene.auto_input_node2.output_activated.connect(func(val): game_scene.score += val)
+		if game_scene.upgr_auto_input_node3:
+			game_scene.auto_input_node3.set_enabled(true)
+			game_scene.auto_input_node3.output_activated.connect(func(val): game_scene.score += val)
+		if game_scene.upgr_auto_input_node4:
+			game_scene.auto_input_node4.set_enabled(true)
+			game_scene.auto_input_node4.output_activated.connect(func(val): game_scene.score += val)
+		
 		print("Game loaded!")
 	else:
 		print("Error: Could not load game.")

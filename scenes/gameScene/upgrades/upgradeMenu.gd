@@ -40,7 +40,24 @@ func buy_upgrade(button: Button):
 			upgrade_level += 1 #upgrade level
 			button.text = "{0} ({1}) | cost: {2}".format([button.get_meta("name"), upgrade_level, upgrade_cost])
 		
-
+		match button.get_meta("name"):
+			"AutoInputNode1":
+				game_scene.auto_input_node.set_enabled(true)
+				game_scene.auto_input_node.output_activated.connect(func(val): game_scene.score += val)
+				game_scene.upgr_auto_input_node1 = true
+			"AutoInputNode2":
+				game_scene.auto_input_node2.set_enabled(true)
+				game_scene.auto_input_node2.output_activated.connect(func(val): game_scene.score += val)
+				game_scene.upgr_auto_input_node2 = true
+			"AutoInputNode3":
+				game_scene.auto_input_node3.set_enabled(true)
+				game_scene.auto_input_node3.output_activated.connect(func(val): game_scene.score += val)
+				game_scene.upgr_auto_input_node3 = true
+			"AutoInputNode4":
+				game_scene.auto_input_node4.set_enabled(true)
+				game_scene.auto_input_node4.output_activated.connect(func(val): game_scene.score += val)
+				game_scene.upgr_auto_input_node4 = true
+				
 func show_tooltip(button: Button): #shows tooltip by obtaining metadata from the specific button
 	if button.has_meta("tooltip_text"):
 		tooltip_text = button.get_meta("tooltip_text")
