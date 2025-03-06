@@ -20,14 +20,7 @@ func save_game():
 	
 	var save_data = {
 		"score": game_scene.score,
-		"dense_layer_nodes": game_scene.dense_layer_nodes,
-		"convolutional_layer_nodes": game_scene.convolutional_layer_nodes,
-		"recurrent_layer_nodes": game_scene.recurrent_layer_nodes,
-		"batch_normalization_layer_nodes": game_scene.batch_normalization_layer_nodes,
-		"upgr_auto_input_node1": game_scene.upgr_auto_input_node1,
-		"upgr_auto_input_node2": game_scene.upgr_auto_input_node2,
-		"upgr_auto_input_node3": game_scene.upgr_auto_input_node3,
-		"upgr_auto_input_node4": game_scene.upgr_auto_input_node4
+		"upgrades": game_scene.upgrades,
 	}
 	
 	var file = FileAccess.open(save_path, FileAccess.WRITE)
@@ -49,28 +42,8 @@ func load_game():
 		file.close()
 		
 		game_scene.score = save_data["score"]
-		game_scene.dense_layer_nodes = save_data["dense_layer_nodes"]
-		game_scene.convolutional_layer_nodes = save_data["convolutional_layer_nodes"]
-		game_scene.recurrent_layer_nodes = save_data["recurrent_layer_nodes"]
-		game_scene.batch_normalization_layer_nodes = save_data["batch_normalization_layer_nodes"]
-		game_scene.upgr_auto_input_node1 = save_data["upgr_auto_input_node1"]
-		game_scene.upgr_auto_input_node2 = save_data["upgr_auto_input_node2"]
-		game_scene.upgr_auto_input_node3 = save_data["upgr_auto_input_node3"]
-		game_scene.upgr_auto_input_node4 = save_data["upgr_auto_input_node4"]
-		
-		if game_scene.upgr_auto_input_node1:
-			game_scene.auto_input_node.set_enabled(true)
-			game_scene.auto_input_node.output_activated.connect(func(val): game_scene.score += val)
-		if game_scene.upgr_auto_input_node2:
-			game_scene.auto_input_node2.set_enabled(true)
-			game_scene.auto_input_node2.output_activated.connect(func(val): game_scene.score += val)
-		if game_scene.upgr_auto_input_node3:
-			game_scene.auto_input_node3.set_enabled(true)
-			game_scene.auto_input_node3.output_activated.connect(func(val): game_scene.score += val)
-		if game_scene.upgr_auto_input_node4:
-			game_scene.auto_input_node4.set_enabled(true)
-			game_scene.auto_input_node4.output_activated.connect(func(val): game_scene.score += val)
-		
+		game_scene.upgrades = save_data["upgrades"]
+		game_scene.update_upgrades()
 		print("Game loaded!")
 	else:
 		print("Error: Could not load game.")

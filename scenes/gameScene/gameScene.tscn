@@ -8,14 +8,12 @@
 [ext_resource type="Script" path="res://scenes/gameScene/outputNode/output_node.gd" id="3_2sikp"]
 [ext_resource type="Script" path="res://scenes/gameScene/currency_label.gd" id="5_0tvsb"]
 [ext_resource type="PackedScene" uid="uid://ba7xr7emiqkau" path="res://scenes/gameScene/upgrades/upgradeMenu.tscn" id="5_abvow"]
+[ext_resource type="Script" path="res://scenes/gameScene/batchNormalizationNode/layer.gd" id="7_3clan"]
 [ext_resource type="PackedScene" uid="uid://48y17njc02di" path="res://scenes/gameScene/batchNormalizationNode/batch_normalization_node.tscn" id="8_fo0yy"]
 [ext_resource type="Script" path="res://scenes/gameScene/AutoInputNode.gd" id="9_30xkf"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_h7ml1"]
-size = Vector2(110, 110)
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_u2w5d"]
-size = Vector2(110, 110)
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_vbi24"]
+size = Vector2(64, 64)
 
 [node name="GameScene" type="Control"]
 layout_mode = 3
@@ -40,7 +38,8 @@ offset_right = 94.0
 offset_bottom = 35.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 25
-text = "100"
+text = "Bits:
+0"
 horizontal_alignment = 1
 script = ExtResource("5_0tvsb")
 
@@ -66,21 +65,21 @@ metadata/_edit_use_anchors_ = true
 
 [node name="AutoInputNode3" type="TextureRect" parent="LayerContainer/Layer0" groups=["nodes_layer0"]]
 visible = false
-custom_minimum_size = Vector2(110, 110)
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = SubResource("PlaceholderTexture2D_h7ml1")
+size_flags_vertical = 5
+texture = SubResource("PlaceholderTexture2D_vbi24")
+stretch_mode = 4
 script = ExtResource("9_30xkf")
 income_amount = 3
 
-[node name="AutoInputNode" type="TextureRect" parent="LayerContainer/Layer0" groups=["nodes_layer0"]]
+[node name="AutoInputNode1" type="TextureRect" parent="LayerContainer/Layer0" groups=["nodes_layer0"]]
 visible = false
-custom_minimum_size = Vector2(110, 110)
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = SubResource("PlaceholderTexture2D_h7ml1")
+size_flags_vertical = 5
+texture = SubResource("PlaceholderTexture2D_vbi24")
+stretch_mode = 4
 script = ExtResource("9_30xkf")
 
 [node name="InputNode" parent="LayerContainer/Layer0" groups=["nodes_layer0"] instance=ExtResource("1_w6okk")]
@@ -91,35 +90,32 @@ script = ExtResource("2_2uk3s")
 
 [node name="AutoInputNode2" type="TextureRect" parent="LayerContainer/Layer0" groups=["nodes_layer0"]]
 visible = false
-custom_minimum_size = Vector2(11, 110)
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = SubResource("PlaceholderTexture2D_u2w5d")
+size_flags_vertical = 5
+texture = SubResource("PlaceholderTexture2D_vbi24")
 stretch_mode = 4
 script = ExtResource("9_30xkf")
 income_amount = 2
 
 [node name="AutoInputNode4" type="TextureRect" parent="LayerContainer/Layer0" groups=["nodes_layer0"]]
 visible = false
-custom_minimum_size = Vector2(110, 110)
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = SubResource("PlaceholderTexture2D_h7ml1")
+size_flags_vertical = 5
+texture = SubResource("PlaceholderTexture2D_vbi24")
+stretch_mode = 4
 script = ExtResource("9_30xkf")
 income_amount = 4
 
 [node name="Layer1" type="VBoxContainer" parent="LayerContainer"]
+visible = false
 custom_minimum_size = Vector2(110, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 alignment = 1
+script = ExtResource("7_3clan")
 metadata/_edit_use_anchors_ = true
-
-[node name="BatchNormalizationNode0" parent="LayerContainer/Layer1" instance=ExtResource("8_fo0yy")]
-visible = false
-layout_mode = 2
 
 [node name="BatchNormalizationNode1" parent="LayerContainer/Layer1" instance=ExtResource("8_fo0yy")]
 visible = false
@@ -134,6 +130,14 @@ visible = false
 layout_mode = 2
 
 [node name="BatchNormalizationNode4" parent="LayerContainer/Layer1" instance=ExtResource("8_fo0yy")]
+visible = false
+layout_mode = 2
+
+[node name="BatchNormalizationNode5" parent="LayerContainer/Layer1" instance=ExtResource("8_fo0yy")]
+visible = false
+layout_mode = 2
+
+[node name="BatchNormalizationNode6" parent="LayerContainer/Layer1" instance=ExtResource("8_fo0yy")]
 visible = false
 layout_mode = 2
 

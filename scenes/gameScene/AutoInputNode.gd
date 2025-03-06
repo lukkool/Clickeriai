@@ -3,10 +3,13 @@ extends Control
 signal score_output(val:float)
 
 @export var income_amount: int = 1
-@export var interval: float = 10.0
-var enabled: bool = false
+@export var interval: float = 1.0
+var enabled: bool = false:
+	set(val):
+		enabled = val
+		visible = enabled
 
-var delay = interval
+var delay = randf_range(0, interval)
 func _process(delta: float) -> void:
 	if not enabled: return
 	
@@ -14,3 +17,4 @@ func _process(delta: float) -> void:
 	if delay <= 0:
 		delay = interval
 		score_output.emit(income_amount)
+	
