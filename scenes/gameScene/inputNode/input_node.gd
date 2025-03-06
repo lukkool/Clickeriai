@@ -25,7 +25,6 @@ func _process(delta: float) -> void:
 
 func _on_pressed() -> void:
 	if not multiplier_active: click_streak += 1
-	
 	if(click_streak > needed_threshold):
 		multiplier *= 2
 		click_streak = 0
@@ -33,7 +32,7 @@ func _on_pressed() -> void:
 		multiplier_timer = multiplier_duration
 		self.modulate = multiplier_color
 		
-	score_generated = multiplier * score_generated
+	score_generated = multiplier * 1
 	score_output.emit(score_generated)
 	
 	Sound.play_button_click()

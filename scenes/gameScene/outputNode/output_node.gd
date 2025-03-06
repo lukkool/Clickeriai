@@ -6,7 +6,9 @@ func _ready() -> void:
 	for node in get_tree().get_nodes_in_group("nodes_layer0"):
 		node.score_output.connect(on_signal_get)
 
-func on_signal_get(val): output_activated.emit(val)
+func on_signal_get(val):
+	print("Adding ", val)
+	output_activated.emit(val)
 
 
 var current_last_layer:int = 0

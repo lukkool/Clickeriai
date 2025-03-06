@@ -1,6 +1,6 @@
 extends Control
 
-signal score_output(val)
+signal score_output(val:float)
 
 @export var income_amount: int = 1
 @export var interval: float = 10.0

@@ -44,11 +44,6 @@ text = "100"
 horizontal_alignment = 1
 script = ExtResource("5_0tvsb")
 
-[node name="UpgradeMenu" parent="." instance=ExtResource("5_abvow")]
-layout_mode = 1
-offset_left = -2.0
-offset_right = -2.0
-
 [node name="SaveLoadManager" type="Node" parent="."]
 script = ExtResource("1_xrb4c")
 
@@ -123,18 +118,23 @@ alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="BatchNormalizationNode0" parent="LayerContainer/Layer1" instance=ExtResource("8_fo0yy")]
+visible = false
 layout_mode = 2
 
 [node name="BatchNormalizationNode1" parent="LayerContainer/Layer1" instance=ExtResource("8_fo0yy")]
+visible = false
 layout_mode = 2
 
 [node name="BatchNormalizationNode2" parent="LayerContainer/Layer1" instance=ExtResource("8_fo0yy")]
+visible = false
 layout_mode = 2
 
 [node name="BatchNormalizationNode3" parent="LayerContainer/Layer1" instance=ExtResource("8_fo0yy")]
+visible = false
 layout_mode = 2
 
 [node name="BatchNormalizationNode4" parent="LayerContainer/Layer1" instance=ExtResource("8_fo0yy")]
+visible = false
 layout_mode = 2
 
 [node name="OutputNode" parent="LayerContainer" instance=ExtResource("2_4hplx")]
@@ -144,5 +144,10 @@ size_flags_horizontal = 6
 size_flags_vertical = 4
 stretch_mode = 2
 script = ExtResource("3_2sikp")
+
+[node name="UpgradeMenu" parent="." instance=ExtResource("5_abvow")]
+layout_mode = 1
+offset_left = -2.0
+offset_right = -2.0
 
 [connection signal="pressed" from="LayerContainer/Layer0/InputNode" to="LayerContainer/Layer0/InputNode" method="_on_pressed"]

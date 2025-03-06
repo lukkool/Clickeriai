@@ -9,52 +9,61 @@
 
 [node name="UpgradeMenu" type="Control"]
 layout_mode = 3
-anchors_preset = 1
-anchor_left = 1.0
+anchors_preset = 15
 anchor_right = 1.0
-grow_horizontal = 0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 theme = SubResource("Theme_lc8ih")
 script = ExtResource("1_5hc3g")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = -179.0
-offset_top = 39.0
-offset_right = -50.0
-offset_bottom = 90.0
+anchor_left = 0.851563
+anchor_top = 0.0617284
+anchor_right = 0.963542
+anchor_bottom = 0.140432
 text = "UPGRADES"
+metadata/_edit_use_anchors_ = true
 
 [node name="Panel" type="Panel" parent="."]
 visible = false
-layout_mode = 0
-offset_left = -870.0
-offset_top = 40.0
-offset_right = -244.0
-offset_bottom = 610.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.646701
+anchor_top = 0.179012
+anchor_right = 0.962674
+anchor_bottom = 0.666667
+metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 545.0
-offset_top = 8.0
-offset_right = 617.0
-offset_bottom = 39.0
+anchor_left = 0.870607
+anchor_top = 0.0140351
+anchor_right = 0.985623
+anchor_bottom = 0.0684211
 text = "EXIT"
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 2
-offset_left = 17.0
-offset_top = 10.0
-offset_right = 126.0
-offset_bottom = 49.0
+anchor_left = 0.0271566
+anchor_top = 0.0175439
+anchor_right = 0.201278
+anchor_bottom = 0.0859649
 text = "UPGRADES"
+metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
-layout_mode = 0
-offset_left = 14.0
-offset_top = 56.0
-offset_right = 616.0
-offset_bottom = 546.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0223642
+anchor_top = 0.0982456
+anchor_right = 0.984026
+anchor_bottom = 0.957895
 theme = SubResource("Theme_38oqk")
+metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
 layout_mode = 2
