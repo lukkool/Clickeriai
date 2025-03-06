@@ -1,6 +1,6 @@
 extends Button
 
-signal input_activated(val)
+signal score_output(val)
 var multiplier = 1
 var score_generated = 1
 
@@ -24,16 +24,16 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
-	if not multiplier_active:
-		click_streak += 1
-	print(click_streak)
+	if not multiplier_active: click_streak += 1
+	
 	if(click_streak > needed_threshold):
 		multiplier *= 2
 		click_streak = 0
 		multiplier_active = true
 		multiplier_timer = multiplier_duration
 		self.modulate = multiplier_color
-	score_generated = multiplier * 1
-	input_activated.emit(score_generated)
+		
+	score_generated = multiplier * score_generated
+	score_output.emit(score_generated)
 	
 	Sound.play_button_click()

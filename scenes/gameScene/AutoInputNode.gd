@@ -1,28 +1,16 @@
 extends Control
 
-signal output_activated(val)
+signal score_output(val)
 
-var income_amount: int = 1
-var interval: float = 1.0  # Time in seconds between activations
-var timer: Timer
+@export var income_amount: int = 1
+@export var interval: float = 10.0
 var enabled: bool = false
 
-func _ready() -> void:
-	timer = Timer.new()
-	timer.wait_time = interval
-	timer.autostart = true
-	timer.timeout.connect(_on_timer_timeout)
-	add_child(timer)
-
-func _on_timer_timeout() -> void:
-	output_activated.emit(income_amount)
-
-func set_income_amount(amount: int) -> void:
-	income_amount = amount
-
-func set_interval(new_interval: float) -> void:
-	interval = new_interval
-	timer.wait_time = interval
-
-func set_enabled(is_enabled: bool) -> void:
-	enabled = is_enabled
+var delay = interval
+func _process(delta: float) -> void:
+	if not enabled: return
+	
+	delay -= delta
+	if delay <= 0:
+		delay = interval
+		score_output.emit(income_amount)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bj5e5ooygsyw7"]
+[gd_scene load_steps=13 format=3 uid="uid://bj5e5ooygsyw7"]
 
 [ext_resource type="Script" path="res://scenes/gameScene/gameScene.gd" id="1_88gci"]
 [ext_resource type="PackedScene" uid="uid://lvqht05hsf30" path="res://scenes/gameScene/inputNode/InputNode.tscn" id="1_w6okk"]
@@ -8,12 +8,14 @@
 [ext_resource type="Script" path="res://scenes/gameScene/outputNode/output_node.gd" id="3_2sikp"]
 [ext_resource type="Script" path="res://scenes/gameScene/currency_label.gd" id="5_0tvsb"]
 [ext_resource type="PackedScene" uid="uid://ba7xr7emiqkau" path="res://scenes/gameScene/upgrades/upgradeMenu.tscn" id="5_abvow"]
+[ext_resource type="PackedScene" uid="uid://48y17njc02di" path="res://scenes/gameScene/batchNormalizationNode/batch_normalization_node.tscn" id="8_fo0yy"]
 [ext_resource type="Script" path="res://scenes/gameScene/AutoInputNode.gd" id="9_30xkf"]
-[ext_resource type="Script" path="res://scenes/gameScene/AutoInputNode2.gd" id="10_t33rj"]
-[ext_resource type="Script" path="res://scenes/gameScene/AutoInputNode3.gd" id="11_nom2l"]
-[ext_resource type="Script" path="res://scenes/gameScene/AutoInputNode4.gd" id="12_3jige"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_1io4r"]
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_h7ml1"]
+size = Vector2(110, 110)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_u2w5d"]
+size = Vector2(110, 110)
 
 [node name="GameScene" type="Control"]
 layout_mode = 3
@@ -27,14 +29,6 @@ offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_88gci")
-
-[node name="InputNode" parent="." instance=ExtResource("1_w6okk")]
-layout_mode = 1
-script = ExtResource("2_2uk3s")
-
-[node name="OutputNode" parent="." instance=ExtResource("2_4hplx")]
-layout_mode = 1
-script = ExtResource("3_2sikp")
 
 [node name="CurrencyLabel" type="Label" parent="."]
 layout_mode = 1
@@ -50,66 +44,6 @@ text = "100"
 horizontal_alignment = 1
 script = ExtResource("5_0tvsb")
 
-[node name="AutoInputNode" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -349.0
-offset_top = 73.0
-offset_right = -252.0
-offset_bottom = 168.0
-texture = SubResource("CanvasTexture_1io4r")
-script = ExtResource("9_30xkf")
-metadata/_edit_use_anchors_ = true
-
-[node name="AutoInputNode2" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -349.0
-offset_top = -168.0
-offset_right = -252.0
-offset_bottom = -73.0
-grow_horizontal = 2
-texture = SubResource("CanvasTexture_1io4r")
-script = ExtResource("10_t33rj")
-
-[node name="AutoInputNode3" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -348.0
-offset_top = -280.0
-offset_right = -251.0
-offset_bottom = -185.0
-texture = SubResource("CanvasTexture_1io4r")
-script = ExtResource("11_nom2l")
-metadata/_edit_use_anchors_ = true
-
-[node name="AutoInputNode4" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -350.0
-offset_top = 194.0
-offset_right = -253.0
-offset_bottom = 289.0
-texture = SubResource("CanvasTexture_1io4r")
-script = ExtResource("12_3jige")
-metadata/_edit_use_anchors_ = true
-
 [node name="UpgradeMenu" parent="." instance=ExtResource("5_abvow")]
 layout_mode = 1
 offset_left = -2.0
@@ -118,4 +52,97 @@ offset_right = -2.0
 [node name="SaveLoadManager" type="Node" parent="."]
 script = ExtResource("1_xrb4c")
 
-[connection signal="pressed" from="InputNode" to="InputNode" method="_on_pressed"]
+[node name="LayerContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.177083
+anchor_top = 0.114198
+anchor_right = 0.826389
+anchor_bottom = 0.987654
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Layer0" type="VBoxContainer" parent="LayerContainer"]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="AutoInputNode3" type="TextureRect" parent="LayerContainer/Layer0" groups=["nodes_layer0"]]
+visible = false
+custom_minimum_size = Vector2(110, 110)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource("PlaceholderTexture2D_h7ml1")
+script = ExtResource("9_30xkf")
+income_amount = 3
+
+[node name="AutoInputNode" type="TextureRect" parent="LayerContainer/Layer0" groups=["nodes_layer0"]]
+visible = false
+custom_minimum_size = Vector2(110, 110)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource("PlaceholderTexture2D_h7ml1")
+script = ExtResource("9_30xkf")
+
+[node name="InputNode" parent="LayerContainer/Layer0" groups=["nodes_layer0"] instance=ExtResource("1_w6okk")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("2_2uk3s")
+
+[node name="AutoInputNode2" type="TextureRect" parent="LayerContainer/Layer0" groups=["nodes_layer0"]]
+visible = false
+custom_minimum_size = Vector2(11, 110)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource("PlaceholderTexture2D_u2w5d")
+stretch_mode = 4
+script = ExtResource("9_30xkf")
+income_amount = 2
+
+[node name="AutoInputNode4" type="TextureRect" parent="LayerContainer/Layer0" groups=["nodes_layer0"]]
+visible = false
+custom_minimum_size = Vector2(110, 110)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource("PlaceholderTexture2D_h7ml1")
+script = ExtResource("9_30xkf")
+income_amount = 4
+
+[node name="Layer1" type="VBoxContainer" parent="LayerContainer"]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="BatchNormalizationNode0" parent="LayerContainer/Layer1" instance=ExtResource("8_fo0yy")]
+layout_mode = 2
+
+[node name="BatchNormalizationNode1" parent="LayerContainer/Layer1" instance=ExtResource("8_fo0yy")]
+layout_mode = 2
+
+[node name="BatchNormalizationNode2" parent="LayerContainer/Layer1" instance=ExtResource("8_fo0yy")]
+layout_mode = 2
+
+[node name="BatchNormalizationNode3" parent="LayerContainer/Layer1" instance=ExtResource("8_fo0yy")]
+layout_mode = 2
+
+[node name="BatchNormalizationNode4" parent="LayerContainer/Layer1" instance=ExtResource("8_fo0yy")]
+layout_mode = 2
+
+[node name="OutputNode" parent="LayerContainer" instance=ExtResource("2_4hplx")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+stretch_mode = 2
+script = ExtResource("3_2sikp")
+
+[connection signal="pressed" from="LayerContainer/Layer0/InputNode" to="LayerContainer/Layer0/InputNode" method="_on_pressed"]
