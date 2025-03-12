@@ -145,6 +145,54 @@ metadata/tooltip_text = "Add a base value to all values incoming from the input 
 metadata/SinglePurchace = true
 metadata/BasePrice = 200.0
 
+[node name="ConvolutionalNode1" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+layout_mode = 2
+text = "Convolutional Layer | cost: 500"
+metadata/name = "ConvolutionalNode1"
+metadata/tooltip_text = "Raise bits coming from left nodes to the power of 2"
+metadata/SinglePurchace = true
+metadata/BasePrice = 500.0
+
+[node name="ConvolutionalNode2" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+layout_mode = 2
+text = "Convolutional Second Node | cost: 500"
+metadata/name = "ConvolutionalNode2"
+metadata/tooltip_text = "Raise bits coming from left nodes to the power of 2"
+metadata/SinglePurchace = true
+metadata/BasePrice = 500.0
+
+[node name="ConvolutionalNode3" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+layout_mode = 2
+text = "Convolutional Third Node | cost: 500"
+metadata/name = "ConvolutionalNode3"
+metadata/tooltip_text = "Raise bits coming from left nodes to the power of 2"
+metadata/SinglePurchace = true
+metadata/BasePrice = 500.0
+
+[node name="ConvolutionalNode4" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+layout_mode = 2
+text = "Convolutional Fourth Node | cost: 500"
+metadata/name = "ConvolutionalNode4"
+metadata/tooltip_text = "Raise bits coming from left nodes to the power of 2"
+metadata/SinglePurchace = true
+metadata/BasePrice = 500.0
+
+[node name="ConvolutionalNode5" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+layout_mode = 2
+text = "Convolutional Fifth Node | cost: 500"
+metadata/name = "ConvolutionalNode5"
+metadata/tooltip_text = "Raise bits coming from left nodes to the power of 2"
+metadata/SinglePurchace = true
+metadata/BasePrice = 500.0
+
+[node name="ConvolutionalNode6" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+layout_mode = 2
+text = "Convolutional Sixth Node | cost: 500"
+metadata/name = "ConvolutionalNode6"
+metadata/tooltip_text = "Raise bits coming from left nodes to the power of 2"
+metadata/SinglePurchace = true
+metadata/BasePrice = 500.0
+
 [node name="Tooltip" type="Control" parent="."]
 visible = false
 anchors_preset = 0

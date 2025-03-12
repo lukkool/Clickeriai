@@ -57,5 +57,7 @@ func update_upgrades():
 	for i in range(1, 7):
 		if upgrades["BatchNormalizationNode" + str(i)]: get_node("LayerContainer/Layer1/BatchNormalizationNode" + str(i)).enable()
 
+	for i in range(1, 7):
+		if upgrades["ConvolutionalNode" + str(i)]: get_node("LayerContainer/Layer2/ConvolutionalNode" + str(i)).enable()
 	
 	#ATTENTION - Add later implemented upgrades
