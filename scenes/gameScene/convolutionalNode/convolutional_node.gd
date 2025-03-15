@@ -14,5 +14,4 @@ func enable():
 		node.score_output.connect(add_and_send)
 
 func add_and_send(val):
-	print("sending ", val ** 2)
 	score_output.emit(val ** 2)
