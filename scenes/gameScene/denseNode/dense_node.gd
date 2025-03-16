@@ -25,7 +25,6 @@ func enable():
 
 func store_value(val: float, source_node):
 	stored_values[source_node] = val
-	print("reached1")
 	
 	if stored_values.size() >= active_dense_nodes and active_dense_nodes > 0:
 		calculate_and_emit()
@@ -34,7 +33,6 @@ func calculate_and_emit():
 	var result: float = stored_values.values()[0]
 	
 	for value in stored_values.values():
-		print("nodes: ", value)
 		result *= value
 	
 	score_output.emit(result)
