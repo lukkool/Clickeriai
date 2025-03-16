@@ -10,7 +10,7 @@ func enable():
 	visible = true
 	$"..".enable()
 	
-	for node in get_tree().get_nodes_in_group("nodes_layer1"):
+	for node in get_tree().get_nodes_in_group("nodes_layer2"):
 		node.score_output.connect(add_and_send)
 
 func add_and_send(val):

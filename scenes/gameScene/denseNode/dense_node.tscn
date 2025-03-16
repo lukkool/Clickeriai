@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddnbwnvfjopks"]
+
+[ext_resource type="Script" path="res://scenes/gameScene/denseNode/dense_node.gd" id="1_jd1wf"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_1kw3o"]
+size = Vector2(64, 64)
+
+[node name="denseNode0" type="TextureRect" groups=["nodes_layer2"]]
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource("PlaceholderTexture2D_1kw3o")
+stretch_mode = 4
+script = ExtResource("1_jd1wf")

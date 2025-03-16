@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/gameScene/convolutionalNode/convolutional_node.gd" id="1_6q7b1"]
 [ext_resource type="Texture2D" uid="uid://cr4rctm8cg0m1" path="res://scenes/gameScene/convolutionalNode/node.png" id="1_6tddx"]
 
-[node name="ConvolutionalNode0" type="TextureRect" groups=["nodes_layer2"]]
+[node name="ConvolutionalNode0" type="TextureRect" groups=["nodes_layer3"]]
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("1_6tddx")

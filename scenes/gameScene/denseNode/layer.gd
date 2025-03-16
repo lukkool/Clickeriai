@@ -8,4 +8,4 @@ func enable():
 	enabled = true
 	
 	visible = true
-	output_node.connect_last_layer_to(3)
+	output_node.connect_last_layer_to(2)
