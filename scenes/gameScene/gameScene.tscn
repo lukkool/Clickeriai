@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bj5e5ooygsyw7"]
+[gd_scene load_steps=18 format=3 uid="uid://bj5e5ooygsyw7"]
 
 [ext_resource type="Script" path="res://scenes/gameScene/gameScene.gd" id="1_88gci"]
 [ext_resource type="PackedScene" uid="uid://lvqht05hsf30" path="res://scenes/gameScene/inputNode/InputNode.tscn" id="1_w6okk"]
@@ -11,8 +11,10 @@
 [ext_resource type="Script" path="res://scenes/gameScene/batchNormalizationNode/layer.gd" id="7_3clan"]
 [ext_resource type="PackedScene" uid="uid://48y17njc02di" path="res://scenes/gameScene/batchNormalizationNode/batch_normalization_node.tscn" id="8_fo0yy"]
 [ext_resource type="Script" path="res://scenes/gameScene/AutoInputNode.gd" id="9_30xkf"]
+[ext_resource type="Script" path="res://scenes/gameScene/denseNode/layer.gd" id="9_fho14"]
 [ext_resource type="Script" path="res://scenes/gameScene/convolutionalNode/layer.gd" id="9_ifbf7"]
 [ext_resource type="PackedScene" uid="uid://3m53ofyws6uw" path="res://scenes/gameScene/convolutionalNode/convolutional_node.tscn" id="10_1fbus"]
+[ext_resource type="PackedScene" uid="uid://ddnbwnvfjopks" path="res://scenes/gameScene/denseNode/dense_node.tscn" id="10_3716f"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_vbi24"]
 size = Vector2(64, 64)
@@ -158,29 +160,62 @@ custom_minimum_size = Vector2(110, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 alignment = 1
+script = ExtResource("9_fho14")
+metadata/_edit_use_anchors_ = true
+
+[node name="DenseNode1" parent="LayerContainer/Layer2" instance=ExtResource("10_3716f")]
+visible = false
+layout_mode = 2
+
+[node name="DenseNode2" parent="LayerContainer/Layer2" instance=ExtResource("10_3716f")]
+visible = false
+layout_mode = 2
+
+[node name="DenseNode3" parent="LayerContainer/Layer2" instance=ExtResource("10_3716f")]
+visible = false
+layout_mode = 2
+
+[node name="DenseNode4" parent="LayerContainer/Layer2" instance=ExtResource("10_3716f")]
+visible = false
+layout_mode = 2
+
+[node name="DenseNode5" parent="LayerContainer/Layer2" instance=ExtResource("10_3716f")]
+visible = false
+layout_mode = 2
+
+[node name="DenseNode6" parent="LayerContainer/Layer2" instance=ExtResource("10_3716f")]
+visible = false
+layout_mode = 2
+
+[node name="Layer3" type="VBoxContainer" parent="LayerContainer"]
+visible = false
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
 script = ExtResource("9_ifbf7")
 
-[node name="ConvolutionalNode1" parent="LayerContainer/Layer2" instance=ExtResource("10_1fbus")]
+[node name="ConvolutionalNode1" parent="LayerContainer/Layer3" instance=ExtResource("10_1fbus")]
 visible = false
 layout_mode = 2
 
-[node name="ConvolutionalNode2" parent="LayerContainer/Layer2" instance=ExtResource("10_1fbus")]
+[node name="ConvolutionalNode2" parent="LayerContainer/Layer3" instance=ExtResource("10_1fbus")]
 visible = false
 layout_mode = 2
 
-[node name="ConvolutionalNode3" parent="LayerContainer/Layer2" instance=ExtResource("10_1fbus")]
+[node name="ConvolutionalNode3" parent="LayerContainer/Layer3" instance=ExtResource("10_1fbus")]
 visible = false
 layout_mode = 2
 
-[node name="ConvolutionalNode4" parent="LayerContainer/Layer2" instance=ExtResource("10_1fbus")]
+[node name="ConvolutionalNode4" parent="LayerContainer/Layer3" instance=ExtResource("10_1fbus")]
 visible = false
 layout_mode = 2
 
-[node name="ConvolutionalNode5" parent="LayerContainer/Layer2" instance=ExtResource("10_1fbus")]
+[node name="ConvolutionalNode5" parent="LayerContainer/Layer3" instance=ExtResource("10_1fbus")]
 visible = false
 layout_mode = 2
 
-[node name="ConvolutionalNode6" parent="LayerContainer/Layer2" instance=ExtResource("10_1fbus")]
+[node name="ConvolutionalNode6" parent="LayerContainer/Layer3" instance=ExtResource("10_1fbus")]
 visible = false
 layout_mode = 2
 

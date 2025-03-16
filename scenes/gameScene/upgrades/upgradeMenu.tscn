@@ -145,6 +145,54 @@ metadata/tooltip_text = "Add a base value to all values incoming from the input 
 metadata/SinglePurchace = true
 metadata/BasePrice = 200.0
 
+[node name="DenseNode1" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+layout_mode = 2
+text = "Dense Layer | cost: 300"
+metadata/name = "DenseNode1"
+metadata/SinglePurchace = true
+metadata/BasePrice = 300.0
+metadata/tooltip_text = "Each node saves a value coming from the left layer. When all nodes are filled, they are multiplied together."
+
+[node name="DenseNode2" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+layout_mode = 2
+text = "Dense Second Node | cost: 300"
+metadata/name = "DenseNode2"
+metadata/SinglePurchace = true
+metadata/BasePrice = 300.0
+metadata/tooltip_text = "Each node saves a value coming from the left layer. When all nodes are filled, they are multiplied together."
+
+[node name="DenseNode3" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+layout_mode = 2
+text = "Dense Third Node | cost: 300"
+metadata/name = "DenseNode3"
+metadata/SinglePurchace = true
+metadata/BasePrice = 300.0
+metadata/tooltip_text = "Each node saves a value coming from the left layer. When all nodes are filled, they are multiplied together."
+
+[node name="DenseNode4" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+layout_mode = 2
+text = "Dense Fourth Node | cost: 300"
+metadata/name = "DenseNode4"
+metadata/SinglePurchace = true
+metadata/BasePrice = 300.0
+metadata/tooltip_text = "Each node saves a value coming from the left layer. When all nodes are filled, they are multiplied together."
+
+[node name="DenseNode5" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+layout_mode = 2
+text = "Dense Fifth Node | cost: 300"
+metadata/name = "DenseNode5"
+metadata/SinglePurchace = true
+metadata/BasePrice = 300.0
+metadata/tooltip_text = "Each node saves a value coming from the left layer. When all nodes are filled, they are multiplied together."
+
+[node name="DenseNode6" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+layout_mode = 2
+text = "Dense Sixth Node | cost: 300"
+metadata/name = "DenseNode6"
+metadata/SinglePurchace = true
+metadata/BasePrice = 300.0
+metadata/tooltip_text = "Each node saves a value coming from the left layer. When all nodes are filled, they are multiplied together."
+
 [node name="ConvolutionalNode1" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
 layout_mode = 2
 text = "Convolutional Layer | cost: 500"
