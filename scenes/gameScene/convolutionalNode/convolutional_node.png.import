@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr4rctm8cg0m1"
-path="res://.godot/imported/node.png-e8ed6a16ce059eed3c2eb00823cc25de.ctex"
+uid="uid://tbop367fwce5"
+path="res://.godot/imported/convolutional_node.png-18e15aa891f0094ee50af7c85165b048.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/gameScene/convolutionalNode/node.png"
-dest_files=["res://.godot/imported/node.png-e8ed6a16ce059eed3c2eb00823cc25de.ctex"]
+source_file="res://scenes/gameScene/convolutionalNode/convolutional_node.png"
+dest_files=["res://.godot/imported/convolutional_node.png-18e15aa891f0094ee50af7c85165b048.ctex"]
 
 [params]
 
