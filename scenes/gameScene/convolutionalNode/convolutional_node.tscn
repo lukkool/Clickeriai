@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://3m53ofyws6uw"]
 
 [ext_resource type="Script" path="res://scenes/gameScene/convolutionalNode/convolutional_node.gd" id="1_6q7b1"]
-[ext_resource type="Texture2D" uid="uid://ptlfb1oog8ve" path="res://scenes/gameScene/convolutionalNode/convolutional_node.png" id="1_dd48r"]
+[ext_resource type="Texture2D" uid="uid://tbop367fwce5" path="res://scenes/gameScene/convolutionalNode/convolutional_node.png" id="1_dd48r"]
 
 [node name="ConvolutionalNode0" type="TextureRect" groups=["nodes_layer3"]]
 size_flags_horizontal = 4
