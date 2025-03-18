@@ -63,4 +63,10 @@ func update_upgrades():
 	for i in range(1, 7):
 		if upgrades["ConvolutionalNode" + str(i)]: get_node("LayerContainer/Layer3/ConvolutionalNode" + str(i)).enable()
 	
+	for i in range(1, 7):
+		if upgrades["RecurrentNode" + str(i)]: get_node("LayerContainer/Layer4/RecurrentNode" + str(i)).enable()
 	#ATTENTION - Add later implemented upgrades
+
+
+func _on_save_and_exit_to_os_pressed() -> void:
+	pass # Replace with function body.

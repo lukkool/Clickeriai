@@ -263,6 +263,60 @@ metadata/tooltip_text = "Raise bits coming from left nodes to the power of 2"
 metadata/SinglePurchace = true
 metadata/BasePrice = 500.0
 
+[node name="RecurrentNode1" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
+layout_mode = 2
+text = "Recurrent Layer | cost: 1000"
+metadata/name = "RecurrentNode1"
+metadata/tooltip_text = "Emit values from left nodes"
+metadata/BasePrice = 50
+metadata/SinglePurchace = true
+
+[node name="RecurrentNode2" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
+layout_mode = 2
+text = "Recurrent Layer | cost: 1000"
+metadata/name = "RecurrentNode2"
+metadata/tooltip_text = "Emit values from left nodes"
+metadata/BasePrice = 50
+metadata/SinglePurchace = true
+
+[node name="RecurrentNode3" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
+layout_mode = 2
+text = "Recurrent Layer | cost: 1000"
+metadata/name = "RecurrentNode3"
+metadata/tooltip_text = "Emit values from left nodes"
+metadata/BasePrice = 50
+metadata/SinglePurchace = true
+
+[node name="RecurrentNode4" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
+layout_mode = 2
+text = "Recurrent Layer | cost: 1000"
+metadata/name = "RecurrentNode4"
+metadata/tooltip_text = "Emit values from left nodes"
+metadata/BasePrice = 50
+metadata/SinglePurchace = true
+
+[node name="RecurrentNode5" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
+layout_mode = 2
+text = "Recurrent Layer | cost: 1000"
+metadata/name = "RecurrentNode5"
+metadata/tooltip_text = "Emit values from left nodes"
+metadata/BasePrice = 50
+metadata/SinglePurchace = true
+
+[node name="RecurrentNode6" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
+layout_mode = 2
+text = "Recurrent Layer | cost: 1000"
+metadata/name = "RecurrentNode6"
+metadata/tooltip_text = "Emit values from left nodes"
+metadata/BasePrice = 50
+metadata/SinglePurchace = true
+
 [node name="Tooltip" type="Control" parent="."]
 visible = false
 anchors_preset = 0
