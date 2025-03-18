@@ -226,6 +226,7 @@ script = ExtResource("13_q1iet")
 [node name="RecurrentNode1" type="TextureRect" parent="LayerContainer/Layer4" groups=["nodes_layer4"]]
 visible = false
 layout_mode = 2
+size_flags_horizontal = 4
 texture = ExtResource("14_62onh")
 stretch_mode = 4
 script = ExtResource("14_n0jdy")
@@ -233,6 +234,7 @@ script = ExtResource("14_n0jdy")
 [node name="RecurrentNode2" type="TextureRect" parent="LayerContainer/Layer4" groups=["nodes_layer4"]]
 visible = false
 layout_mode = 2
+size_flags_horizontal = 4
 texture = ExtResource("14_62onh")
 stretch_mode = 4
 script = ExtResource("14_n0jdy")
@@ -240,6 +242,7 @@ script = ExtResource("14_n0jdy")
 [node name="RecurrentNode3" type="TextureRect" parent="LayerContainer/Layer4" groups=["nodes_layer4"]]
 visible = false
 layout_mode = 2
+size_flags_horizontal = 4
 texture = ExtResource("14_62onh")
 stretch_mode = 4
 script = ExtResource("14_n0jdy")
@@ -247,6 +250,7 @@ script = ExtResource("14_n0jdy")
 [node name="RecurrentNode4" type="TextureRect" parent="LayerContainer/Layer4" groups=["nodes_layer4"]]
 visible = false
 layout_mode = 2
+size_flags_horizontal = 4
 texture = ExtResource("14_62onh")
 stretch_mode = 4
 script = ExtResource("14_n0jdy")
@@ -254,6 +258,7 @@ script = ExtResource("14_n0jdy")
 [node name="RecurrentNode5" type="TextureRect" parent="LayerContainer/Layer4" groups=["nodes_layer4"]]
 visible = false
 layout_mode = 2
+size_flags_horizontal = 4
 texture = ExtResource("14_62onh")
 stretch_mode = 4
 script = ExtResource("14_n0jdy")
@@ -261,6 +266,7 @@ script = ExtResource("14_n0jdy")
 [node name="RecurrentNode6" type="TextureRect" parent="LayerContainer/Layer4" groups=["nodes_layer4"]]
 visible = false
 layout_mode = 2
+size_flags_horizontal = 4
 texture = ExtResource("14_62onh")
 stretch_mode = 4
 script = ExtResource("14_n0jdy")
