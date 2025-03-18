@@ -66,6 +66,7 @@ theme = SubResource("Theme_38oqk")
 metadata/_edit_use_anchors_ = true
 
 [node name="AutoNode1" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
 layout_mode = 2
 text = "Auto Input Node 1 | cost: 20"
 metadata/name = "AutoInputNode1"
@@ -74,6 +75,7 @@ metadata/SinglePurchace = true
 metadata/BasePrice = 20.0
 
 [node name="AutoNode2" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
 layout_mode = 2
 text = "Auto Input Node 2 | cost: 100"
 metadata/name = "AutoInputNode2"
@@ -82,6 +84,7 @@ metadata/SinglePurchace = true
 metadata/BasePrice = 100.0
 
 [node name="AutoNode3" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
 layout_mode = 2
 text = "Auto Input Node 3 | cost: 500"
 metadata/name = "AutoInputNode3"
@@ -90,6 +93,7 @@ metadata/SinglePurchace = true
 metadata/BasePrice = 500.0
 
 [node name="AutoNode4" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
 layout_mode = 2
 text = "Auto Input Node 4| cost: 10k"
 metadata/name = "AutoInputNode4"
@@ -98,6 +102,7 @@ metadata/SinglePurchace = true
 metadata/BasePrice = 10000.0
 
 [node name="BatchNormalizationNode1" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
 layout_mode = 2
 text = "Batch Normalization Layer | cost: 200"
 metadata/name = "BatchNormalizationNode1"
@@ -106,6 +111,7 @@ metadata/SinglePurchace = true
 metadata/BasePrice = 200.0
 
 [node name="BatchNormalizationNode2" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
 layout_mode = 2
 text = "Batch Normalization Second Node | cost: 200"
 metadata/name = "BatchNormalizationNode2"
@@ -114,6 +120,7 @@ metadata/SinglePurchace = true
 metadata/BasePrice = 200.0
 
 [node name="BatchNormalizationNode3" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
 layout_mode = 2
 text = "Batch Normalization Third Node | cost: 200"
 metadata/name = "BatchNormalizationNode3"
@@ -122,6 +129,7 @@ metadata/SinglePurchace = true
 metadata/BasePrice = 200.0
 
 [node name="BatchNormalizationNode4" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
 layout_mode = 2
 text = "Batch Normalization Fourth Node | cost: 200"
 metadata/name = "BatchNormalizationNode4"
@@ -130,6 +138,7 @@ metadata/SinglePurchace = true
 metadata/BasePrice = 200.0
 
 [node name="BatchNormalizationNode5" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
 layout_mode = 2
 text = "Batch Normalization Fifth Node | cost: 200"
 metadata/name = "BatchNormalizationNode5"
@@ -138,6 +147,7 @@ metadata/SinglePurchace = true
 metadata/BasePrice = 200.0
 
 [node name="BatchNormalizationNode6" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
 layout_mode = 2
 text = "Batch Normalization Sixth Node | cost: 200"
 metadata/name = "BatchNormalizationNode6"
@@ -146,6 +156,7 @@ metadata/SinglePurchace = true
 metadata/BasePrice = 200.0
 
 [node name="DenseNode1" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
 layout_mode = 2
 text = "Dense Layer | cost: 300"
 metadata/name = "DenseNode1"
@@ -154,6 +165,7 @@ metadata/BasePrice = 300.0
 metadata/tooltip_text = "Each node saves a value coming from the left layer. When all nodes are filled, they are multiplied together."
 
 [node name="DenseNode2" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
 layout_mode = 2
 text = "Dense Second Node | cost: 300"
 metadata/name = "DenseNode2"
@@ -162,6 +174,7 @@ metadata/BasePrice = 300.0
 metadata/tooltip_text = "Each node saves a value coming from the left layer. When all nodes are filled, they are multiplied together."
 
 [node name="DenseNode3" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
 layout_mode = 2
 text = "Dense Third Node | cost: 300"
 metadata/name = "DenseNode3"
@@ -170,6 +183,7 @@ metadata/BasePrice = 300.0
 metadata/tooltip_text = "Each node saves a value coming from the left layer. When all nodes are filled, they are multiplied together."
 
 [node name="DenseNode4" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
 layout_mode = 2
 text = "Dense Fourth Node | cost: 300"
 metadata/name = "DenseNode4"
@@ -178,6 +192,7 @@ metadata/BasePrice = 300.0
 metadata/tooltip_text = "Each node saves a value coming from the left layer. When all nodes are filled, they are multiplied together."
 
 [node name="DenseNode5" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
 layout_mode = 2
 text = "Dense Fifth Node | cost: 300"
 metadata/name = "DenseNode5"
@@ -186,6 +201,7 @@ metadata/BasePrice = 300.0
 metadata/tooltip_text = "Each node saves a value coming from the left layer. When all nodes are filled, they are multiplied together."
 
 [node name="DenseNode6" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
 layout_mode = 2
 text = "Dense Sixth Node | cost: 300"
 metadata/name = "DenseNode6"
@@ -194,6 +210,7 @@ metadata/BasePrice = 300.0
 metadata/tooltip_text = "Each node saves a value coming from the left layer. When all nodes are filled, they are multiplied together."
 
 [node name="ConvolutionalNode1" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
 layout_mode = 2
 text = "Convolutional Layer | cost: 500"
 metadata/name = "ConvolutionalNode1"
@@ -202,6 +219,7 @@ metadata/SinglePurchace = true
 metadata/BasePrice = 500.0
 
 [node name="ConvolutionalNode2" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
 layout_mode = 2
 text = "Convolutional Second Node | cost: 500"
 metadata/name = "ConvolutionalNode2"
@@ -210,6 +228,7 @@ metadata/SinglePurchace = true
 metadata/BasePrice = 500.0
 
 [node name="ConvolutionalNode3" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
 layout_mode = 2
 text = "Convolutional Third Node | cost: 500"
 metadata/name = "ConvolutionalNode3"
@@ -218,6 +237,7 @@ metadata/SinglePurchace = true
 metadata/BasePrice = 500.0
 
 [node name="ConvolutionalNode4" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
 layout_mode = 2
 text = "Convolutional Fourth Node | cost: 500"
 metadata/name = "ConvolutionalNode4"
@@ -226,6 +246,7 @@ metadata/SinglePurchace = true
 metadata/BasePrice = 500.0
 
 [node name="ConvolutionalNode5" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
 layout_mode = 2
 text = "Convolutional Fifth Node | cost: 500"
 metadata/name = "ConvolutionalNode5"
@@ -234,6 +255,7 @@ metadata/SinglePurchace = true
 metadata/BasePrice = 500.0
 
 [node name="ConvolutionalNode6" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
 layout_mode = 2
 text = "Convolutional Sixth Node | cost: 500"
 metadata/name = "ConvolutionalNode6"

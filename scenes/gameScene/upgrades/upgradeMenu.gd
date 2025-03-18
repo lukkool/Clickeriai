@@ -20,6 +20,8 @@ func _ready():
 func _process(_delta):
 	if tooltip_active: #keeps tooltip on the mouse position
 		tooltip.global_position = get_global_mouse_position() + Vector2(20, 10)
+		
+	update_upgrade_buttons()
 
 func buy_upgrade(button: Button):
 	
@@ -54,6 +56,66 @@ func show_tooltip(button: Button): #shows tooltip by obtaining metadata from the
 		tooltip.show_tooltip(tooltip_text)
 		tooltip_active = true
 
+func update_upgrade_buttons():
+	
+	var unlockDense:bool = false;
+	var unlockConvolutional:bool = false;
+	var unlockReccurent:bool = false;
+	
+	for i in range(4, 0, -1):
+		if game_scene.upgrades["AutoInputNode" + str(i)]:
+			if(i == 4):
+				break;
+			else:
+				get_node("Panel/VBoxContainer/AutoNode" + str(i + 1)).visible = true
+				break;
+		if (i == 1):
+			get_node("Panel/VBoxContainer/AutoNode" + str(i)).visible = true
+	for i in range(6, 0, -1):
+		if game_scene.upgrades["BatchNormalizationNode" + str(i)]:
+			unlockDense = true;
+			if(i == 6):
+				break;
+			else:
+				get_node("Panel/VBoxContainer/BatchNormalizationNode" + str(i + 1)).visible = true
+				break;
+		if (i == 1):
+			get_node("Panel/VBoxContainer/BatchNormalizationNode" + str(i)).visible = true
+	if unlockDense:
+		for i in range(6, 0, -1):
+			if game_scene.upgrades["DenseNode" + str(i)]:
+				unlockConvolutional = true;
+				if(i == 6):
+					break;
+				else:
+					get_node("Panel/VBoxContainer/DenseNode" + str(i + 1)).visible = true
+					break;
+			if (i == 1):
+				get_node("Panel/VBoxContainer/DenseNode" + str(i)).visible = true
+			
+	if unlockConvolutional:
+		for i in range(6, 0, -1):
+			if game_scene.upgrades["ConvolutionalNode" + str(i)]:
+				unlockReccurent = true;
+				if(i == 6):
+					break;
+				else:
+					get_node("Panel/VBoxContainer/ConvolutionalNode" + str(i + 1)).visible = true
+					break;
+			if (i == 1):
+				get_node("Panel/VBoxContainer/ConvolutionalNode" + str(i)).visible = true
+				
+	if unlockReccurent:
+		for i in range(6, 0, -1):
+			if game_scene.upgrades["RecurrentNode" + str(i)]:
+				if(i == 6):
+					break;
+				else:
+					get_node("Panel/VBoxContainer/RecurrentNode" + str(i + 1)).visible = true
+					break;
+			if (i == 1):
+				get_node("Panel/VBoxContainer/RecurrentNode" + str(i)).visible = true
+		
 func hide_tooltip():
 	tooltip.hide_tooltip()
 	tooltip_active = false
