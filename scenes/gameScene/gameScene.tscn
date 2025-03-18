@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bj5e5ooygsyw7"]
+[gd_scene load_steps=21 format=3 uid="uid://bj5e5ooygsyw7"]
 
 [ext_resource type="Script" path="res://scenes/gameScene/gameScene.gd" id="1_88gci"]
 [ext_resource type="PackedScene" uid="uid://lvqht05hsf30" path="res://scenes/gameScene/inputNode/InputNode.tscn" id="1_w6okk"]
@@ -21,9 +21,6 @@
 [ext_resource type="PackedScene" uid="uid://dthf070fxj3i5" path="res://scenes/gameScene/PauseMenu.tscn" id="19_60wk5"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_vbi24"]
-size = Vector2(64, 64)
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_1kw3o"]
 size = Vector2(64, 64)
 
 [node name="GameScene" type="Control"]
@@ -132,32 +129,26 @@ metadata/_edit_use_anchors_ = true
 [node name="BatchNormalizationNode1" parent="LayerContainer/Layer1" instance=ExtResource("8_fo0yy")]
 visible = false
 layout_mode = 2
-texture = SubResource("PlaceholderTexture2D_1kw3o")
 
 [node name="BatchNormalizationNode2" parent="LayerContainer/Layer1" instance=ExtResource("8_fo0yy")]
 visible = false
 layout_mode = 2
-texture = SubResource("PlaceholderTexture2D_1kw3o")
 
 [node name="BatchNormalizationNode3" parent="LayerContainer/Layer1" instance=ExtResource("8_fo0yy")]
 visible = false
 layout_mode = 2
-texture = SubResource("PlaceholderTexture2D_1kw3o")
 
 [node name="BatchNormalizationNode4" parent="LayerContainer/Layer1" instance=ExtResource("8_fo0yy")]
 visible = false
 layout_mode = 2
-texture = SubResource("PlaceholderTexture2D_1kw3o")
 
 [node name="BatchNormalizationNode5" parent="LayerContainer/Layer1" instance=ExtResource("8_fo0yy")]
 visible = false
 layout_mode = 2
-texture = SubResource("PlaceholderTexture2D_1kw3o")
 
 [node name="BatchNormalizationNode6" parent="LayerContainer/Layer1" instance=ExtResource("8_fo0yy")]
 visible = false
 layout_mode = 2
-texture = SubResource("PlaceholderTexture2D_1kw3o")
 
 [node name="Layer2" type="VBoxContainer" parent="LayerContainer"]
 visible = false
