@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://dbnd03h46tvoy"]
+[gd_scene load_steps=2 format=3 uid="uid://dbnd03h46tvoy"]
 
-[node name="OutputNode" type="ColorRect"]
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_1sm7f"]
+size = Vector2(64, 64)
+
+[node name="OutputNode" type="TextureRect"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -12,3 +15,4 @@ offset_right = 350.0
 offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = SubResource("PlaceholderTexture2D_1sm7f")

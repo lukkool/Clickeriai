@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="64"
+   height="64"
+   viewBox="0 0 16.933332 16.933334"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="batch_norm.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   inkscape:export-filename="batch_norm.png"
+   inkscape:export-xdpi="6.1440001"
+   inkscape:export-ydpi="6.1440001"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="8.7454967"
+     inkscape:cx="29.215036"
+     inkscape:cy="33.788819"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5" />
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata856">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Inspire Studio</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <cc:license
+           rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" />
+        <dc:description>Thank you for using this artwork. Feel free to visit our page https://www.pinterest.com.au/inspirestudiobox for more designs. We wish you have a wonderful day, everyday. Amitabha</dc:description>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/publicdomain/zero/1.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <ellipse
+     style="fill:#b5c9ee;fill-opacity:1;stroke:#000000;stroke-width:0.933348;stroke-dasharray:none;stroke-opacity:1"
+     id="path1"
+     cx="8.4666662"
+     cy="8.4666672"
+     rx="7.9999924"
+     ry="7.9999928" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#8b9dc1;stroke-width:0.484502;stroke-linejoin:bevel;stroke-opacity:1"
+     d="m 13.821374,12.579962 c 0,0 -0.861301,0.786209 -5.1197152,0.786209 -4.2584139,0 -5.2119204,-0.804985 -5.2119204,-0.804985 L 3.4749746,4.3189458 m -0.00515,2.8366248 c 0,0 1.1067106,0.669869 5.2127534,0.668804 4.106042,-0.00106 5.123194,-0.6600269 5.123194,-0.6600269 M 3.4790584,9.9983803 c 0,0 1.1067104,0.6698697 5.2127534,0.6688047 4.1060432,-0.0011 5.1231962,-0.660027 5.1231962,-0.660027"
+     id="path2-9"
+     sodipodi:nodetypes="czccczccsc" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#121212;stroke-width:0.485501;stroke-opacity:1"
+     d="m 8.5159004,5.1744765 c 4.1133036,0 5.1453246,-0.642277 5.1453246,-0.642277 l 0.01436,8.2501935 c 0,0 -0.86305,0.787865 -5.1300994,0.787865 -4.26705,0 -5.2224905,-0.806681 -5.2224905,-0.806681 L 3.3082033,4.5039756 c 0,0 1.0943945,0.6705009 5.2076971,0.6705009 z M 3.3030379,7.3465758 c 0,0 1.1089553,0.6712795 5.2233253,0.6702121 4.1143708,-0.00106 5.1335848,-0.6614171 5.1335848,-0.6614171 M 3.1851857,4.2856402 c 0,0 1.2329971,-0.6939493 5.3462996,-0.6939493 4.1133027,0 5.2442407,0.7068253 5.2442407,0.7068253 M 3.3122918,10.195375 c 0,0 1.1089556,0.671279 5.2233255,0.670212 4.1143697,-0.0011 5.1335847,-0.661417 5.1335847,-0.661417"
+     id="path2"
+     sodipodi:nodetypes="zcczcczczccsccsc" />
+</svg>

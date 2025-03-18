@@ -1,6 +1,6 @@
 extends Button
 
-signal input_activated(val)
+signal score_output(val)
 var multiplier = 1
 var score_generated = 1
 
@@ -11,6 +11,8 @@ var multiplier_duration: float = 10.0
 var multiplier_active = false
 var normal_color = Color(1, 1, 1)
 var multiplier_color = Color(1, 0, 0)
+
+@onready var progress_bar: ProgressBar = get_node("/root/GameScene/ProgressBar")
 
 
 func _process(delta: float) -> void:
@@ -26,12 +28,16 @@ func _process(delta: float) -> void:
 func _on_pressed() -> void:
 	if not multiplier_active:
 		click_streak += 1
-	print(click_streak)
+		progress_bar.value += 1
 	if(click_streak > needed_threshold):
 		multiplier *= 2
 		click_streak = 0
+		progress_bar.value = 0
 		multiplier_active = true
 		multiplier_timer = multiplier_duration
 		self.modulate = multiplier_color
+		
 	score_generated = multiplier * 1
-	input_activated.emit(score_generated)
+	score_output.emit(score_generated)
+	
+	Sound.play_button_click()

@@ -352,4 +352,4 @@ text = "Save & exit game"
 [connection signal="pressed" from="LayerContainer/Layer0/InputNode" to="LayerContainer/Layer0/InputNode" method="_on_pressed"]
 [connection signal="pressed" from="PauseMenu/Save2" to="PauseMenu" method="_on_save_pressed"]
 [connection signal="pressed" from="PauseMenu/SaveExit2" to="PauseMenu" method="_on_save_and_exit_to_main_menu_pressed"]
-[connection signal="pressed" from="PauseMenu/SaveExitOS2" to="PauseMenu" method="_on_save_and_exit_to_os_pressed"]
+[connection signal="pressed" from="PauseMenu/SaveExitOS2" to="." method="_on_save_and_exit_to_os_pressed"]

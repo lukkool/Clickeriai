@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddnbwnvfjopks"]
+
+[ext_resource type="Texture2D" uid="uid://dwdq7qk3yj6a0" path="res://scenes/gameScene/denseNode/denseNode.png" id="1_0sh25"]
+[ext_resource type="Script" path="res://scenes/gameScene/denseNode/dense_node.gd" id="1_jd1wf"]
+
+[node name="denseNode0" type="TextureRect" groups=["nodes_layer2"]]
+custom_minimum_size = Vector2(64, 64)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_0sh25")
+expand_mode = 1
+stretch_mode = 4
+script = ExtResource("1_jd1wf")

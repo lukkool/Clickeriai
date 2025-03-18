@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://3m53ofyws6uw"]
+
+[ext_resource type="Texture2D" uid="uid://dmvcddce64n0g" path="res://scenes/gameScene/convolutionalNode/convolutional_node.svg" id="1_4xev8"]
+[ext_resource type="Script" path="res://scenes/gameScene/convolutionalNode/convolutional_node.gd" id="1_6q7b1"]
+
+[node name="ConvolutionalNode0" type="TextureRect" groups=["nodes_layer3"]]
+offset_right = 64.0
+offset_bottom = 64.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_4xev8")
+stretch_mode = 4
+script = ExtResource("1_6q7b1")

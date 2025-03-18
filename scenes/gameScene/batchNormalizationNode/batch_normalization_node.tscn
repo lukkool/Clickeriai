@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://48y17njc02di"]
+
+[ext_resource type="Texture2D" uid="uid://d802573403kr" path="res://scenes/gameScene/batchNormalizationNode/batch_norm.svg" id="1_3uuic"]
+[ext_resource type="Script" path="res://scenes/gameScene/batchNormalizationNode/batch_normalization_node.gd" id="1_kf4rg"]
+
+[node name="BatchNormalizationNode0" type="TextureRect" groups=["nodes_layer1"]]
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_3uuic")
+stretch_mode = 4
+script = ExtResource("1_kf4rg")

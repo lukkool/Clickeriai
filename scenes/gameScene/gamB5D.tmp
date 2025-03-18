@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bj5e5ooygsyw7"]
+[gd_scene load_steps=16 format=3 uid="uid://bj5e5ooygsyw7"]
 
 [ext_resource type="Script" path="res://scenes/gameScene/gameScene.gd" id="1_88gci"]
 [ext_resource type="PackedScene" uid="uid://lvqht05hsf30" path="res://scenes/gameScene/inputNode/InputNode.tscn" id="1_w6okk"]
@@ -11,14 +11,8 @@
 [ext_resource type="Script" path="res://scenes/gameScene/batchNormalizationNode/layer.gd" id="7_3clan"]
 [ext_resource type="PackedScene" uid="uid://48y17njc02di" path="res://scenes/gameScene/batchNormalizationNode/batch_normalization_node.tscn" id="8_fo0yy"]
 [ext_resource type="Script" path="res://scenes/gameScene/AutoInputNode.gd" id="9_30xkf"]
-[ext_resource type="Script" path="res://scenes/gameScene/denseNode/layer.gd" id="9_fho14"]
 [ext_resource type="Script" path="res://scenes/gameScene/convolutionalNode/layer.gd" id="9_ifbf7"]
 [ext_resource type="PackedScene" uid="uid://3m53ofyws6uw" path="res://scenes/gameScene/convolutionalNode/convolutional_node.tscn" id="10_1fbus"]
-[ext_resource type="PackedScene" uid="uid://ddnbwnvfjopks" path="res://scenes/gameScene/denseNode/dense_node.tscn" id="10_3716f"]
-[ext_resource type="Script" path="res://scenes/gameScene/recurrentNode/layer.gd" id="13_q1iet"]
-[ext_resource type="Texture2D" uid="uid://cst3l0mkteou6" path="res://scenes/gameScene/recurrentNode/recurrentNode.svg" id="14_62onh"]
-[ext_resource type="Script" path="res://scenes/gameScene/recurrentNode/recurrent_node.gd" id="14_n0jdy"]
-[ext_resource type="PackedScene" uid="uid://dthf070fxj3i5" path="res://scenes/gameScene/PauseMenu.tscn" id="19_60wk5"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_vbi24"]
 size = Vector2(64, 64)
@@ -45,9 +39,8 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -94.0
-offset_top = 35.0
 offset_right = 94.0
-offset_bottom = 108.0
+offset_bottom = 35.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 25
 text = "Bits:
@@ -121,7 +114,6 @@ script = ExtResource("9_30xkf")
 income_amount = 4
 
 [node name="Layer1" type="VBoxContainer" parent="LayerContainer"]
-visible = false
 custom_minimum_size = Vector2(110, 0)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -160,117 +152,34 @@ layout_mode = 2
 texture = SubResource("PlaceholderTexture2D_1kw3o")
 
 [node name="Layer2" type="VBoxContainer" parent="LayerContainer"]
-visible = false
-custom_minimum_size = Vector2(110, 0)
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
-size_flags_horizontal = 3
-alignment = 1
-script = ExtResource("9_fho14")
-metadata/_edit_use_anchors_ = true
-
-[node name="DenseNode1" parent="LayerContainer/Layer2" instance=ExtResource("10_3716f")]
-visible = false
-layout_mode = 2
-
-[node name="DenseNode2" parent="LayerContainer/Layer2" instance=ExtResource("10_3716f")]
-visible = false
-layout_mode = 2
-
-[node name="DenseNode3" parent="LayerContainer/Layer2" instance=ExtResource("10_3716f")]
-visible = false
-layout_mode = 2
-
-[node name="DenseNode4" parent="LayerContainer/Layer2" instance=ExtResource("10_3716f")]
-visible = false
-layout_mode = 2
-
-[node name="DenseNode5" parent="LayerContainer/Layer2" instance=ExtResource("10_3716f")]
-visible = false
-layout_mode = 2
-
-[node name="DenseNode6" parent="LayerContainer/Layer2" instance=ExtResource("10_3716f")]
-visible = false
-layout_mode = 2
-
-[node name="Layer3" type="VBoxContainer" parent="LayerContainer"]
-custom_minimum_size = Vector2(110, 0)
-layout_mode = 2
-size_flags_horizontal = 3
 alignment = 1
 script = ExtResource("9_ifbf7")
 
-[node name="ConvolutionalNode1" parent="LayerContainer/Layer3" instance=ExtResource("10_1fbus")]
+[node name="ConvolutionalNode1" parent="LayerContainer/Layer2" instance=ExtResource("10_1fbus")]
 visible = false
 layout_mode = 2
 
-[node name="ConvolutionalNode2" parent="LayerContainer/Layer3" instance=ExtResource("10_1fbus")]
+[node name="ConvolutionalNode2" parent="LayerContainer/Layer2" instance=ExtResource("10_1fbus")]
 visible = false
 layout_mode = 2
 
-[node name="ConvolutionalNode3" parent="LayerContainer/Layer3" instance=ExtResource("10_1fbus")]
+[node name="ConvolutionalNode3" parent="LayerContainer/Layer2" instance=ExtResource("10_1fbus")]
 visible = false
 layout_mode = 2
 
-[node name="ConvolutionalNode4" parent="LayerContainer/Layer3" instance=ExtResource("10_1fbus")]
+[node name="ConvolutionalNode4" parent="LayerContainer/Layer2" instance=ExtResource("10_1fbus")]
 visible = false
 layout_mode = 2
 
-[node name="ConvolutionalNode5" parent="LayerContainer/Layer3" instance=ExtResource("10_1fbus")]
+[node name="ConvolutionalNode5" parent="LayerContainer/Layer2" instance=ExtResource("10_1fbus")]
 visible = false
 layout_mode = 2
 
-[node name="ConvolutionalNode6" parent="LayerContainer/Layer3" instance=ExtResource("10_1fbus")]
+[node name="ConvolutionalNode6" parent="LayerContainer/Layer2" instance=ExtResource("10_1fbus")]
 visible = false
 layout_mode = 2
-
-[node name="Layer4" type="VBoxContainer" parent="LayerContainer"]
-custom_minimum_size = Vector2(110, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-alignment = 1
-script = ExtResource("13_q1iet")
-
-[node name="RecurrentNode1" type="TextureRect" parent="LayerContainer/Layer4" groups=["nodes_layer4"]]
-visible = false
-layout_mode = 2
-texture = ExtResource("14_62onh")
-stretch_mode = 4
-script = ExtResource("14_n0jdy")
-
-[node name="RecurrentNode2" type="TextureRect" parent="LayerContainer/Layer4" groups=["nodes_layer4"]]
-visible = false
-layout_mode = 2
-texture = ExtResource("14_62onh")
-stretch_mode = 4
-script = ExtResource("14_n0jdy")
-
-[node name="RecurrentNode3" type="TextureRect" parent="LayerContainer/Layer4" groups=["nodes_layer4"]]
-visible = false
-layout_mode = 2
-texture = ExtResource("14_62onh")
-stretch_mode = 4
-script = ExtResource("14_n0jdy")
-
-[node name="RecurrentNode4" type="TextureRect" parent="LayerContainer/Layer4" groups=["nodes_layer4"]]
-visible = false
-layout_mode = 2
-texture = ExtResource("14_62onh")
-stretch_mode = 4
-script = ExtResource("14_n0jdy")
-
-[node name="RecurrentNode5" type="TextureRect" parent="LayerContainer/Layer4" groups=["nodes_layer4"]]
-visible = false
-layout_mode = 2
-texture = ExtResource("14_62onh")
-stretch_mode = 4
-script = ExtResource("14_n0jdy")
-
-[node name="RecurrentNode6" type="TextureRect" parent="LayerContainer/Layer4" groups=["nodes_layer4"]]
-visible = false
-layout_mode = 2
-texture = ExtResource("14_62onh")
-stretch_mode = 4
-script = ExtResource("14_n0jdy")
 
 [node name="OutputNode" parent="LayerContainer" instance=ExtResource("2_4hplx")]
 unique_name_in_owner = true
@@ -285,71 +194,4 @@ layout_mode = 1
 offset_left = -2.0
 offset_right = -2.0
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_top = -3.0
-offset_bottom = 23.0
-grow_horizontal = 2
-max_value = 20.0
-show_percentage = false
-
-[node name="PauseMenu" parent="." instance=ExtResource("19_60wk5")]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -213.0
-offset_top = -327.0
-offset_right = 238.0
-offset_bottom = 305.0
-
-[node name="Save2" type="Button" parent="PauseMenu"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -146.5
-offset_top = -271.0
-offset_right = 133.5
-offset_bottom = -171.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "SAVE"
-
-[node name="SaveExit2" type="Button" parent="PauseMenu"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.506
-anchor_bottom = 0.5
-offset_left = -146.5
-offset_top = -151.0
-offset_right = 130.782
-offset_bottom = -51.0
-text = "Save & exit to main menu
-"
-
-[node name="SaveExitOS2" type="Button" parent="PauseMenu"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.508
-anchor_bottom = 0.5
-offset_left = -146.5
-offset_top = -31.0
-offset_right = 129.876
-offset_bottom = 69.0
-text = "Save & exit game"
-
 [connection signal="pressed" from="LayerContainer/Layer0/InputNode" to="LayerContainer/Layer0/InputNode" method="_on_pressed"]
-[connection signal="pressed" from="PauseMenu/Save2" to="PauseMenu" method="_on_save_pressed"]
-[connection signal="pressed" from="PauseMenu/SaveExit2" to="PauseMenu" method="_on_save_and_exit_to_main_menu_pressed"]
-[connection signal="pressed" from="PauseMenu/SaveExitOS2" to="PauseMenu" method="_on_save_and_exit_to_os_pressed"]

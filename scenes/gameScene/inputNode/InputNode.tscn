@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://lvqht05hsf30"]
+[gd_scene load_steps=3 format=3 uid="uid://lvqht05hsf30"]
+
+[ext_resource type="Texture2D" uid="uid://im8bvd1gwwh7" path="res://scenes/gameScene/inputNode/manual_input.svg" id="1_t3t5v"]
 
 [sub_resource type="GDScript" id="GDScript_5gw0s"]
 script/source = "extends Button
@@ -14,10 +16,12 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -350.0
-offset_top = -50.0
-offset_right = -250.0
-offset_bottom = 50.0
+offset_left = -576.0
+offset_top = -324.0
+offset_right = -504.0
+offset_bottom = -252.0
 grow_horizontal = 2
 grow_vertical = 2
+icon = ExtResource("1_t3t5v")
+flat = true
 script = SubResource("GDScript_5gw0s")
