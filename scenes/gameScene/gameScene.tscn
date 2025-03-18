@@ -216,6 +216,7 @@ visible = false
 layout_mode = 2
 
 [node name="Layer4" type="VBoxContainer" parent="LayerContainer"]
+visible = false
 custom_minimum_size = Vector2(110, 0)
 layout_mode = 2
 size_flags_horizontal = 3
