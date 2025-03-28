@@ -39,8 +39,6 @@ func draw_lines():
 	else:
 		right_nodes = layers[layer_number + 1].nodes
 	
-	print(str(layer_number) + " " + str(output_node.current_last_layer))
-	
 	for right_node:Control in right_nodes:
 		for left_node:Control in nodes:
 			if not left_node.enabled or not right_node.enabled: continue
