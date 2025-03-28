@@ -24,6 +24,12 @@ func _process(delta: float) -> void:
 			multiplier_active = false
 			multiplier = 1
 			self.modulate = normal_color
+			
+	if not multiplier_active:
+		progress_bar.value -= 1 * delta
+		click_streak -= 1 * delta
+		
+		
 	
 		
 
