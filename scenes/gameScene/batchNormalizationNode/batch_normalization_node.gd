@@ -17,3 +17,10 @@ func enable():
 
 func add_and_send(val):
 	score_output.emit(val + bonus)
+	lightup()
+
+func _process(delta: float) -> void:
+	modulate = lerp(modulate, Color(1, 1, 1, 1), delta*10)
+
+func lightup():
+	modulate = Color(2, 2, 2, 1)
