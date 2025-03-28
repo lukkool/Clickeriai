@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsr6uin4urbf0"]
+
+[ext_resource type="Texture2D" uid="uid://cr7obx002wwio" path="res://scenes/gameScene/misc/lines_between_nodes/gradient.tres" id="1_e3ief"]
+[ext_resource type="Script" path="res://scenes/gameScene/misc/lines_between_nodes/line.gd" id="2_k0lf7"]
+
+[node name="Line" type="Line2D"]
+points = PackedVector2Array(0, 0)
+width = 12.0
+texture = ExtResource("1_e3ief")
+texture_mode = 2
+script = ExtResource("2_k0lf7")

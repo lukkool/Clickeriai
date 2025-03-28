@@ -43,18 +43,13 @@ func draw_lines():
 		for left_node:Control in nodes:
 			if not left_node.enabled or not right_node.enabled: continue
 			
-			var line = Line2D.new()
+			var line = preload("res://scenes/gameScene/misc/lines_between_nodes/line.tscn").instantiate()
 			var right_center:Vector2 = right_node.get_global_rect().get_center()
 			var left_center:Vector2 = left_node.get_global_rect().get_center()
 			
 			line.global_position = left_center
-			line.add_point(Vector2(0, 0))
 			line.add_point(right_center - left_center)
-			
-			line.width = 16
-			line.texture = preload("res://scenes/gameScene/misc/lines_between_nodes/gradient.tres")
-			line.texture_mode = Line2D.LINE_TEXTURE_STRETCH
-			
+			line.connect_parent(left_node)
 			lines.append(line)
 			
 			get_tree().root.add_child(line)
