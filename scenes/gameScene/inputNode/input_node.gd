@@ -19,21 +19,22 @@ var multiplier_color = Color(1, 0, 0)
 func _process(delta: float) -> void:
 	if multiplier_active:
 		multiplier_timer -= delta
+		progress_bar.value = (multiplier_timer/multiplier_duration) * needed_threshold
 		if multiplier_timer <= 0:
 			multiplier_active = false
 			multiplier = 1
 			self.modulate = normal_color
 	
+		
 
 
 func _on_pressed() -> void:
 	if not multiplier_active:
 		click_streak += 1
 		progress_bar.value += 1
-	if(click_streak > needed_threshold):
+	if(click_streak >= needed_threshold):
 		multiplier *= 2
 		click_streak = 0
-		progress_bar.value = 0
 		multiplier_active = true
 		multiplier_timer = multiplier_duration
 		self.modulate = multiplier_color
