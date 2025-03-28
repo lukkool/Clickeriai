@@ -1,7 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dbnd03h46tvoy"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_1sm7f"]
-size = Vector2(64, 64)
+[ext_resource type="Texture2D" uid="uid://jfe4sramtbrr" path="res://scenes/gameScene/outputNode/output.svg" id="1_a7whx"]
 
 [node name="OutputNode" type="TextureRect"]
 anchors_preset = 8
@@ -15,4 +14,4 @@ offset_right = 350.0
 offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("PlaceholderTexture2D_1sm7f")
+texture = ExtResource("1_a7whx")
