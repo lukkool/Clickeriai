@@ -27,14 +27,11 @@ func save_game():
 	if file:
 		file.store_var(save_data)
 		file.close()
-		print("Game saved automatically!")
 	else:
-		print("Error: Could not save game.")
+		printerr("Error: Could not save game.")
 
 func load_game():
-	if not FileAccess.file_exists(save_path):
-		print("No save file found!")
-		return
+	if not FileAccess.file_exists(save_path): return
 	
 	var file = FileAccess.open(save_path, FileAccess.READ)
 	if file:
@@ -44,6 +41,5 @@ func load_game():
 		game_scene.score = save_data["score"]
 		game_scene.upgrades = save_data["upgrades"]
 		game_scene.update_upgrades()
-		print("Game loaded!")
 	else:
-		print("Error: Could not load game.")
+		printerr("Error: Could not load game.")

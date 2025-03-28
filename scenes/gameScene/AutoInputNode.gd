@@ -8,6 +8,7 @@ var enabled: bool = false:
 	set(val):
 		enabled = val
 		visible = enabled
+		$"..".enable()
 
 var delay = randf_range(0, interval)
 func _process(delta: float) -> void:

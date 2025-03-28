@@ -67,6 +67,7 @@ custom_minimum_size = Vector2(110, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 alignment = 1
+script = ExtResource("7_3clan")
 metadata/_edit_use_anchors_ = true
 
 [node name="AutoInputNode3" type="TextureRect" parent="LayerContainer/Layer0" groups=["nodes_layer0"]]

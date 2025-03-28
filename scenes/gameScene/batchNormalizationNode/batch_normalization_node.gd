@@ -2,7 +2,7 @@ extends TextureRect
 
 signal score_output(val:float)
 
-var bonus:int = 1
+var bonus:float = 1
 var enabled = false
 
 func enable():

@@ -3,6 +3,7 @@ extends Button
 signal score_output(val)
 var multiplier = 1
 var score_generated = 1
+var enabled = true
 
 var click_streak = 0
 var needed_threshold = 20
