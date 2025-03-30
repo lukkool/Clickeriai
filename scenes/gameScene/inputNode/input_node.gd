@@ -49,4 +49,4 @@ func _on_pressed() -> void:
 	score_generated = multiplier * 1
 	score_output.emit(score_generated)
 	
-	Sound.play_button_click(input_sound)
+	Sound.play_button_click(input_sound, -12)
