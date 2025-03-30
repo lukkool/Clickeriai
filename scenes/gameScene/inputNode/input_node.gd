@@ -12,6 +12,7 @@ var multiplier_duration: float = 10.0
 var multiplier_active = false
 var normal_color = Color(1, 1, 1)
 var multiplier_color = Color(1, 0, 0)
+var input_sound = preload("res://scenes/gameScene/inputNode/input_sound.ogg")
 
 @onready var progress_bar: ProgressBar = get_node("/root/GameScene/ProgressBar")
 
@@ -48,4 +49,4 @@ func _on_pressed() -> void:
 	score_generated = multiplier * 1
 	score_output.emit(score_generated)
 	
-	Sound.play_button_click()
+	Sound.play_button_click(input_sound)

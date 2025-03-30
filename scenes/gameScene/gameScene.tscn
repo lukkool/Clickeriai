@@ -357,7 +357,6 @@ text = "Save & exit game"
 stream = ExtResource("17_rls6l")
 autoplay = true
 max_polyphony = 2
-bus = &"Music"
 script = ExtResource("18_ewl8n")
 
 [connection signal="pressed" from="LayerContainer/Layer0/InputNode" to="LayerContainer/Layer0/InputNode" method="_on_pressed"]

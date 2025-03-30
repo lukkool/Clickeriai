@@ -14,4 +14,11 @@ func enable():
 		node.score_output.connect(add_and_send)
 
 func add_and_send(val):
+	lightup()
 	score_output.emit(val ** 2)
+	
+func _process(delta: float) -> void:
+	modulate = lerp(modulate, Color(1, 1, 1, 1), delta*10)
+
+func lightup():
+	modulate = Color(0.6, 0.6, 1)
