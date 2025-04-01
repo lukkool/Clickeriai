@@ -37,3 +37,10 @@ func calculate_and_emit():
 	
 	score_output.emit(result)
 	stored_values.clear()
+	lightup()
+
+func _process(delta: float) -> void:
+	modulate = lerp(modulate, Color(1, 1, 1, 1), delta*10)
+
+func lightup():
+	modulate = Color(0.3, 0.6, 1)

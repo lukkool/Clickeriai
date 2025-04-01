@@ -16,6 +16,11 @@ func _ready() -> void:
 	output_node.output_activated.connect(func(val): score += val)
 
 var upgrades = {
+	"ManualInputUpgrade1": false,
+	"ManualInputUpgrade2": false,
+	"ManualInputUpgrade3": false,
+	"ManualInputUpgrade4": false,
+	
 	"AutoInputNode1": false,
 	"AutoInputNode2": false,
 	"AutoInputNode3": false,
@@ -53,6 +58,12 @@ var upgrades = {
 }
 
 func update_upgrades():
+	
+	for i in range(4, 0, -1):
+		if upgrades["ManualInputUpgrade" + str(i)]: 
+			get_node("LayerContainer/Layer0/InputNode").set_upgrade_level(i);
+			break;
+	
 	for i in range(1, 5):
 		if upgrades["AutoInputNode" + str(i)]: get_node("LayerContainer/Layer0/AutoInputNode" + str(i)).enabled = true
 	

@@ -33,7 +33,7 @@ metadata/_edit_use_anchors_ = true
 visible = false
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.646701
+anchor_left = 0.62934
 anchor_top = 0.179012
 anchor_right = 0.962674
 anchor_bottom = 0.666667
@@ -58,18 +58,61 @@ anchor_bottom = 0.0859649
 text = "UPGRADES"
 metadata/_edit_use_anchors_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.0223642
-anchor_top = 0.0982456
-anchor_right = 0.984026
-anchor_bottom = 0.957895
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 43.0
+offset_right = 378.0
+offset_bottom = 304.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/ScrollContainer"]
+layout_mode = 2
 theme = SubResource("Theme_38oqk")
 metadata/_edit_use_anchors_ = true
 
-[node name="AutoNode1" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+[node name="ManualInputUpgrade1" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
+custom_minimum_size = Vector2(358, 31)
+layout_mode = 2
+text = "Manual Input Upgrade 1 | cost: 20"
+metadata/name = "ManualInputUpgrade1"
+metadata/tooltip_text = "Increases the base amount of score generated during each manual input by 3."
+metadata/SinglePurchace = true
+metadata/BasePrice = 20.0
+
+[node name="ManualInputUpgrade2" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
+custom_minimum_size = Vector2(358, 31)
+layout_mode = 2
+text = "Manual Input Upgrade 2 | cost: 20"
+metadata/name = "ManualInputUpgrade2"
+metadata/tooltip_text = "Increases the base amount of score generated during each manual input by 3."
+metadata/SinglePurchace = true
+metadata/BasePrice = 20.0
+
+[node name="ManualInputUpgrade3" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
+custom_minimum_size = Vector2(358, 31)
+layout_mode = 2
+text = "Manual Input Upgrade 3 | cost: 20"
+metadata/name = "ManualInputUpgrade3"
+metadata/tooltip_text = "Increases the base amount of score generated during each manual input by 3."
+metadata/SinglePurchace = true
+metadata/BasePrice = 20.0
+
+[node name="ManualInputUpgrade4" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
+custom_minimum_size = Vector2(358, 31)
+layout_mode = 2
+text = "Manual Input Upgrade 4 | cost: 20"
+metadata/name = "ManualInputUpgrade4"
+metadata/tooltip_text = "Increases the base amount of score generated during each manual input by 3."
+metadata/SinglePurchace = true
+metadata/BasePrice = 20.0
+
+[node name="AutoNode1" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
+custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Auto Input Node 1 | cost: 20"
@@ -78,8 +121,9 @@ metadata/tooltip_text = "Automatically generates income every second."
 metadata/SinglePurchace = true
 metadata/BasePrice = 20.0
 
-[node name="AutoNode2" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+[node name="AutoNode2" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
+custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Auto Input Node 2 | cost: 100"
@@ -88,8 +132,9 @@ metadata/tooltip_text = "Automatically generates income every second."
 metadata/SinglePurchace = true
 metadata/BasePrice = 100.0
 
-[node name="AutoNode3" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+[node name="AutoNode3" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
+custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Auto Input Node 3 | cost: 500"
@@ -98,8 +143,9 @@ metadata/tooltip_text = "Automatically generates income every second."
 metadata/SinglePurchace = true
 metadata/BasePrice = 500.0
 
-[node name="AutoNode4" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+[node name="AutoNode4" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
+custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Auto Input Node 4| cost: 10k"
@@ -119,6 +165,7 @@ metadata/tooltip_text = "Doubles the base income from all Auto Input Nodes."
 
 [node name="BatchNormalizationNode1" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
+custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Batch Normalization Layer | cost: 200"
@@ -127,8 +174,9 @@ metadata/tooltip_text = "Add a base value to all values incoming from the input 
 metadata/SinglePurchace = true
 metadata/BasePrice = 200.0
 
-[node name="BatchNormalizationNode2" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+[node name="BatchNormalizationNode2" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
+custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Batch Normalization Second Node | cost: 200"
@@ -137,8 +185,9 @@ metadata/tooltip_text = "Add a base value to all values incoming from the input 
 metadata/SinglePurchace = true
 metadata/BasePrice = 200.0
 
-[node name="BatchNormalizationNode3" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+[node name="BatchNormalizationNode3" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
+custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Batch Normalization Third Node | cost: 200"
@@ -147,8 +196,9 @@ metadata/tooltip_text = "Add a base value to all values incoming from the input 
 metadata/SinglePurchace = true
 metadata/BasePrice = 200.0
 
-[node name="BatchNormalizationNode4" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+[node name="BatchNormalizationNode4" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
+custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Batch Normalization Fourth Node | cost: 200"
@@ -157,8 +207,9 @@ metadata/tooltip_text = "Add a base value to all values incoming from the input 
 metadata/SinglePurchace = true
 metadata/BasePrice = 200.0
 
-[node name="BatchNormalizationNode5" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+[node name="BatchNormalizationNode5" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
+custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Batch Normalization Fifth Node | cost: 200"
@@ -167,8 +218,9 @@ metadata/tooltip_text = "Add a base value to all values incoming from the input 
 metadata/SinglePurchace = true
 metadata/BasePrice = 200.0
 
-[node name="BatchNormalizationNode6" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+[node name="BatchNormalizationNode6" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
+custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Batch Normalization Sixth Node | cost: 200"
@@ -177,8 +229,9 @@ metadata/tooltip_text = "Add a base value to all values incoming from the input 
 metadata/SinglePurchace = true
 metadata/BasePrice = 200.0
 
-[node name="DenseNode1" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+[node name="DenseNode1" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
+custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Dense Layer | cost: 300"
@@ -187,8 +240,9 @@ metadata/SinglePurchace = true
 metadata/BasePrice = 300.0
 metadata/tooltip_text = "Each node saves a value coming from the left layer. When all nodes are filled, they are multiplied together."
 
-[node name="DenseNode2" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+[node name="DenseNode2" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
+custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Dense Second Node | cost: 300"
@@ -197,8 +251,9 @@ metadata/SinglePurchace = true
 metadata/BasePrice = 300.0
 metadata/tooltip_text = "Each node saves a value coming from the left layer. When all nodes are filled, they are multiplied together."
 
-[node name="DenseNode3" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+[node name="DenseNode3" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
+custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Dense Third Node | cost: 300"
@@ -207,8 +262,9 @@ metadata/SinglePurchace = true
 metadata/BasePrice = 300.0
 metadata/tooltip_text = "Each node saves a value coming from the left layer. When all nodes are filled, they are multiplied together."
 
-[node name="DenseNode4" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+[node name="DenseNode4" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
+custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Dense Fourth Node | cost: 300"
@@ -217,8 +273,9 @@ metadata/SinglePurchace = true
 metadata/BasePrice = 300.0
 metadata/tooltip_text = "Each node saves a value coming from the left layer. When all nodes are filled, they are multiplied together."
 
-[node name="DenseNode5" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+[node name="DenseNode5" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
+custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Dense Fifth Node | cost: 300"
@@ -227,8 +284,9 @@ metadata/SinglePurchace = true
 metadata/BasePrice = 300.0
 metadata/tooltip_text = "Each node saves a value coming from the left layer. When all nodes are filled, they are multiplied together."
 
-[node name="DenseNode6" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+[node name="DenseNode6" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
+custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Dense Sixth Node | cost: 300"
@@ -237,8 +295,9 @@ metadata/SinglePurchace = true
 metadata/BasePrice = 300.0
 metadata/tooltip_text = "Each node saves a value coming from the left layer. When all nodes are filled, they are multiplied together."
 
-[node name="ConvolutionalNode1" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+[node name="ConvolutionalNode1" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
+custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Convolutional Layer | cost: 500"
@@ -247,8 +306,9 @@ metadata/tooltip_text = "Raise bits coming from left nodes to the power of 2"
 metadata/SinglePurchace = true
 metadata/BasePrice = 500.0
 
-[node name="ConvolutionalNode2" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+[node name="ConvolutionalNode2" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
+custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Convolutional Second Node | cost: 500"
@@ -257,8 +317,9 @@ metadata/tooltip_text = "Raise bits coming from left nodes to the power of 2"
 metadata/SinglePurchace = true
 metadata/BasePrice = 500.0
 
-[node name="ConvolutionalNode3" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+[node name="ConvolutionalNode3" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
+custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Convolutional Third Node | cost: 500"
@@ -267,8 +328,9 @@ metadata/tooltip_text = "Raise bits coming from left nodes to the power of 2"
 metadata/SinglePurchace = true
 metadata/BasePrice = 500.0
 
-[node name="ConvolutionalNode4" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+[node name="ConvolutionalNode4" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
+custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Convolutional Fourth Node | cost: 500"
@@ -277,8 +339,9 @@ metadata/tooltip_text = "Raise bits coming from left nodes to the power of 2"
 metadata/SinglePurchace = true
 metadata/BasePrice = 500.0
 
-[node name="ConvolutionalNode5" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+[node name="ConvolutionalNode5" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
+custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Convolutional Fifth Node | cost: 500"
@@ -287,8 +350,9 @@ metadata/tooltip_text = "Raise bits coming from left nodes to the power of 2"
 metadata/SinglePurchace = true
 metadata/BasePrice = 500.0
 
-[node name="ConvolutionalNode6" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+[node name="ConvolutionalNode6" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
+custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Convolutional Sixth Node | cost: 500"
@@ -297,8 +361,9 @@ metadata/tooltip_text = "Raise bits coming from left nodes to the power of 2"
 metadata/SinglePurchace = true
 metadata/BasePrice = 500.0
 
-[node name="RecurrentNode1" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+[node name="RecurrentNode1" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
+custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Recurrent Layer | cost: 1000"
@@ -307,8 +372,9 @@ metadata/tooltip_text = "Emit values from left nodes"
 metadata/BasePrice = 50
 metadata/SinglePurchace = true
 
-[node name="RecurrentNode2" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+[node name="RecurrentNode2" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
+custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Recurrent Layer | cost: 1000"
@@ -317,8 +383,9 @@ metadata/tooltip_text = "Emit values from left nodes"
 metadata/BasePrice = 50
 metadata/SinglePurchace = true
 
-[node name="RecurrentNode3" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+[node name="RecurrentNode3" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
+custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Recurrent Layer | cost: 1000"
@@ -327,8 +394,9 @@ metadata/tooltip_text = "Emit values from left nodes"
 metadata/BasePrice = 50
 metadata/SinglePurchace = true
 
-[node name="RecurrentNode4" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+[node name="RecurrentNode4" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
+custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Recurrent Layer | cost: 1000"
@@ -337,8 +405,9 @@ metadata/tooltip_text = "Emit values from left nodes"
 metadata/BasePrice = 50
 metadata/SinglePurchace = true
 
-[node name="RecurrentNode5" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+[node name="RecurrentNode5" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
+custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Recurrent Layer | cost: 1000"
@@ -347,8 +416,9 @@ metadata/tooltip_text = "Emit values from left nodes"
 metadata/BasePrice = 50
 metadata/SinglePurchace = true
 
-[node name="RecurrentNode6" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+[node name="RecurrentNode6" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
+custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Recurrent Layer | cost: 1000"

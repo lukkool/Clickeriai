@@ -3,6 +3,7 @@ extends Button
 signal score_output(val)
 var multiplier = 1
 var score_generated = 1
+var score_per_click = 1
 var enabled = true
 
 var click_streak = 0
@@ -46,7 +47,10 @@ func _on_pressed() -> void:
 		multiplier_timer = multiplier_duration
 		self.modulate = multiplier_color
 		
-	score_generated = multiplier * 1
+	score_generated = multiplier * score_per_click
 	score_output.emit(score_generated)
 	
 	Sound.play_button_click(input_sound, -12)
+	
+func set_upgrade_level(level: int):
+	score_per_click += 3 * level
