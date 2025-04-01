@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/gameScene/upgrades/upgradeMenu.gd" id="1_5hc3g"]
 [ext_resource type="Script" path="res://scenes/gameScene/upgrades/upgradeTooltip.gd" id="2_b4xg1"]
-[ext_resource type="Theme" uid="uid://38q5to2imxny" path="res://Button_theme.tres" id="2_vhmeu"]
+[ext_resource type="Theme" uid="uid://1vh4w00qv6is" path="res://Button_theme.tres" id="2_vhmeu"]
 
 [sub_resource type="Theme" id="Theme_lc8ih"]
 
@@ -154,25 +154,16 @@ metadata/tooltip_text = "Automatically generates income every second."
 metadata/SinglePurchace = true
 metadata/BasePrice = 10000.0
 
-[node name="AutoInputIncomeDouble" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
-layout_mode = 2
-theme = ExtResource("2_vhmeu")
-text = "Double auto input node income | cost: 100"
-metadata/name = "AutoInputIncomeDouble"
-metadata/BasePrice = 100.0
-metadata/SinglePurchace = true
-metadata/tooltip_text = "Doubles the base income from all Auto Input Nodes."
-
-[node name="BatchNormalizationNode1" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+[node name="BatchNormalizationNode1" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
 custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
-text = "Batch Normalization Layer | cost: 200"
+text = "Batch Normalization Layer | cost: 100"
 metadata/name = "BatchNormalizationNode1"
 metadata/tooltip_text = "Add a base value to all values incoming from the input nodes"
 metadata/SinglePurchace = true
-metadata/BasePrice = 200.0
+metadata/BasePrice = 100.0
 
 [node name="BatchNormalizationNode2" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
@@ -426,6 +417,15 @@ metadata/name = "RecurrentNode6"
 metadata/tooltip_text = "Emit values from left nodes"
 metadata/BasePrice = 50
 metadata/SinglePurchace = true
+
+[node name="Panel_VBoxContainer#AutoInputIncomeDouble" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
+layout_mode = 2
+theme = ExtResource("2_vhmeu")
+text = "Double auto input node income | cost: 100"
+metadata/name = "AutoInputIncomeDouble"
+metadata/BasePrice = 100.0
+metadata/SinglePurchace = true
+metadata/tooltip_text = "Doubles the base income from all Auto Input Nodes."
 
 [node name="Tooltip" type="Control" parent="."]
 visible = false
