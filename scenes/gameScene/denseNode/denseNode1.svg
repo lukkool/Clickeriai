@@ -2,43 +2,16 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="1000"
-   height="1000"
-   viewBox="0 0 264.58332 264.58334"
+   width="64"
+   height="64"
+   viewBox="0 0 16.933332 16.933334"
    version="1.1"
    id="svg5"
-   sodipodi:docname="manual_input.svg"
-   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
-   inkscape:export-filename="manual_input.png"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <sodipodi:namedview
-     id="namedview1"
-     pagecolor="#ffffff"
-     bordercolor="#000000"
-     borderopacity="0.25"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     showgrid="false"
-     inkscape:zoom="0.54659354"
-     inkscape:cx="142.70202"
-     inkscape:cy="613.80162"
-     inkscape:window-width="1920"
-     inkscape:window-height="1013"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="layer1-4"
-     inkscape:export-bgcolor="#ffffff00" />
   <defs
      id="defs2" />
   <metadata
@@ -67,16 +40,14 @@
     </rdf:RDF>
   </metadata>
   <circle
-     style="fill:#b5c9ee;fill-opacity:1;stroke:#000000;stroke-width:13.99999982;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:#b5c9ee;fill-opacity:1;stroke:#000000;stroke-width:0.933056;stroke-dasharray:none;stroke-opacity:1"
      id="path1"
-     cx="132.14801"
-     cy="132.14801"
-     r="119.99786" />
+     cx="8.5315342"
+     cy="8.5012808"
+     r="7.9974756" />
   <g
-     inkscape:groupmode="layer"
      id="layer1-4-7"
-     inkscape:label="shadow row"
-     transform="matrix(1.713761,0,0,1.5762882,-104.97964,-98.490232)"
+     transform="matrix(0.11421671,0,0,0.10505459,-7.2722688,-6.8700242)"
      style="fill:#000000;fill-opacity:0.5">
     <path
        id="path98-0-7-8"
@@ -84,10 +55,8 @@
        d="m 126.93946,172.80748 a 13.123399,14.267929 0 0 1 -13.1234,14.26793 13.123399,14.267929 0 0 1 -13.1234,-14.26793 13.123399,14.267929 0 0 1 13.1234,-14.26793 13.123399,14.267929 0 0 1 13.1234,14.26793 z m 51.87899,0.11072 a 13.123399,14.267929 0 0 1 -13.1234,14.26793 13.123399,14.267929 0 0 1 -13.1234,-14.26793 13.123399,14.267929 0 0 1 13.1234,-14.26793 13.123399,14.267929 0 0 1 13.1234,14.26793 z m -0.32909,-57.49065 a 13.123399,14.267929 0 0 1 -13.1234,14.26793 13.123399,14.267929 0 0 1 -13.1234,-14.26793 13.123399,14.267929 0 0 1 13.1234,-14.26793 13.123399,14.267929 0 0 1 13.1234,14.26793 z m -52.69775,1.05381 a 13.123399,14.267929 0 0 1 -13.1234,14.26793 13.123399,14.267929 0 0 1 -13.1234,-14.26793 13.123399,14.267929 0 0 1 13.1234,-14.26793 13.123399,14.267929 0 0 1 13.1234,14.26793 z m -4.83824,1.15806 45.48541,49.45233 c 1.80822,1.96592 1.80822,5.13128 0,7.0972 -1.80822,1.96593 -4.71967,1.96592 -6.52789,0 l -45.48541,-49.45233 c -1.80823,-1.96593 -1.80822,-5.13128 0,-7.0972 1.80822,-1.96593 4.71966,-1.96593 6.52789,0 z m -6.99546,48.76641 45.48541,-49.45233 c 1.80823,-1.96593 4.71966,-1.96593 6.52789,0 1.80822,1.96592 1.80823,5.13128 0,7.0972 l -45.48541,49.45233 c -1.80822,1.96593 -4.71967,1.96592 -6.52789,0 -1.80822,-1.96593 -1.80822,-5.13127 0,-7.0972 z" />
   </g>
   <g
-     inkscape:groupmode="layer"
      id="layer1-4"
-     inkscape:label="first row"
-     transform="matrix(1.713761,0,0,1.5762882,-109.06299,-93.447813)"
+     transform="matrix(0.11421671,0,0,0.10505459,-7.5444111,-6.5339629)"
      style="fill:#32383e;fill-opacity:1">
     <rect
        style="fill:#000000;fill-opacity:1;stroke-width:0.101062"
