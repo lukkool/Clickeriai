@@ -17,5 +17,12 @@ func enable():
 
 func process_value(val: float):
 	if randf() < emit_chance:
+		lightup()
 		score_output.emit(val)
 	score_output.emit(val)
+	
+func _process(delta: float) -> void:
+	modulate = lerp(modulate, Color(1, 1, 1, 1), delta*10)
+
+func lightup():
+	modulate = Color(2, 0.4, 1)
