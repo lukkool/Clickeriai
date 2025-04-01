@@ -67,20 +67,20 @@ func update_upgrade_buttons():
 			if(i == 4):
 				break;
 			else:
-				get_node("Panel/VBoxContainer/AutoNode" + str(i + 1)).visible = true
+				get_node("Panel/ScrollContainer/VBoxContainer/AutoNode" + str(i + 1)).visible = true
 				break;
 		if (i == 1):
-			get_node("Panel/VBoxContainer/AutoNode" + str(i)).visible = true
+			get_node("Panel/ScrollContainer/VBoxContainer/AutoNode" + str(i)).visible = true
 	for i in range(6, 0, -1):
 		if game_scene.upgrades["BatchNormalizationNode" + str(i)]:
 			unlockDense = true;
 			if(i == 6):
 				break;
 			else:
-				get_node("Panel/VBoxContainer/BatchNormalizationNode" + str(i + 1)).visible = true
+				get_node("Panel/ScrollContainer/VBoxContainer/BatchNormalizationNode" + str(i + 1)).visible = true
 				break;
 		if (i == 1):
-			get_node("Panel/VBoxContainer/BatchNormalizationNode" + str(i)).visible = true
+			get_node("Panel/ScrollContainer/VBoxContainer/BatchNormalizationNode" + str(i)).visible = true
 	if unlockDense:
 		for i in range(6, 0, -1):
 			if game_scene.upgrades["DenseNode" + str(i)]:
@@ -88,10 +88,10 @@ func update_upgrade_buttons():
 				if(i == 6):
 					break;
 				else:
-					get_node("Panel/VBoxContainer/DenseNode" + str(i + 1)).visible = true
+					get_node("Panel/ScrollContainer/VBoxContainer/DenseNode" + str(i + 1)).visible = true
 					break;
 			if (i == 1):
-				get_node("Panel/VBoxContainer/DenseNode" + str(i)).visible = true
+				get_node("Panel/ScrollContainer/VBoxContainer/DenseNode" + str(i)).visible = true
 			
 	if unlockConvolutional:
 		for i in range(6, 0, -1):
@@ -100,10 +100,10 @@ func update_upgrade_buttons():
 				if(i == 6):
 					break;
 				else:
-					get_node("Panel/VBoxContainer/ConvolutionalNode" + str(i + 1)).visible = true
+					get_node("Panel/ScrollContainer/VBoxContainer/ConvolutionalNode" + str(i + 1)).visible = true
 					break;
 			if (i == 1):
-				get_node("Panel/VBoxContainer/ConvolutionalNode" + str(i)).visible = true
+				get_node("Panel/ScrollContainer/VBoxContainer/ConvolutionalNode" + str(i)).visible = true
 				
 	if unlockReccurent:
 		for i in range(6, 0, -1):
@@ -111,10 +111,10 @@ func update_upgrade_buttons():
 				if(i == 6):
 					break;
 				else:
-					get_node("Panel/VBoxContainer/RecurrentNode" + str(i + 1)).visible = true
+					get_node("Panel/ScrollContainer/VBoxContainer/RecurrentNode" + str(i + 1)).visible = true
 					break;
 			if (i == 1):
-				get_node("Panel/VBoxContainer/RecurrentNode" + str(i)).visible = true
+				get_node("Panel/ScrollContainer/VBoxContainer/RecurrentNode" + str(i)).visible = true
 		
 func hide_tooltip():
 	tooltip.hide_tooltip()
