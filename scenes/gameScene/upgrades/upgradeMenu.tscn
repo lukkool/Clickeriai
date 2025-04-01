@@ -67,6 +67,46 @@ layout_mode = 2
 theme = SubResource("Theme_38oqk")
 metadata/_edit_use_anchors_ = true
 
+[node name="ManualInputUpgrade1" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
+custom_minimum_size = Vector2(358, 31)
+layout_mode = 2
+text = "Manual Input Upgrade 1 | cost: 20"
+metadata/name = "ManualInputUpgrade1"
+metadata/tooltip_text = "Increases the base amount of score generated during each manual input by 3."
+metadata/SinglePurchace = true
+metadata/BasePrice = 20.0
+
+[node name="ManualInputUpgrade2" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
+custom_minimum_size = Vector2(358, 31)
+layout_mode = 2
+text = "Manual Input Upgrade 2 | cost: 20"
+metadata/name = "ManualInputUpgrade2"
+metadata/tooltip_text = "Increases the base amount of score generated during each manual input by 3."
+metadata/SinglePurchace = true
+metadata/BasePrice = 20.0
+
+[node name="ManualInputUpgrade3" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
+custom_minimum_size = Vector2(358, 31)
+layout_mode = 2
+text = "Manual Input Upgrade 3 | cost: 20"
+metadata/name = "ManualInputUpgrade3"
+metadata/tooltip_text = "Increases the base amount of score generated during each manual input by 3."
+metadata/SinglePurchace = true
+metadata/BasePrice = 20.0
+
+[node name="ManualInputUpgrade4" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
+custom_minimum_size = Vector2(358, 31)
+layout_mode = 2
+text = "Manual Input Upgrade 4 | cost: 20"
+metadata/name = "ManualInputUpgrade4"
+metadata/tooltip_text = "Increases the base amount of score generated during each manual input by 3."
+metadata/SinglePurchace = true
+metadata/BasePrice = 20.0
+
 [node name="AutoNode1" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
 custom_minimum_size = Vector2(358, 31)

@@ -63,6 +63,16 @@ func update_upgrade_buttons():
 	var unlockReccurent:bool = false;
 	
 	for i in range(4, 0, -1):
+		if game_scene.upgrades["ManualInputUpgrade" + str(i)]:
+			if(i == 4):
+				break;
+			else:
+				get_node("Panel/ScrollContainer/VBoxContainer/ManualInputUpgrade" + str(i + 1)).visible = true
+				break;
+		if (i == 1):
+			get_node("Panel/ScrollContainer/VBoxContainer/ManualInputUpgrade" + str(i)).visible = true
+	
+	for i in range(4, 0, -1):
 		if game_scene.upgrades["AutoInputNode" + str(i)]:
 			if(i == 4):
 				break;
