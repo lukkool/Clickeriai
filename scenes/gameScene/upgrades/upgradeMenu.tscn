@@ -117,6 +117,15 @@ metadata/BasePrice = 100.0
 metadata/SinglePurchace = true
 metadata/tooltip_text = "Doubles the base income from all Auto Input Nodes."
 
+[node name="StreakMultiplier" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+layout_mode = 2
+theme = ExtResource("2_vhmeu")
+text = "Upgrade streak multiplier to 4x | Cost: 400"
+metadata/name = "ClickMultiplier4x"
+metadata/SinglePurchace = true
+metadata/BasePrice = 400.0
+metadata/tooltip_text = "Upgrades the click streak multiplier from 2x to 4x."
+
 [node name="BatchNormalizationNode1" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
 layout_mode = 2
