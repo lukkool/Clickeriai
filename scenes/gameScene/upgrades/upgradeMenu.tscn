@@ -108,6 +108,15 @@ metadata/tooltip_text = "Automatically generates income every second."
 metadata/SinglePurchace = true
 metadata/BasePrice = 10000.0
 
+[node name="AutoInputIncomeDouble" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
+layout_mode = 2
+theme = ExtResource("2_vhmeu")
+text = "Double auto input node income | cost: 100"
+metadata/name = "AutoInputIncomeDouble"
+metadata/BasePrice = 100.0
+metadata/SinglePurchace = true
+metadata/tooltip_text = "Doubles the base income from all Auto Input Nodes."
+
 [node name="BatchNormalizationNode1" type="Button" parent="Panel/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
 layout_mode = 2

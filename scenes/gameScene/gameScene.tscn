@@ -81,7 +81,6 @@ size_flags_vertical = 5
 texture = SubResource("PlaceholderTexture2D_vbi24")
 stretch_mode = 4
 script = ExtResource("9_30xkf")
-income_amount = 3
 
 [node name="AutoInputNode1" type="TextureRect" parent="LayerContainer/Layer0" groups=["nodes_layer0"]]
 visible = false
@@ -106,7 +105,6 @@ size_flags_vertical = 5
 texture = SubResource("PlaceholderTexture2D_vbi24")
 stretch_mode = 4
 script = ExtResource("9_30xkf")
-income_amount = 2
 
 [node name="AutoInputNode4" type="TextureRect" parent="LayerContainer/Layer0" groups=["nodes_layer0"]]
 visible = false
@@ -116,7 +114,6 @@ size_flags_vertical = 5
 texture = SubResource("PlaceholderTexture2D_vbi24")
 stretch_mode = 4
 script = ExtResource("9_30xkf")
-income_amount = 4
 
 [node name="Layer1" type="VBoxContainer" parent="LayerContainer"]
 visible = false

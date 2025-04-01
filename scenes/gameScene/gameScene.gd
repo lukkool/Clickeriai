@@ -21,6 +21,8 @@ var upgrades = {
 	"AutoInputNode3": false,
 	"AutoInputNode4": false,
 	
+	"AutoInputIncomeDouble": false,
+	
 	"BatchNormalizationNode1": false,
 	"BatchNormalizationNode2": false,
 	"BatchNormalizationNode3": false,
@@ -65,6 +67,16 @@ func update_upgrades():
 	
 	for i in range(1, 7):
 		if upgrades["RecurrentNode" + str(i)]: get_node("LayerContainer/Layer4/RecurrentNode" + str(i)).enable()
+		
+	var income_multiplier = 1
+	if upgrades["AutoInputIncomeDouble"]:
+		income_multiplier = 2
+
+	var auto_input_parent = get_node_or_null("LayerContainer/Layer0")
+	if auto_input_parent:
+		for node in auto_input_parent.get_children():
+			if node.get_script() == preload("res://scenes/gameScene/AutoInputNode.gd"):
+				node.apply_income_multiplier(income_multiplier)
 	#ATTENTION - Add later implemented upgrades
 
 
