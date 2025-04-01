@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bj5e5ooygsyw7"]
+[gd_scene load_steps=21 format=3 uid="uid://bj5e5ooygsyw7"]
 
 [ext_resource type="Script" path="res://scenes/gameScene/gameScene.gd" id="1_88gci"]
 [ext_resource type="PackedScene" uid="uid://lvqht05hsf30" path="res://scenes/gameScene/inputNode/InputNode.tscn" id="1_w6okk"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://cst3l0mkteou6" path="res://scenes/gameScene/recurrentNode/recurrentNode.svg" id="14_62onh"]
 [ext_resource type="Script" path="res://scenes/gameScene/recurrentNode/recurrent_node.gd" id="14_n0jdy"]
 [ext_resource type="AudioStream" uid="uid://cagqjep1njwv" path="res://scenes/gameScene/misc/music/ItsRainingNeurons.wav" id="17_rls6l"]
+[ext_resource type="Theme" uid="uid://38q5to2imxny" path="res://Button_theme.tres" id="17_uwubf"]
 [ext_resource type="Script" path="res://scenes/gameScene/misc/music/background_music_player.gd" id="18_ewl8n"]
 [ext_resource type="PackedScene" uid="uid://dthf070fxj3i5" path="res://scenes/gameScene/PauseMenu.tscn" id="19_60wk5"]
 
@@ -324,6 +325,7 @@ offset_right = 133.5
 offset_bottom = -171.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("17_uwubf")
 text = "SAVE"
 
 [node name="SaveExit2" type="Button" parent="PauseMenu"]
@@ -337,6 +339,7 @@ offset_left = -146.5
 offset_top = -151.0
 offset_right = 130.782
 offset_bottom = -51.0
+theme = ExtResource("17_uwubf")
 text = "Save & exit to main menu
 "
 
@@ -351,6 +354,7 @@ offset_left = -146.5
 offset_top = -31.0
 offset_right = 129.876
 offset_bottom = 69.0
+theme = ExtResource("17_uwubf")
 text = "Save & exit game"
 
 [node name="BackgroundMusicPlayer" type="AudioStreamPlayer" parent="."]

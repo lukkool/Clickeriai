@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://11mllv7cxnte"]
+[gd_scene load_steps=4 format=3 uid="uid://11mllv7cxnte"]
 
 [ext_resource type="Script" path="res://scenes/mainMenu/MainMenu.gd" id="1_pyhf2"]
+[ext_resource type="Theme" uid="uid://38q5to2imxny" path="res://Button_theme.tres" id="2_uwodh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_27h22"]
 font_size = 116
@@ -20,6 +21,7 @@ anchor_left = 0.0173611
 anchor_top = 0.322531
 anchor_right = 0.289931
 anchor_bottom = 0.436728
+theme = ExtResource("2_uwodh")
 text = "CONTINUE"
 metadata/_edit_use_anchors_ = true
 
@@ -33,6 +35,7 @@ anchor_bottom = 0.569444
 offset_bottom = 3.05176e-05
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_uwodh")
 text = "START"
 metadata/_edit_use_anchors_ = true
 
@@ -45,6 +48,7 @@ anchor_right = 0.289931
 anchor_bottom = 0.70216
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_uwodh")
 text = "LEADERBOARD"
 metadata/_edit_use_anchors_ = true
 
@@ -58,6 +62,7 @@ anchor_bottom = 0.834877
 offset_top = 3.05176e-05
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_uwodh")
 text = "SETTINGS"
 metadata/_edit_use_anchors_ = true
 
@@ -70,6 +75,7 @@ anchor_right = 0.289931
 anchor_bottom = 0.969136
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_uwodh")
 text = "EXIT"
 metadata/_edit_use_anchors_ = true
 
