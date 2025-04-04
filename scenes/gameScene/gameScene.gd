@@ -2,7 +2,7 @@ extends Control
 
 @onready var score_label:Label = $CurrencyLabel
 @onready var output_node:Control = $%OutputNode
-@onready var input_node = $%InputNode
+
 var score:float:
 	set(val):
 		score = val
@@ -50,8 +50,6 @@ var upgrades = {
 	"RecurrentNode4": false,
 	"RecurrentNode5": false,
 	"RecurrentNode6": false,
-	
-	"ClickMultiplier4x": false,
 }
 
 func update_upgrades():
@@ -79,15 +77,6 @@ func update_upgrades():
 		for node in auto_input_parent.get_children():
 			if node.get_script() == preload("res://scenes/gameScene/AutoInputNode.gd"):
 				node.apply_income_multiplier(income_multiplier)
-				
-	if input_node:
-		var target_mult = 2
-		if upgrades.get("ClickMultiplier4x", false):
-			target_mult = 4
-		if input_node.has_method("set_target_streak_multiplier"):
-			input_node.set_target_streak_multiplier(target_mult)
-		else:
-			push_warning("InputNode does not have function 'set_target_streak_multiplier'.")
 	#ATTENTION - Add later implemented upgrades
 
 
