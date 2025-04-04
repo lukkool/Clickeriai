@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwdq7qk3yj6a0"
-path="res://.godot/imported/denseNode.png-a340ad56084f91bbed754c1b01700a03.ctex"
+uid="uid://cyp4hp8tln26m"
+path="res://.godot/imported/denseNode1.svg-f6f480bad450990ff16b4de510074a08.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/gameScene/denseNode/denseNode.png"
-dest_files=["res://.godot/imported/denseNode.png-a340ad56084f91bbed754c1b01700a03.ctex"]
+source_file="res://scenes/gameScene/denseNode/denseNode1.svg"
+dest_files=["res://.godot/imported/denseNode1.svg-f6f480bad450990ff16b4de510074a08.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false
