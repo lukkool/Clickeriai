@@ -19,8 +19,3 @@ func _on_value_changed(value: float) -> void:
 		bus_index,
 		linear_to_db(value)
 	)
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
