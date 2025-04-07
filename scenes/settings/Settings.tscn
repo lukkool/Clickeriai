@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://clkiltgskp8vu"]
+[gd_scene load_steps=4 format=3 uid="uid://clkiltgskp8vu"]
 
 [ext_resource type="Script" path="res://scenes/settings/Settings.gd" id="1_n7qdk"]
+[ext_resource type="Script" path="res://scenes/settings/volume_slider.gd" id="2_xe02o"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_dses6"]
 font_size = 111
@@ -40,5 +41,31 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "<"
 metadata/_edit_use_anchors_ = true
+
+[node name="VolumeSettings" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 250.0
+offset_right = 308.0
+offset_bottom = 337.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VolumeSettings"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="VolumeSettings/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 25
+text = "Master Volume"
+horizontal_alignment = 1
+
+[node name="volumeSlider" type="HSlider" parent="VolumeSettings/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.001
+script = ExtResource("2_xe02o")
+bus_name = "Master"
 
 [connection signal="pressed" from="ButtonBack" to="." method="_on_button_back_pressed"]

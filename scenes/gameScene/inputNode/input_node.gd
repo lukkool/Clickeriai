@@ -29,7 +29,8 @@ func _process(delta: float) -> void:
 			
 	if not multiplier_active:
 		progress_bar.value -= 1 * delta
-		click_streak -= 1 * delta
+		if click_streak > 0:
+			click_streak -= 1 * delta
 		
 		
 	
