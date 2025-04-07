@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://cst3l0mkteou6" path="res://scenes/gameScene/recurrentNode/recurrentNode.svg" id="14_62onh"]
 [ext_resource type="Script" path="res://scenes/gameScene/recurrentNode/recurrent_node.gd" id="14_n0jdy"]
 [ext_resource type="AudioStream" uid="uid://cagqjep1njwv" path="res://scenes/gameScene/misc/music/ItsRainingNeurons.wav" id="17_rls6l"]
-[ext_resource type="Theme" uid="uid://1vh4w00qv6is" path="res://Button_theme.tres" id="17_uwubf"]
+[ext_resource type="Theme" uid="uid://38q5to2imxny" path="res://Button_theme.tres" id="17_uwubf"]
 [ext_resource type="Script" path="res://scenes/gameScene/misc/music/background_music_player.gd" id="18_ewl8n"]
 [ext_resource type="PackedScene" uid="uid://dthf070fxj3i5" path="res://scenes/gameScene/PauseMenu.tscn" id="19_60wk5"]
 
