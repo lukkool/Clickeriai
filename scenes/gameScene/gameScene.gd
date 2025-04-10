@@ -86,7 +86,7 @@ func update_upgrades():
 	var auto_input_parent = get_node_or_null("LayerContainer/Layer0")
 	if auto_input_parent:
 		for node in auto_input_parent.get_children():
-			if node.get_script() == preload("res://scenes/gameScene/AutoInputNode.gd"):
+			if node.get_script() == preload("res://scenes/gameScene/nodes/autoInputNode/AutoInputNode.gd"):
 				node.apply_income_multiplier(income_multiplier)
 	#ATTENTION - Add later implemented upgrades
 
