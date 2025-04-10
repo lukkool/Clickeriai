@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dbnd03h46tvoy"]
 
-[ext_resource type="Texture2D" uid="uid://jfe4sramtbrr" path="res://scenes/gameScene/outputNode/output.svg" id="1_a7whx"]
+[ext_resource type="Texture2D" uid="uid://jfe4sramtbrr" path="res://scenes/gameScene/nodes/outputNode/output.svg" id="1_a7whx"]
 
 [node name="OutputNode" type="TextureRect"]
 anchors_preset = 8

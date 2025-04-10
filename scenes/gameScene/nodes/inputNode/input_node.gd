@@ -13,7 +13,7 @@ var multiplier_duration: float = 10.0
 var multiplier_active = false
 var normal_color = Color(1, 1, 1)
 var multiplier_color = Color(1, 0, 0)
-var input_sound = preload("res://scenes/gameScene/inputNode/input_sound.ogg")
+var input_sound = preload("res://scenes/gameScene/nodes/inputNode/input_sound.ogg")
 
 @onready var progress_bar: ProgressBar = get_node("/root/GameScene/ProgressBar")
 

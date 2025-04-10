@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyp4hp8tln26m"
-path="res://.godot/imported/denseNode1.svg-f6f480bad450990ff16b4de510074a08.ctex"
+uid="uid://im8bvd1gwwh7"
+path="res://.godot/imported/manual_input.svg-fef86c421057f746f917cc09c54be162.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/gameScene/denseNode/denseNode1.svg"
-dest_files=["res://.godot/imported/denseNode1.svg-f6f480bad450990ff16b4de510074a08.ctex"]
+source_file="res://scenes/gameScene/nodes/inputNode/manual_input.svg"
+dest_files=["res://.godot/imported/manual_input.svg-fef86c421057f746f917cc09c54be162.ctex"]
 
 [params]
 

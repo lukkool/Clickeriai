@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jfe4sramtbrr"
-path="res://.godot/imported/output.svg-d6216142e735fdea9d1464dc51e6a1fe.ctex"
+uid="uid://cst3l0mkteou6"
+path="res://.godot/imported/recurrentNode.svg-317317efa8f8ffa72d890b3d4ba24395.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/gameScene/outputNode/output.svg"
-dest_files=["res://.godot/imported/output.svg-d6216142e735fdea9d1464dc51e6a1fe.ctex"]
+source_file="res://scenes/gameScene/nodes/recurrentNode/recurrentNode.svg"
+dest_files=["res://.godot/imported/recurrentNode.svg-317317efa8f8ffa72d890b3d4ba24395.ctex"]
 
 [params]
 

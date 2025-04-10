@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://im8bvd1gwwh7"
-path="res://.godot/imported/manual_input.svg-990d12441359f838ca21518cc8052eb7.ctex"
+uid="uid://d802573403kr"
+path="res://.godot/imported/batch_norm.svg-7508ba0738b1f0271b3348b29eb3679d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/gameScene/inputNode/manual_input.svg"
-dest_files=["res://.godot/imported/manual_input.svg-990d12441359f838ca21518cc8052eb7.ctex"]
+source_file="res://scenes/gameScene/nodes/batchNormalizationNode/batch_norm.svg"
+dest_files=["res://.godot/imported/batch_norm.svg-7508ba0738b1f0271b3348b29eb3679d.ctex"]
 
 [params]
 
