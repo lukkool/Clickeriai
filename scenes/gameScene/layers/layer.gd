@@ -52,5 +52,5 @@ func draw_lines():
 			line.connect_parent(left_node)
 			lines.append(line)
 			
-			get_tree().root.add_child(line)
-			get_tree().root.move_child(line, 0)
+			get_tree().root.get_child(-1).add_child(line)
+			get_tree().root.get_child(-1).move_child(line, 1)

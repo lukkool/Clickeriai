@@ -7,7 +7,6 @@ var nodes = [self]
 var enabled = true
 
 func _ready() -> void:
-	
 	for node in get_tree().get_nodes_in_group("nodes_layer0"):
 		node.score_output.connect(on_signal_get)
 
