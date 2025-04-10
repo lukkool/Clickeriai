@@ -31,7 +31,6 @@ func reconnect_last_layer(current, next):
 
 func update(): pass
 
-
 func show_number(value: int):
 	
 	var label = Label.new()

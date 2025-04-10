@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyp4hp8tln26m"
-path="res://.godot/imported/denseNode1.svg-a4e7a0af7ac5f2a036c539ccb6056872.ctex"
+path="res://.godot/imported/denseNode.svg-68e120d2d3fc77f6e105d402f27b96cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/gameScene/nodes/denseNode/denseNode1.svg"
-dest_files=["res://.godot/imported/denseNode1.svg-a4e7a0af7ac5f2a036c539ccb6056872.ctex"]
+source_file="res://scenes/gameScene/nodes/denseNode/denseNode.svg"
+dest_files=["res://.godot/imported/denseNode.svg-68e120d2d3fc77f6e105d402f27b96cd.ctex"]
 
 [params]
 
