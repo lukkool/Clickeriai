@@ -13,7 +13,7 @@ func enable():
 	$"..".enable()
 	
 	for node in get_tree().get_nodes_in_group("nodes_layer" + str(($"..").get_meta("index") - 1)):
-		node.score_output.connect(process_and_send)
+		node.score_output.connect(func(val:float):await get_tree().create_timer(randf_range(0.1, 0.2)).timeout;process_and_send(val))
 	
 	after_enable()
 func after_enable(): pass
