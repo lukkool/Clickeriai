@@ -1,14 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://lvqht05hsf30"]
 
 [ext_resource type="Texture2D" uid="uid://im8bvd1gwwh7" path="res://scenes/gameScene/nodes/inputNode/manual_input.svg" id="1_t3t5v"]
-
-[sub_resource type="GDScript" id="GDScript_5gw0s"]
-script/source = "extends Button
-
-
-func _on_pressed() -> void:
-	print(\"clicked\")
-"
+[ext_resource type="Script" path="res://scenes/gameScene/nodes/inputNode/input_node.gd" id="2_2fj0g"]
 
 [node name="InputNode" type="Button"]
 anchors_preset = 8
@@ -24,4 +17,4 @@ grow_horizontal = 2
 grow_vertical = 2
 icon = ExtResource("1_t3t5v")
 flat = true
-script = SubResource("GDScript_5gw0s")
+script = ExtResource("2_2fj0g")

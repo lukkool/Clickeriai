@@ -17,6 +17,10 @@ var input_sound = preload("res://scenes/gameScene/nodes/inputNode/input_sound.og
 
 @onready var progress_bar: ProgressBar = get_node("/root/GameScene/ProgressBar")
 
+const CLICK_LIMIT:int = 18
+var click_limit_counter:int = 0
+const CLICK_LIMIT_TIME:float = 1
+var click_limit_time:float = 0
 
 func _process(delta: float) -> void:
 	if multiplier_active:
@@ -31,13 +35,21 @@ func _process(delta: float) -> void:
 		progress_bar.value -= 1 * delta
 		if click_streak > 0:
 			click_streak -= 1 * delta
-		
-		
 	
+	click_limit_time -= delta
 		
-
 
 func _on_pressed() -> void:
+	if click_limit_time <= 0:
+		click_limit_counter = 0
+		click_limit_time = CLICK_LIMIT_TIME
+	
+	click_limit_counter += 1
+	if click_limit_counter > CLICK_LIMIT: return
+	
+	
+	
+	
 	if not multiplier_active:
 		click_streak += 1
 		progress_bar.value += 1
