@@ -23,13 +23,13 @@ func _process(delta: float) -> void:
 			right_seed = right_node.material.get_shader_parameter("rand_seed")
 
 		var left_jitter = Vector2(
-			sin(t * pseudo_random(left_seed)) * 5.0,
-			cos(t * pseudo_random(Vector2(left_seed.y, left_seed.x))) * 5.0
+			sin(t * pseudo_random(left_seed)) * 2.5,
+			cos(t * pseudo_random(Vector2(left_seed.y, left_seed.x))) * 2.5
 		)
 
 		var right_jitter = Vector2(
-			sin(t * pseudo_random(right_seed)) * 5.0,
-			cos(t * pseudo_random(Vector2(right_seed.y, right_seed.x))) * 5.0
+			sin(t * pseudo_random(right_seed)) * 2.5,
+			cos(t * pseudo_random(Vector2(right_seed.y, right_seed.x))) * 2.5
 		)
 		
 		if left_node.material is ShaderMaterial:
