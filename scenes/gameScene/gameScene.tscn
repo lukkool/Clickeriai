@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bj5e5ooygsyw7"]
+[gd_scene load_steps=21 format=3 uid="uid://bj5e5ooygsyw7"]
 
 [ext_resource type="Script" path="res://scenes/gameScene/gameScene.gd" id="1_88gci"]
 [ext_resource type="PackedScene" uid="uid://lvqht05hsf30" path="res://scenes/gameScene/nodes/inputNode/InputNode.tscn" id="1_w6okk"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cs0l82i0kblv8" path="res://scenes/gameScene/Background.png" id="2_j7qo3"]
 [ext_resource type="Script" path="res://scenes/gameScene/nodes/outputNode/output_node.gd" id="3_2sikp"]
 [ext_resource type="Script" path="res://scenes/gameScene/currency_label.gd" id="5_0tvsb"]
+[ext_resource type="Script" path="res://scenes/gameScene/nodes/layerManager.gd" id="5_7l221"]
 [ext_resource type="PackedScene" uid="uid://ba7xr7emiqkau" path="res://scenes/gameScene/upgrades/upgradeMenu.tscn" id="5_abvow"]
 [ext_resource type="PackedScene" uid="uid://dvnt2dvm3inc2" path="res://scenes/gameScene/nodes/autoInputNode/autoInputNode.tscn" id="5_j5ee2"]
 [ext_resource type="Script" path="res://scenes/gameScene/layers/layer.gd" id="7_3clan"]
@@ -70,6 +71,7 @@ anchor_top = 0.114198
 anchor_right = 0.826389
 anchor_bottom = 0.987654
 alignment = 1
+script = ExtResource("5_7l221")
 metadata/_edit_use_anchors_ = true
 
 [node name="Layer0" type="VBoxContainer" parent="LayerContainer"]

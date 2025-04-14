@@ -26,6 +26,9 @@ func update():
 	await get_tree().process_frame
 	draw_lines()
 
+func _process(delta):
+	draw_lines()
+	
 var lines = []
 func draw_lines():
 	if not enabled: return

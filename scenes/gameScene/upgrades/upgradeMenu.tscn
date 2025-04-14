@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/gameScene/upgrades/upgradeMenu.gd" id="1_5hc3g"]
 [ext_resource type="Script" path="res://scenes/gameScene/upgrades/upgradeTooltip.gd" id="2_b4xg1"]
-[ext_resource type="Theme" uid="uid://1vh4w00qv6is" path="res://Button_theme.tres" id="2_vhmeu"]
+[ext_resource type="Theme" uid="uid://38q5to2imxny" path="res://Button_theme.tres" id="2_vhmeu"]
 
 [sub_resource type="Theme" id="Theme_lc8ih"]
 
