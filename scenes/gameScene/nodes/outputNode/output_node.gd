@@ -57,6 +57,7 @@ func show_number(value: int):
 	tween.connect(
 		"finished",
 		func():
-			label.queue_free()
+			if is_instance_valid(label):
+				label.queue_free()
 	)
 		
