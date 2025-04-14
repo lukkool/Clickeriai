@@ -31,3 +31,6 @@ func apply_income_multiplier(multiplier: int):
 		base_income_amount = income_amount
 		
 	income_amount = base_income_amount * multiplier
+
+func apply_speed(intervalUpgraded: float):
+	interval = intervalUpgraded

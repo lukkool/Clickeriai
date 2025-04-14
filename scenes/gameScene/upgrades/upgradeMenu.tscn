@@ -154,6 +154,48 @@ metadata/tooltip_text = "Automatically generates income every second."
 metadata/SinglePurchace = true
 metadata/BasePrice = 10000.0
 
+[node name="Panel_VBoxContainer#AutoInputIncomeDouble" type="Button" parent="Panel/ScrollContainer/VBoxContainer/AutoNode4" groups=["upgrade_buttons"]]
+visible = false
+layout_mode = 2
+offset_right = 330.0
+offset_bottom = 23.0
+theme = ExtResource("2_vhmeu")
+text = "Double auto input node income | cost: 100"
+metadata/name = "AutoInputIncomeDouble"
+metadata/BasePrice = 100.0
+metadata/SinglePurchace = true
+metadata/tooltip_text = "Doubles the base income from all Auto Input Nodes."
+
+[node name="AutoSpeed1" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
+custom_minimum_size = Vector2(358, 31)
+layout_mode = 2
+text = "Auto node input speed 1 | cost: 20"
+metadata/name = "AutoSpeed1"
+metadata/tooltip_text = "Increases the speed of auto node score generation."
+metadata/SinglePurchace = true
+metadata/BasePrice = 20.0
+
+[node name="AutoSpeed2" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
+custom_minimum_size = Vector2(358, 31)
+layout_mode = 2
+text = "Auto node input speed 2 | cost: 20"
+metadata/name = "AutoSpeed2"
+metadata/tooltip_text = "Increases the speed of auto node score generation."
+metadata/SinglePurchace = true
+metadata/BasePrice = 20.0
+
+[node name="AutoSpeed3" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
+custom_minimum_size = Vector2(358, 31)
+layout_mode = 2
+text = "Auto node input speed 3 | cost: 20"
+metadata/name = "AutoSpeed3"
+metadata/tooltip_text = "Increases the speed of auto node score generation."
+metadata/SinglePurchace = true
+metadata/BasePrice = 20.0
+
 [node name="BatchNormalizationNode1" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
 custom_minimum_size = Vector2(358, 31)
@@ -417,15 +459,6 @@ metadata/name = "RecurrentNode6"
 metadata/tooltip_text = "Emit values from left nodes"
 metadata/BasePrice = 50
 metadata/SinglePurchace = true
-
-[node name="Panel_VBoxContainer#AutoInputIncomeDouble" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
-layout_mode = 2
-theme = ExtResource("2_vhmeu")
-text = "Double auto input node income | cost: 100"
-metadata/name = "AutoInputIncomeDouble"
-metadata/BasePrice = 100.0
-metadata/SinglePurchace = true
-metadata/tooltip_text = "Doubles the base income from all Auto Input Nodes."
 
 [node name="Tooltip" type="Control" parent="."]
 visible = false

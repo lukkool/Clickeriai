@@ -26,6 +26,10 @@ var upgrades = {
 	"AutoInputNode3": false,
 	"AutoInputNode4": false,
 	
+	"AutoSpeed1": false,
+	"AutoSpeed2": false,
+	"AutoSpeed3": false,
+	
 	"AutoInputIncomeDouble": false,
 	
 	"BatchNormalizationNode1": false,
@@ -64,6 +68,12 @@ func update_upgrades():
 			get_node("LayerContainer/Layer0/InputNode").set_upgrade_level(i);
 			break;
 	
+	var interval: float = 1.0
+	for i in range(3, 0, -1):
+		if upgrades["AutoSpeed" + str(i)]: 
+			interval /= (1 + i)
+			break;
+	
 	for i in range(1, 5):
 		if upgrades["AutoInputNode" + str(i)]: get_node("LayerContainer/Layer0/AutoInputNode" + str(i)).enabled = true
 	
@@ -88,6 +98,7 @@ func update_upgrades():
 		for node in auto_input_parent.get_children():
 			if node.get_script() == preload("res://scenes/gameScene/nodes/autoInputNode/AutoInputNode.gd"):
 				node.apply_income_multiplier(income_multiplier)
+				node.apply_speed(interval)
 	#ATTENTION - Add later implemented upgrades
 
 
