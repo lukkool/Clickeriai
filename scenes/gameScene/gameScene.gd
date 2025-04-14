@@ -1,12 +1,12 @@
 extends Control
 
-@onready var score_label:Label = $CurrencyLabel
+@onready var score_label:Label = $HBoxContainer/CurrencyLabel
 @onready var output_node:Control = $%OutputNode
 
 var score:float:
 	set(val):
 		score = val
-		score_label.text = "Bits:\n" + str(score)
+		score_label.text = str(score)
 
 var should_load: bool
 

@@ -15,7 +15,7 @@ var normal_color = Color(1, 1, 1)
 var multiplier_color = Color(1, 0, 0)
 var input_sound = preload("res://scenes/gameScene/nodes/inputNode/input_sound.ogg")
 
-@onready var progress_bar: ProgressBar = get_node("/root/GameScene/ProgressBar")
+@onready var progress_bar: TextureProgressBar = get_node("/root/GameScene/ProgressBar")
 
 const CLICK_LIMIT:int = 18
 var click_limit_counter:int = 0
