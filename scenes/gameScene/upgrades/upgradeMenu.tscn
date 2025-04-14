@@ -154,11 +154,9 @@ metadata/tooltip_text = "Automatically generates income every second."
 metadata/SinglePurchace = true
 metadata/BasePrice = 10000.0
 
-[node name="Panel_VBoxContainer#AutoInputIncomeDouble" type="Button" parent="Panel/ScrollContainer/VBoxContainer/AutoNode4" groups=["upgrade_buttons"]]
+[node name="Panel_VBoxContainer#AutoInputIncomeDouble" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
 layout_mode = 2
-offset_right = 330.0
-offset_bottom = 23.0
 theme = ExtResource("2_vhmeu")
 text = "Double auto input node income | cost: 100"
 metadata/name = "AutoInputIncomeDouble"
@@ -457,6 +455,39 @@ theme = ExtResource("2_vhmeu")
 text = "Recurrent Layer | cost: 1000"
 metadata/name = "RecurrentNode6"
 metadata/tooltip_text = "Emit values from left nodes"
+metadata/BasePrice = 50
+metadata/SinglePurchace = true
+
+[node name="OutputMultiplier1" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
+custom_minimum_size = Vector2(358, 31)
+layout_mode = 2
+theme = ExtResource("2_vhmeu")
+text = "Output multiplier 1 | cost: 1000"
+metadata/name = "OutputMultiplier1"
+metadata/tooltip_text = "The output will be multiplied by 1.1x."
+metadata/BasePrice = 50
+metadata/SinglePurchace = true
+
+[node name="OutputMultiplier2" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
+custom_minimum_size = Vector2(358, 31)
+layout_mode = 2
+theme = ExtResource("2_vhmeu")
+text = "Output multiplier 2 | cost: 1000"
+metadata/name = "OutputMultiplier2"
+metadata/tooltip_text = "The output will be multiplied by 1.2x."
+metadata/BasePrice = 50
+metadata/SinglePurchace = true
+
+[node name="OutputMultiplier3" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
+custom_minimum_size = Vector2(358, 31)
+layout_mode = 2
+theme = ExtResource("2_vhmeu")
+text = "Output multiplier 3 | cost: 1000"
+metadata/name = "OutputMultiplier3"
+metadata/tooltip_text = "The output will be multiplied by 1.3x."
 metadata/BasePrice = 50
 metadata/SinglePurchace = true
 

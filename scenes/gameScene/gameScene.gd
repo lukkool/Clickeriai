@@ -59,6 +59,10 @@ var upgrades = {
 	"RecurrentNode4": false,
 	"RecurrentNode5": false,
 	"RecurrentNode6": false,
+	
+	"OutputMultiplier1": false,
+	"OutputMultiplier2": false,
+	"OutputMultiplier3": false,
 }
 
 func update_upgrades():
@@ -99,6 +103,13 @@ func update_upgrades():
 			if node.get_script() == preload("res://scenes/gameScene/nodes/autoInputNode/AutoInputNode.gd"):
 				node.apply_income_multiplier(income_multiplier)
 				node.apply_speed(interval)
+				
+	var output_multiplier:float = 1.0;
+	for i in range(3, 0, -1):
+		if upgrades["OutputMultiplier" + str(i)]: 
+			output_multiplier += (0.1 * i)
+			break;
+	output_node.apply_output_multiplier(output_multiplier)
 	#ATTENTION - Add later implemented upgrades
 
 

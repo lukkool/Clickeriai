@@ -142,7 +142,17 @@ func update_upgrade_buttons():
 					break;
 			if (i == 1):
 				get_node("Panel/ScrollContainer/VBoxContainer/RecurrentNode" + str(i)).visible = true
-		
+	
+	for i in range(3, 0, -1):
+			if game_scene.upgrades["OutputMultiplier" + str(i)]:
+				if(i == 3):
+					break;
+				else:
+					get_node("Panel/ScrollContainer/VBoxContainer/OutputMultiplier" + str(i + 1)).visible = true
+					break;
+			if (i == 1):
+				get_node("Panel/ScrollContainer/VBoxContainer/OutputMultiplier" + str(i)).visible = true
+
 func hide_tooltip():
 	tooltip.hide_tooltip()
 	tooltip_active = false

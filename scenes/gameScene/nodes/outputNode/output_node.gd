@@ -2,6 +2,7 @@ extends TextureRect
 
 
 signal output_activated(val)
+var output_multiplier:float = 1.0
 
 var nodes = [self]
 var enabled = true
@@ -19,6 +20,9 @@ func _ready() -> void:
 			shader_material.set_shader_parameter("rand_seed", Vector2(rand_x, rand_y))
 
 func on_signal_get(val):
+	
+	val = round(val * output_multiplier)
+	
 	output_activated.emit(val)
 	show_number(val)
 
@@ -59,4 +63,8 @@ func show_number(value: int):
 		func():
 			label.queue_free()
 	)
-		
+
+func apply_output_multiplier(output_upgrade: float):
+	output_multiplier = output_upgrade
+	
+	
