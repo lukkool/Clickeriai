@@ -9,6 +9,14 @@ var enabled = true
 func _ready() -> void:
 	for node in get_tree().get_nodes_in_group("nodes_layer0"):
 		node.score_output.connect(on_signal_get)
+		
+	randomize()
+	for node in nodes:
+		if node.material and node.material is ShaderMaterial:
+			var shader_material = node.material as ShaderMaterial
+			var rand_x = randf() * 100.0
+			var rand_y = randf() * 100.0
+			shader_material.set_shader_parameter("rand_seed", Vector2(rand_x, rand_y))
 
 func on_signal_get(val):
 	output_activated.emit(val)
