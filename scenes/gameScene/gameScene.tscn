@@ -18,7 +18,7 @@
 [ext_resource type="Script" path="res://scenes/gameScene/nodes/recurrentNode/recurrent_node.gd" id="14_n0jdy"]
 [ext_resource type="AudioStream" uid="uid://cagqjep1njwv" path="res://scenes/gameScene/misc/music/ItsRainingNeurons.wav" id="17_rls6l"]
 [ext_resource type="Theme" uid="uid://38q5to2imxny" path="res://Button_theme.tres" id="17_uwubf"]
-[ext_resource type="Texture2D" uid="uid://pxnquekjyxm5" path="res://scenes/gameScene/grad.tres" id="18_5kyb7"]
+[ext_resource type="Texture2D" uid="uid://dp53qtxmxnbop" path="res://scenes/gameScene/grad.tres" id="18_5kyb7"]
 [ext_resource type="Script" path="res://scenes/gameScene/misc/music/background_music_player.gd" id="18_ewl8n"]
 [ext_resource type="PackedScene" uid="uid://dthf070fxj3i5" path="res://scenes/gameScene/PauseMenu.tscn" id="19_60wk5"]
 [ext_resource type="Texture2D" uid="uid://dqmdpk000neny" path="res://global/bits.svg" id="21_6atpj"]
@@ -33,10 +33,6 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1.0
-offset_top = 4.0
-offset_right = 1.0
-offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_88gci")
@@ -316,10 +312,7 @@ stretch_mode = 2
 script = ExtResource("3_2sikp")
 
 [node name="UpgradeMenu" parent="." instance=ExtResource("5_abvow")]
-visible = false
 layout_mode = 1
-offset_left = -2.0
-offset_right = -2.0
 
 [node name="ProgressBar" type="TextureProgressBar" parent="."]
 layout_mode = 1
