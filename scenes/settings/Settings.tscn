@@ -68,4 +68,13 @@ step = 0.001
 script = ExtResource("2_xe02o")
 bus_name = "Master"
 
+[node name="ResolutionLabel" type="Label" parent="VolumeSettings/VBoxContainer"]
+layout_mode = 2
+text = "Resolution
+"
+
+[node name="ResolutionOptionButton" type="OptionButton" parent="VolumeSettings/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
 [connection signal="pressed" from="ButtonBack" to="." method="_on_button_back_pressed"]
