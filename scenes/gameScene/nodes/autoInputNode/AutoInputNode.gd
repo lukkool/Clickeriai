@@ -25,6 +25,7 @@ func _process(delta: float) -> void:
 	if delay <= 0:
 		delay = interval
 		score_output.emit(income_amount)
+		lightup()
 	
 func apply_income_multiplier(multiplier: int):
 	if base_income_amount == 0 and income_amount != 0:
@@ -34,3 +35,6 @@ func apply_income_multiplier(multiplier: int):
 
 func apply_speed(interval_upgraded: float):
 	interval = interval_upgraded
+	
+func lightup():
+	modulate = Color(2, 2, 2, 1)
