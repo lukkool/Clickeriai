@@ -26,6 +26,8 @@ func _process(delta: float) -> void:
 		delay = interval
 		score_output.emit(income_amount)
 		lightup()
+		
+	modulate = lerp(modulate, Color(1, 1, 1, 1), delta * 10.)
 	
 func apply_income_multiplier(multiplier: int):
 	if base_income_amount == 0 and income_amount != 0:
