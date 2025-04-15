@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bj5e5ooygsyw7"]
+[gd_scene load_steps=25 format=3 uid="uid://bj5e5ooygsyw7"]
 
 [ext_resource type="Script" path="res://scenes/gameScene/gameScene.gd" id="1_88gci"]
 [ext_resource type="PackedScene" uid="uid://lvqht05hsf30" path="res://scenes/gameScene/nodes/inputNode/InputNode.tscn" id="1_w6okk"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://scenes/gameScene/layers/layer.gd" id="7_3clan"]
 [ext_resource type="Shader" path="res://scenes/gameScene/nodes/nodeFloat.gdshader" id="8_cd6j6"]
 [ext_resource type="PackedScene" uid="uid://48y17njc02di" path="res://scenes/gameScene/nodes/batchNormalizationNode/batch_normalization_node.tscn" id="8_fo0yy"]
+[ext_resource type="Texture2D" uid="uid://btdord8sla7my" path="res://scenes/gameScene/nodes/autoInputNode/automatic.svg" id="9_67phg"]
 [ext_resource type="PackedScene" uid="uid://3m53ofyws6uw" path="res://scenes/gameScene/nodes/convolutionalNode/convolutional_node.tscn" id="10_1fbus"]
 [ext_resource type="PackedScene" uid="uid://ddnbwnvfjopks" path="res://scenes/gameScene/nodes/denseNode/dense_node.tscn" id="10_3716f"]
 [ext_resource type="Texture2D" uid="uid://cst3l0mkteou6" path="res://scenes/gameScene/nodes/recurrentNode/recurrentNode.svg" id="14_62onh"]
@@ -96,10 +97,12 @@ metadata/index = 0
 [node name="AutoInputNode3" parent="LayerContainer/Layer0" instance=ExtResource("5_j5ee2")]
 material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
+texture = ExtResource("9_67phg")
 
 [node name="AutoInputNode1" parent="LayerContainer/Layer0" instance=ExtResource("5_j5ee2")]
 material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
+texture = ExtResource("9_67phg")
 
 [node name="InputNode" parent="LayerContainer/Layer0" groups=["nodes_layer0"] instance=ExtResource("1_w6okk")]
 material = SubResource("ShaderMaterial_xyodh")
@@ -110,10 +113,12 @@ size_flags_vertical = 4
 [node name="AutoInputNode2" parent="LayerContainer/Layer0" instance=ExtResource("5_j5ee2")]
 material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
+texture = ExtResource("9_67phg")
 
 [node name="AutoInputNode4" parent="LayerContainer/Layer0" instance=ExtResource("5_j5ee2")]
 material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
+texture = ExtResource("9_67phg")
 
 [node name="Layer1" type="VBoxContainer" parent="LayerContainer"]
 visible = false
