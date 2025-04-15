@@ -1,16 +1,15 @@
-[gd_scene load_steps=24 format=3 uid="uid://bj5e5ooygsyw7"]
+[gd_scene load_steps=20 format=3 uid="uid://bj5e5ooygsyw7"]
 
 [ext_resource type="Script" path="res://scenes/gameScene/gameScene.gd" id="1_88gci"]
 [ext_resource type="PackedScene" uid="uid://lvqht05hsf30" path="res://scenes/gameScene/nodes/inputNode/InputNode.tscn" id="1_w6okk"]
 [ext_resource type="Script" path="res://scenes/gameScene/SaveLoad.gd" id="1_xrb4c"]
+[ext_resource type="Script" path="res://scenes/gameScene/nodes/inputNode/input_node.gd" id="2_2uk3s"]
 [ext_resource type="PackedScene" uid="uid://dbnd03h46tvoy" path="res://scenes/gameScene/nodes/outputNode/outputNode.tscn" id="2_4hplx"]
-[ext_resource type="Texture2D" uid="uid://cs0l82i0kblv8" path="res://scenes/gameScene/Background.png" id="2_j7qo3"]
 [ext_resource type="Script" path="res://scenes/gameScene/nodes/outputNode/output_node.gd" id="3_2sikp"]
 [ext_resource type="Script" path="res://scenes/gameScene/currency_label.gd" id="5_0tvsb"]
 [ext_resource type="PackedScene" uid="uid://ba7xr7emiqkau" path="res://scenes/gameScene/upgrades/upgradeMenu.tscn" id="5_abvow"]
 [ext_resource type="PackedScene" uid="uid://dvnt2dvm3inc2" path="res://scenes/gameScene/nodes/autoInputNode/autoInputNode.tscn" id="5_j5ee2"]
 [ext_resource type="Script" path="res://scenes/gameScene/layers/layer.gd" id="7_3clan"]
-[ext_resource type="Shader" path="res://scenes/gameScene/nodes/nodeFloat.gdshader" id="8_cd6j6"]
 [ext_resource type="PackedScene" uid="uid://48y17njc02di" path="res://scenes/gameScene/nodes/batchNormalizationNode/batch_normalization_node.tscn" id="8_fo0yy"]
 [ext_resource type="PackedScene" uid="uid://3m53ofyws6uw" path="res://scenes/gameScene/nodes/convolutionalNode/convolutional_node.tscn" id="10_1fbus"]
 [ext_resource type="PackedScene" uid="uid://ddnbwnvfjopks" path="res://scenes/gameScene/nodes/denseNode/dense_node.tscn" id="10_3716f"]
@@ -18,56 +17,35 @@
 [ext_resource type="Script" path="res://scenes/gameScene/nodes/recurrentNode/recurrent_node.gd" id="14_n0jdy"]
 [ext_resource type="AudioStream" uid="uid://cagqjep1njwv" path="res://scenes/gameScene/misc/music/ItsRainingNeurons.wav" id="17_rls6l"]
 [ext_resource type="Theme" uid="uid://38q5to2imxny" path="res://Button_theme.tres" id="17_uwubf"]
-[ext_resource type="Texture2D" uid="uid://dp53qtxmxnbop" path="res://scenes/gameScene/grad.tres" id="18_5kyb7"]
 [ext_resource type="Script" path="res://scenes/gameScene/misc/music/background_music_player.gd" id="18_ewl8n"]
 [ext_resource type="PackedScene" uid="uid://dthf070fxj3i5" path="res://scenes/gameScene/PauseMenu.tscn" id="19_60wk5"]
-[ext_resource type="Texture2D" uid="uid://dqmdpk000neny" path="res://global/bits.svg" id="21_6atpj"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_xyodh"]
-shader = ExtResource("8_cd6j6")
-shader_parameter/rand_seed = Vector2(0, 0)
-shader_parameter/jitter_offset = null
 
 [node name="GameScene" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 1.0
+offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_88gci")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="CurrencyLabel" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -94.0
+offset_top = 35.0
+offset_right = 94.0
+offset_bottom = 108.0
 grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_j7qo3")
-expand_mode = 1
-
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.419271
-anchor_top = 0.0632716
-anchor_right = 0.585069
-anchor_bottom = 0.162037
-grow_horizontal = 2
-alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="TextureRect2" type="TextureRect" parent="HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("21_6atpj")
-expand_mode = 2
-stretch_mode = 4
-
-[node name="CurrencyLabel" type="Label" parent="HBoxContainer"]
-layout_mode = 2
 theme_override_font_sizes/font_size = 25
-text = "0"
+text = "Bits:
+0"
 horizontal_alignment = 1
 script = ExtResource("5_0tvsb")
 
@@ -94,25 +72,21 @@ metadata/_edit_use_anchors_ = true
 metadata/index = 0
 
 [node name="AutoInputNode3" parent="LayerContainer/Layer0" instance=ExtResource("5_j5ee2")]
-material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
 
 [node name="AutoInputNode1" parent="LayerContainer/Layer0" instance=ExtResource("5_j5ee2")]
-material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
 
 [node name="InputNode" parent="LayerContainer/Layer0" groups=["nodes_layer0"] instance=ExtResource("1_w6okk")]
-material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+script = ExtResource("2_2uk3s")
 
 [node name="AutoInputNode2" parent="LayerContainer/Layer0" instance=ExtResource("5_j5ee2")]
-material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
 
 [node name="AutoInputNode4" parent="LayerContainer/Layer0" instance=ExtResource("5_j5ee2")]
-material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
 
 [node name="Layer1" type="VBoxContainer" parent="LayerContainer"]
@@ -128,32 +102,26 @@ metadata/index = 1
 
 [node name="BatchNormalizationNode1" parent="LayerContainer/Layer1" instance=ExtResource("8_fo0yy")]
 visible = false
-material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
 
 [node name="BatchNormalizationNode2" parent="LayerContainer/Layer1" instance=ExtResource("8_fo0yy")]
 visible = false
-material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
 
 [node name="BatchNormalizationNode3" parent="LayerContainer/Layer1" instance=ExtResource("8_fo0yy")]
 visible = false
-material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
 
 [node name="BatchNormalizationNode4" parent="LayerContainer/Layer1" instance=ExtResource("8_fo0yy")]
 visible = false
-material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
 
 [node name="BatchNormalizationNode5" parent="LayerContainer/Layer1" instance=ExtResource("8_fo0yy")]
 visible = false
-material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
 
 [node name="BatchNormalizationNode6" parent="LayerContainer/Layer1" instance=ExtResource("8_fo0yy")]
 visible = false
-material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
 
 [node name="Layer2" type="VBoxContainer" parent="LayerContainer"]
@@ -169,32 +137,26 @@ metadata/index = 2
 
 [node name="DenseNode1" parent="LayerContainer/Layer2" instance=ExtResource("10_3716f")]
 visible = false
-material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
 
 [node name="DenseNode2" parent="LayerContainer/Layer2" instance=ExtResource("10_3716f")]
 visible = false
-material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
 
 [node name="DenseNode3" parent="LayerContainer/Layer2" instance=ExtResource("10_3716f")]
 visible = false
-material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
 
 [node name="DenseNode4" parent="LayerContainer/Layer2" instance=ExtResource("10_3716f")]
 visible = false
-material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
 
 [node name="DenseNode5" parent="LayerContainer/Layer2" instance=ExtResource("10_3716f")]
 visible = false
-material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
 
 [node name="DenseNode6" parent="LayerContainer/Layer2" instance=ExtResource("10_3716f")]
 visible = false
-material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
 
 [node name="Layer3" type="VBoxContainer" parent="LayerContainer"]
@@ -209,32 +171,26 @@ metadata/index = 3
 
 [node name="ConvolutionalNode1" parent="LayerContainer/Layer3" instance=ExtResource("10_1fbus")]
 visible = false
-material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
 
 [node name="ConvolutionalNode2" parent="LayerContainer/Layer3" instance=ExtResource("10_1fbus")]
 visible = false
-material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
 
 [node name="ConvolutionalNode3" parent="LayerContainer/Layer3" instance=ExtResource("10_1fbus")]
 visible = false
-material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
 
 [node name="ConvolutionalNode4" parent="LayerContainer/Layer3" instance=ExtResource("10_1fbus")]
 visible = false
-material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
 
 [node name="ConvolutionalNode5" parent="LayerContainer/Layer3" instance=ExtResource("10_1fbus")]
 visible = false
-material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
 
 [node name="ConvolutionalNode6" parent="LayerContainer/Layer3" instance=ExtResource("10_1fbus")]
 visible = false
-material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
 
 [node name="Layer4" type="VBoxContainer" parent="LayerContainer"]
@@ -249,7 +205,6 @@ metadata/index = 4
 
 [node name="RecurrentNode1" type="TextureRect" parent="LayerContainer/Layer4" groups=["nodes_layer4"]]
 visible = false
-material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
 size_flags_horizontal = 4
 texture = ExtResource("14_62onh")
@@ -258,7 +213,6 @@ script = ExtResource("14_n0jdy")
 
 [node name="RecurrentNode2" type="TextureRect" parent="LayerContainer/Layer4" groups=["nodes_layer4"]]
 visible = false
-material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
 size_flags_horizontal = 4
 texture = ExtResource("14_62onh")
@@ -267,7 +221,6 @@ script = ExtResource("14_n0jdy")
 
 [node name="RecurrentNode3" type="TextureRect" parent="LayerContainer/Layer4" groups=["nodes_layer4"]]
 visible = false
-material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
 size_flags_horizontal = 4
 texture = ExtResource("14_62onh")
@@ -276,7 +229,6 @@ script = ExtResource("14_n0jdy")
 
 [node name="RecurrentNode4" type="TextureRect" parent="LayerContainer/Layer4" groups=["nodes_layer4"]]
 visible = false
-material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
 size_flags_horizontal = 4
 texture = ExtResource("14_62onh")
@@ -285,7 +237,6 @@ script = ExtResource("14_n0jdy")
 
 [node name="RecurrentNode5" type="TextureRect" parent="LayerContainer/Layer4" groups=["nodes_layer4"]]
 visible = false
-material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
 size_flags_horizontal = 4
 texture = ExtResource("14_62onh")
@@ -294,7 +245,6 @@ script = ExtResource("14_n0jdy")
 
 [node name="RecurrentNode6" type="TextureRect" parent="LayerContainer/Layer4" groups=["nodes_layer4"]]
 visible = false
-material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
 size_flags_horizontal = 4
 texture = ExtResource("14_62onh")
@@ -303,7 +253,6 @@ script = ExtResource("14_n0jdy")
 
 [node name="OutputNode" parent="LayerContainer" instance=ExtResource("2_4hplx")]
 unique_name_in_owner = true
-material = SubResource("ShaderMaterial_xyodh")
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
@@ -312,18 +261,18 @@ script = ExtResource("3_2sikp")
 
 [node name="UpgradeMenu" parent="." instance=ExtResource("5_abvow")]
 layout_mode = 1
+offset_left = -2.0
+offset_right = -2.0
 
-[node name="ProgressBar" type="TextureProgressBar" parent="."]
+[node name="ProgressBar" type="ProgressBar" parent="."]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 10
 anchor_right = 1.0
-anchor_bottom = 0.0339506
+offset_top = -3.0
+offset_bottom = 23.0
 grow_horizontal = 2
 max_value = 20.0
-step = 0.01
-nine_patch_stretch = true
-texture_progress = ExtResource("18_5kyb7")
-metadata/_edit_use_anchors_ = true
+show_percentage = false
 
 [node name="PauseMenu" parent="." instance=ExtResource("19_60wk5")]
 visible = false

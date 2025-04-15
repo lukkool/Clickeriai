@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvnt2dvm3inc2"]
+
+[ext_resource type="Script" path="res://scenes/gameScene/nodes/autoInputNode/AutoInputNode.gd" id="1_bmot8"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ysko3"]
+size = Vector2(64, 64)
+
+[node name="AutoInputNode" type="TextureRect" groups=["nodes_layer0"]]
+visible = false
+size_flags_horizontal = 4
+size_flags_vertical = 5
+texture = SubResource("PlaceholderTexture2D_ysko3")
+stretch_mode = 4
+script = ExtResource("1_bmot8")

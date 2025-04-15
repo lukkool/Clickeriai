@@ -58,6 +58,7 @@ func show_tooltip(button: Button): #shows tooltip by obtaining metadata from the
 
 func update_upgrade_buttons():
 	
+	var autoInputUnlocked:bool = false;
 	var unlockDense:bool = false;
 	var unlockConvolutional:bool = false;
 	var unlockReccurent:bool = false;
@@ -74,6 +75,7 @@ func update_upgrade_buttons():
 	
 	for i in range(4, 0, -1):
 		if game_scene.upgrades["AutoInputNode" + str(i)]:
+			autoInputUnlocked = true;
 			if(i == 4):
 				break;
 			else:
@@ -81,6 +83,21 @@ func update_upgrade_buttons():
 				break;
 		if (i == 1):
 			get_node("Panel/ScrollContainer/VBoxContainer/AutoNode" + str(i)).visible = true
+			
+	if autoInputUnlocked:
+		for i in range(3, 0, -1):
+			if game_scene.upgrades["AutoSpeed" + str(i)]:
+				if(i == 3):
+					break;
+				else:
+					get_node("Panel/ScrollContainer/VBoxContainer/AutoSpeed" + str(i + 1)).visible = true
+					break;
+			if (i == 1):
+				get_node("Panel/ScrollContainer/VBoxContainer/AutoSpeed" + str(i)).visible = true
+				
+		if !game_scene.upgrades["AutoInputIncomeDouble"]:
+			get_node("Panel/ScrollContainer/VBoxContainer/Panel_VBoxContainer#AutoInputIncomeDouble").visible = true
+			
 	for i in range(6, 0, -1):
 		if game_scene.upgrades["BatchNormalizationNode" + str(i)]:
 			unlockDense = true;
@@ -125,7 +142,17 @@ func update_upgrade_buttons():
 					break;
 			if (i == 1):
 				get_node("Panel/ScrollContainer/VBoxContainer/RecurrentNode" + str(i)).visible = true
-		
+	
+	for i in range(3, 0, -1):
+			if game_scene.upgrades["OutputMultiplier" + str(i)]:
+				if(i == 3):
+					break;
+				else:
+					get_node("Panel/ScrollContainer/VBoxContainer/OutputMultiplier" + str(i + 1)).visible = true
+					break;
+			if (i == 1):
+				get_node("Panel/ScrollContainer/VBoxContainer/OutputMultiplier" + str(i)).visible = true
+
 func hide_tooltip():
 	tooltip.hide_tooltip()
 	tooltip_active = false

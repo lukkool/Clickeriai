@@ -9,6 +9,16 @@ var enabled = false
 func _ready():
 	if layer_number == 0: enable()
 	layers.remove_at(len(layers)-1)
+	
+	randomize()
+	for node in nodes:
+		if node.material and node.material is ShaderMaterial:
+			node.material = node.material.duplicate()
+		
+			var shader_material = node.material as ShaderMaterial
+			var rand_x = randf() * 100.0
+			var rand_y = randf() * 100.0
+			shader_material.set_shader_parameter("rand_seed", Vector2(rand_x, rand_y))
 
 func enable():
 	if not enabled:
@@ -26,13 +36,14 @@ func update():
 	await get_tree().process_frame
 	draw_lines()
 
+	
 var lines = []
 func draw_lines():
 	if not enabled: return
 	
 	for line in lines: line.queue_free()
 	lines = []
-	
+
 	var right_nodes:Array
 	if layer_number == output_node.current_last_layer:
 		right_nodes = [output_node]
@@ -50,7 +61,11 @@ func draw_lines():
 			line.global_position = left_center
 			line.add_point(right_center - left_center)
 			line.connect_parent(left_node)
+			
+			line.left_node = left_node  # Set the left node reference
+			line.right_node = right_node  # Set the right node reference
+			
 			lines.append(line)
 			
-			get_tree().root.add_child(line)
-			get_tree().root.move_child(line, 0)
+			get_tree().root.get_child(-1).add_child(line)
+			get_tree().root.get_child(-1).move_child(line, 1)

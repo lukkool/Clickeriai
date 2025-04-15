@@ -1,12 +1,12 @@
 extends Control
 
-@onready var score_label:Label = $CurrencyLabel
+@onready var score_label:Label = $HBoxContainer/CurrencyLabel
 @onready var output_node:Control = $%OutputNode
 
 var score:float:
 	set(val):
 		score = val
-		score_label.text = "Bits:\n" + str(score)
+		score_label.text = str(score)
 
 var should_load: bool
 
@@ -25,6 +25,10 @@ var upgrades = {
 	"AutoInputNode2": false,
 	"AutoInputNode3": false,
 	"AutoInputNode4": false,
+	
+	"AutoSpeed1": false,
+	"AutoSpeed2": false,
+	"AutoSpeed3": false,
 	
 	"AutoInputIncomeDouble": false,
 	
@@ -55,6 +59,10 @@ var upgrades = {
 	"RecurrentNode4": false,
 	"RecurrentNode5": false,
 	"RecurrentNode6": false,
+	
+	"OutputMultiplier1": false,
+	"OutputMultiplier2": false,
+	"OutputMultiplier3": false,
 }
 
 func update_upgrades():
@@ -62,6 +70,12 @@ func update_upgrades():
 	for i in range(4, 0, -1):
 		if upgrades["ManualInputUpgrade" + str(i)]: 
 			get_node("LayerContainer/Layer0/InputNode").set_upgrade_level(i);
+			break;
+	
+	var interval: float = 1.0
+	for i in range(3, 0, -1):
+		if upgrades["AutoSpeed" + str(i)]: 
+			interval /= (1 + i)
 			break;
 	
 	for i in range(1, 5):
@@ -86,8 +100,16 @@ func update_upgrades():
 	var auto_input_parent = get_node_or_null("LayerContainer/Layer0")
 	if auto_input_parent:
 		for node in auto_input_parent.get_children():
-			if node.get_script() == preload("res://scenes/gameScene/AutoInputNode.gd"):
+			if node.get_script() == preload("res://scenes/gameScene/nodes/autoInputNode/AutoInputNode.gd"):
 				node.apply_income_multiplier(income_multiplier)
+				node.apply_speed(interval)
+				
+	var output_multiplier:float = 1.0;
+	for i in range(3, 0, -1):
+		if upgrades["OutputMultiplier" + str(i)]: 
+			output_multiplier += (0.1 * i)
+			break;
+	output_node.apply_output_multiplier(output_multiplier)
 	#ATTENTION - Add later implemented upgrades
 
 
