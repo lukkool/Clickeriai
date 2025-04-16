@@ -4,6 +4,9 @@ extends TextureRect
 signal output_activated(val)
 var output_multiplier:float = 1.0
 
+var number_pool: Array = []
+const MAX_NUMBERS = 50
+
 var nodes = [self]
 var enabled = true
 
@@ -18,6 +21,12 @@ func _ready() -> void:
 			var rand_x = randf() * 100.0
 			var rand_y = randf() * 100.0
 			shader_material.set_shader_parameter("rand_seed", Vector2(rand_x, rand_y))
+	
+	for i in range(MAX_NUMBERS):
+		var label = Label.new()
+		label.visible = false
+		add_child(label)
+		number_pool.append(label)
 
 func on_signal_get(val):
 	
@@ -43,27 +52,28 @@ func reconnect_last_layer(current, next):
 func update(): pass
 
 func show_number(value: int):
+	var label = get_pooled_label()
+	if not label:
+		return
 	
-	var label = Label.new()
 	label.text = "+" + str(value)
-	var offset = Vector2(35 - (label.text.length() * 5.5), -30)
 	label.modulate = Color(1, 1, 1, 1)
-	label.position = offset
-	add_child(label)
-	
+	label.position = Vector2(35 - (label.text.length() * 5.5), -30)
+	label.visible = true
+
 	var tween = get_tree().create_tween()
-	tween.tween_property(
-		label, 'position',
-		offset - Vector2(0, 60), 0.9
-	).set_trans(Tween.TRANS_SINE)
-		
+	tween.tween_property(label, 'position', label.position - Vector2(0, 60), 0.9).set_trans(Tween.TRANS_SINE)
 	tween.tween_property(label, 'modulate:a', 0.0, 0.6)
-	tween.connect(
-		"finished",
-		func():
-			if is_instance_valid(label):
-				label.queue_free()
+	tween.connect("finished", func():
+		if is_instance_valid(label):
+			label.visible = false
 	)
+
+func get_pooled_label() -> Label:
+	for label in number_pool:
+		if not label.visible:
+			return label
+	return null 
 
 func apply_output_multiplier(output_upgrade: float):
 	output_multiplier = output_upgrade
