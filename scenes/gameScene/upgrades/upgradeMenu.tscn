@@ -272,10 +272,10 @@ visible = false
 custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
-text = "Dense Layer | cost: 300"
+text = "Dense Layer | cost: 500"
 metadata/name = "DenseNode1"
 metadata/SinglePurchace = true
-metadata/BasePrice = 300.0
+metadata/BasePrice = 500.0
 metadata/tooltip_text = "Each node saves a value coming from the left layer. When all nodes are filled, they are multiplied together."
 
 [node name="DenseNode2" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
@@ -283,10 +283,10 @@ visible = false
 custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
-text = "Dense Second Node | cost: 300"
+text = "Dense Second Node | cost: 10K"
 metadata/name = "DenseNode2"
 metadata/SinglePurchace = true
-metadata/BasePrice = 300.0
+metadata/BasePrice = 10000.0
 metadata/tooltip_text = "Each node saves a value coming from the left layer. When all nodes are filled, they are multiplied together."
 
 [node name="DenseNode3" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
@@ -294,10 +294,10 @@ visible = false
 custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
-text = "Dense Third Node | cost: 300"
+text = "Dense Third Node | cost: 100K"
 metadata/name = "DenseNode3"
 metadata/SinglePurchace = true
-metadata/BasePrice = 300.0
+metadata/BasePrice = 100000.0
 metadata/tooltip_text = "Each node saves a value coming from the left layer. When all nodes are filled, they are multiplied together."
 
 [node name="DenseNode4" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
@@ -305,10 +305,10 @@ visible = false
 custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
-text = "Dense Fourth Node | cost: 300"
+text = "Dense Fourth Node | cost: 1M"
 metadata/name = "DenseNode4"
 metadata/SinglePurchace = true
-metadata/BasePrice = 300.0
+metadata/BasePrice = 1e+06
 metadata/tooltip_text = "Each node saves a value coming from the left layer. When all nodes are filled, they are multiplied together."
 
 [node name="DenseNode5" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
@@ -316,21 +316,21 @@ visible = false
 custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
-text = "Dense Fifth Node | cost: 300"
+text = "Dense Fifth Node | cost: 1B"
 metadata/name = "DenseNode5"
 metadata/SinglePurchace = true
-metadata/BasePrice = 300.0
 metadata/tooltip_text = "Each node saves a value coming from the left layer. When all nodes are filled, they are multiplied together."
+metadata/BasePrice = 1e+09
 
 [node name="DenseNode6" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
 custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
-text = "Dense Sixth Node | cost: 300"
+text = "Dense Sixth Node | cost: 1T"
 metadata/name = "DenseNode6"
 metadata/SinglePurchace = true
-metadata/BasePrice = 300.0
+metadata/BasePrice = 1e+12
 metadata/tooltip_text = "Each node saves a value coming from the left layer. When all nodes are filled, they are multiplied together."
 
 [node name="ConvolutionalNode1" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]

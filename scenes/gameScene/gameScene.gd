@@ -9,7 +9,7 @@ var score:float:
 		score_label.text = format_number(score)
 
 func format_number(value: float) -> String:
-	var suffixes = ["", "k", "m", "b", "t", "q", "qi", "sx", "sp", "oc", "n", "dc"]
+	var suffixes = ["", "K", "M", "B", "T", "Q", "QI", "SX", "SP", "OC", "N", "DC"]
 	var index = 0
 
 	while abs(value) >= 1000.0 and index < suffixes.size() - 1:
