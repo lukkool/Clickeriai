@@ -6,7 +6,21 @@ extends Control
 var score:float:
 	set(val):
 		score = val
-		score_label.text = str(score)
+		score_label.text = format_number(score)
+
+func format_number(value: float) -> String:
+	var suffixes = ["", "k", "m", "b", "t", "q", "qi", "sx", "sp", "oc", "n", "dc"]
+	var index = 0
+
+	while abs(value) >= 1000.0 and index < suffixes.size() - 1:
+		value /= 1000.0
+		index += 1
+
+	var formatted = "%.1f" % value
+	if formatted.ends_with(".0"):
+		formatted = str(int(value))
+
+	return formatted + suffixes[index]
 
 var should_load: bool
 
