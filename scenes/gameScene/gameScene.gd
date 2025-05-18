@@ -121,7 +121,7 @@ func update_upgrades():
 	var output_multiplier:float = 1.0;
 	for i in range(3, 0, -1):
 		if upgrades["OutputMultiplier" + str(i)]: 
-			output_multiplier += (0.1 * i)
+			output_multiplier += (0.05 * i)
 			break;
 	output_node.apply_output_multiplier(output_multiplier)
 	#ATTENTION - Add later implemented upgrades

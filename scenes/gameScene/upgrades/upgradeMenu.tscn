@@ -75,44 +75,44 @@ visible = false
 custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
-text = "Manual Input Upgrade 1 | cost: 20"
+text = "Manual Input Upgrade 1 | cost: 10K"
 metadata/name = "ManualInputUpgrade1"
-metadata/tooltip_text = "Increases the base amount of score generated during each manual input by 3."
+metadata/tooltip_text = "Increases the base amount of score generated during each manual input by 1."
 metadata/SinglePurchace = true
-metadata/BasePrice = 20.0
+metadata/BasePrice = 10000.0
 
 [node name="ManualInputUpgrade2" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
 custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
-text = "Manual Input Upgrade 2 | cost: 20"
+text = "Manual Input Upgrade 2 | cost: 1M"
 metadata/name = "ManualInputUpgrade2"
-metadata/tooltip_text = "Increases the base amount of score generated during each manual input by 3."
+metadata/tooltip_text = "Increases the base amount of score generated during each manual input by 1."
 metadata/SinglePurchace = true
-metadata/BasePrice = 20.0
+metadata/BasePrice = 1e+06
 
 [node name="ManualInputUpgrade3" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
 custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
-text = "Manual Input Upgrade 3 | cost: 20"
+text = "Manual Input Upgrade 3 | cost: 1B"
 metadata/name = "ManualInputUpgrade3"
-metadata/tooltip_text = "Increases the base amount of score generated during each manual input by 3."
+metadata/tooltip_text = "Increases the base amount of score generated during each manual input by 1."
 metadata/SinglePurchace = true
-metadata/BasePrice = 20.0
+metadata/BasePrice = 1e+09
 
 [node name="ManualInputUpgrade4" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
 custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
-text = "Manual Input Upgrade 4 | cost: 20"
+text = "Manual Input Upgrade 4 | cost: 1T"
 metadata/name = "ManualInputUpgrade4"
-metadata/tooltip_text = "Increases the base amount of score generated during each manual input by 3."
+metadata/tooltip_text = "Increases the base amount of score generated during each manual input by 1."
 metadata/SinglePurchace = true
-metadata/BasePrice = 20.0
+metadata/BasePrice = 1e+12
 
 [node name="AutoNode1" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
@@ -472,7 +472,7 @@ layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Output multiplier 1 | cost: 1000"
 metadata/name = "OutputMultiplier1"
-metadata/tooltip_text = "The output will be multiplied by 1.1x."
+metadata/tooltip_text = "The output will be multiplied by 1.05x."
 metadata/BasePrice = 50
 metadata/SinglePurchace = true
 
@@ -483,7 +483,7 @@ layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Output multiplier 2 | cost: 1000"
 metadata/name = "OutputMultiplier2"
-metadata/tooltip_text = "The output will be multiplied by 1.2x."
+metadata/tooltip_text = "The output will be multiplied by 1.1x."
 metadata/BasePrice = 50
 metadata/SinglePurchace = true
 
@@ -494,7 +494,7 @@ layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Output multiplier 3 | cost: 1000"
 metadata/name = "OutputMultiplier3"
-metadata/tooltip_text = "The output will be multiplied by 1.3x."
+metadata/tooltip_text = "The output will be multiplied by 1.15x."
 metadata/BasePrice = 50
 metadata/SinglePurchace = true
 

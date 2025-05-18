@@ -66,4 +66,4 @@ func _on_pressed() -> void:
 	Sound.play_button_click(input_sound, -12)
 	
 func set_upgrade_level(level: int):
-	score_per_click += 3 * level
+	score_per_click = 1 + (level)
