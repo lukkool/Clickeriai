@@ -183,55 +183,55 @@ visible = false
 custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
-text = "Batch Normalization Second Node | cost: 200"
+text = "Batch Normalization Second Node | cost: 7.5K"
 metadata/name = "BatchNormalizationNode2"
 metadata/tooltip_text = "Add a base value to all values incoming from the input nodes"
 metadata/SinglePurchace = true
-metadata/BasePrice = 200.0
+metadata/BasePrice = 7500.0
 
 [node name="BatchNormalizationNode3" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
 custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
-text = "Batch Normalization Third Node | cost: 200"
+text = "Batch Normalization Third Node | cost: 75K"
 metadata/name = "BatchNormalizationNode3"
 metadata/tooltip_text = "Add a base value to all values incoming from the input nodes"
 metadata/SinglePurchace = true
-metadata/BasePrice = 200.0
+metadata/BasePrice = 75000.0
 
 [node name="BatchNormalizationNode4" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
 custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
-text = "Batch Normalization Fourth Node | cost: 200"
+text = "Batch Normalization Fourth Node | cost: 750K"
 metadata/name = "BatchNormalizationNode4"
 metadata/tooltip_text = "Add a base value to all values incoming from the input nodes"
 metadata/SinglePurchace = true
-metadata/BasePrice = 200.0
+metadata/BasePrice = 750000.0
 
 [node name="BatchNormalizationNode5" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
 custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
-text = "Batch Normalization Fifth Node | cost: 200"
+text = "Batch Normalization Fifth Node | cost: 750M"
 metadata/name = "BatchNormalizationNode5"
 metadata/tooltip_text = "Add a base value to all values incoming from the input nodes"
 metadata/SinglePurchace = true
-metadata/BasePrice = 200.0
+metadata/BasePrice = 7.5e+09
 
 [node name="BatchNormalizationNode6" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
 custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
-text = "Batch Normalization Sixth Node | cost: 200"
+text = "Batch Normalization Sixth Node | cost: 750B"
 metadata/name = "BatchNormalizationNode6"
 metadata/tooltip_text = "Add a base value to all values incoming from the input nodes"
 metadata/SinglePurchace = true
-metadata/BasePrice = 200.0
+metadata/BasePrice = 7.5e+12
 
 [node name="DenseNode1" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
