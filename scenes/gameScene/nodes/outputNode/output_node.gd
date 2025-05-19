@@ -9,6 +9,7 @@ const MAX_NUMBERS = 50
 
 var nodes = [self]
 var enabled = true
+var ascension_base_mult = 1
 
 func _ready() -> void:
 	for node in get_tree().get_nodes_in_group("nodes_layer0"):
@@ -29,10 +30,11 @@ func _ready() -> void:
 		number_pool.append(label)
 
 func on_signal_get(val):
+	val = (val * output_multiplier * ascension_base_mult)
 	
-	val = round(val * output_multiplier)
 	
 	output_activated.emit(val)
+	
 	show_number(val)
 
 
@@ -51,7 +53,7 @@ func reconnect_last_layer(current, next):
 
 func update(): pass
 
-func show_number(value: int):
+func show_number(value: float):
 	var label = get_pooled_label()
 	if not label:
 		return

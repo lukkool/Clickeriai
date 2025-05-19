@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Global="*res://global/Global.gd"
 Sound="*res://global/Sound.gd"
+Ascension="*res://global/Ascension.gd"
 
 [dotnet]
 

@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://blmbiblnw0jxb"]
+[gd_scene load_steps=3 format=3 uid="uid://blmbiblnw0jxb"]
+
+[ext_resource type="Script" path="res://scenes/ascension/ascension.gd" id="1_enqr1"]
+[ext_resource type="Theme" uid="uid://38q5to2imxny" path="res://Button_theme.tres" id="1_r2ky2"]
 
 [node name="Ascension" type="Control"]
 layout_mode = 3
@@ -7,3 +10,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_enqr1")
+
+[node name="ButtonAscend" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.363715
+anchor_top = 0.679012
+anchor_right = 0.636285
+anchor_bottom = 0.817901
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_r2ky2")
+text = "Ascend"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="ButtonAscend" to="." method="_on_button_ascend_pressed"]

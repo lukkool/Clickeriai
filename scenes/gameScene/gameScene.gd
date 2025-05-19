@@ -28,6 +28,7 @@ func _ready() -> void:
 	if should_load:
 		get_node("SaveLoadManager").load_game()
 	output_node.output_activated.connect(func(val): score += val)
+	update_upgrades()
 
 var upgrades = {
 	"ManualInputUpgrade1": false,
@@ -80,7 +81,6 @@ var upgrades = {
 }
 
 func update_upgrades():
-	
 	for i in range(4, 0, -1):
 		if upgrades["ManualInputUpgrade" + str(i)]: 
 			get_node("LayerContainer/Layer0/InputNode").set_upgrade_level(i);
@@ -106,7 +106,7 @@ func update_upgrades():
 	
 	for i in range(1, 7):
 		if upgrades["RecurrentNode" + str(i)]: get_node("LayerContainer/Layer4/RecurrentNode" + str(i)).enable()
-		
+	
 	var income_multiplier = 1
 	if upgrades["AutoInputIncomeDouble"]:
 		income_multiplier = 2
@@ -117,13 +117,26 @@ func update_upgrades():
 			if node.get_script() == preload("res://scenes/gameScene/nodes/autoInputNode/AutoInputNode.gd"):
 				node.apply_income_multiplier(income_multiplier)
 				node.apply_speed(interval)
-				
+	
 	var output_multiplier:float = 1.0;
 	for i in range(3, 0, -1):
 		if upgrades["OutputMultiplier" + str(i)]: 
 			output_multiplier += (0.05 * i)
 			break;
 	output_node.apply_output_multiplier(output_multiplier)
+	
+	output_node.ascension_base_mult = 1 + Ascension.upgrades["Base"] * 0.01
+	
+	var all_upgrades_purchased = true
+	for upgrade in upgrades.values():
+		if not upgrade:
+			all_upgrades_purchased = false
+			break
+	
+	if all_upgrades_purchased: 
+		Global.switch_scene("res://scenes/ascension/ascension.tscn")
+	
+	
 	#ATTENTION - Add later implemented upgrades
 
 

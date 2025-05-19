@@ -21,6 +21,7 @@ func save_game():
 	var save_data = {
 		"score": game_scene.score,
 		"upgrades": game_scene.upgrades,
+		"ascension_upgrades": Ascension.upgrades
 	}
 	
 	var file = FileAccess.open(save_path, FileAccess.WRITE)
@@ -40,6 +41,7 @@ func load_game():
 		
 		game_scene.score = save_data["score"]
 		game_scene.upgrades = save_data["upgrades"]
+		Ascension.upgrades = save_data["ascension_upgrades"]
 		game_scene.update_upgrades()
 	else:
 		printerr("Error: Could not load game.")
