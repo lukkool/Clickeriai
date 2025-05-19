@@ -70,7 +70,7 @@ func update_upgrade_buttons():
 
 	var manual_upgrade_cost = base_price * price_growth ** manual_level
 	
-	manual_button.text = "%s (Level %d) | Cost: %.1f" % ["Manual Input Upgrade", manual_level, manual_upgrade_cost]
+	manual_button.text = "%s (Level %d) | Cost: %.1f" % ["Manual Input", manual_level, manual_upgrade_cost]
 	manual_button.visible = true
 	manual_button.disabled = game_scene.score < manual_upgrade_cost
 
