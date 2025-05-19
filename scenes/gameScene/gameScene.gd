@@ -31,10 +31,7 @@ func _ready() -> void:
 	update_upgrades()
 
 var upgrades = {
-	"ManualInputUpgrade1": false,
-	"ManualInputUpgrade2": false,
-	"ManualInputUpgrade3": false,
-	"ManualInputUpgrade4": false,
+	"ManualInputUpgrade": 0,
 	
 	"AutoInputNode1": false,
 	"AutoInputNode2": false,
@@ -81,10 +78,10 @@ var upgrades = {
 }
 
 func update_upgrades():
-	for i in range(4, 0, -1):
-		if upgrades["ManualInputUpgrade" + str(i)]: 
-			get_node("LayerContainer/Layer0/InputNode").set_upgrade_level(i);
-			break;
+	
+	var level = upgrades.get("ManualInputUpgrade", 0)
+	if level > 0:
+		get_node("LayerContainer/Layer0/InputNode").set_upgrade_level(level);
 	
 	var interval: float = 1.0
 	for i in range(3, 0, -1):

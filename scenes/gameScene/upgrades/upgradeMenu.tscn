@@ -30,7 +30,6 @@ text = "UPGRADES"
 metadata/_edit_use_anchors_ = true
 
 [node name="Panel" type="Panel" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.62934
@@ -70,49 +69,16 @@ layout_mode = 2
 theme = SubResource("Theme_38oqk")
 metadata/_edit_use_anchors_ = true
 
-[node name="ManualInputUpgrade1" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
-visible = false
+[node name="ManualInputUpgrade" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
 text = "Manual Input Upgrade 1 | cost: 10K"
-metadata/name = "ManualInputUpgrade1"
+metadata/name = "ManualInputUpgrade"
 metadata/tooltip_text = "Increases the base amount of score generated during each manual input by 1."
-metadata/SinglePurchace = true
-metadata/BasePrice = 10000.0
-
-[node name="ManualInputUpgrade2" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
-visible = false
-custom_minimum_size = Vector2(358, 31)
-layout_mode = 2
-theme = ExtResource("2_vhmeu")
-text = "Manual Input Upgrade 2 | cost: 1M"
-metadata/name = "ManualInputUpgrade2"
-metadata/tooltip_text = "Increases the base amount of score generated during each manual input by 1."
-metadata/SinglePurchace = true
-metadata/BasePrice = 1e+06
-
-[node name="ManualInputUpgrade3" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
-visible = false
-custom_minimum_size = Vector2(358, 31)
-layout_mode = 2
-theme = ExtResource("2_vhmeu")
-text = "Manual Input Upgrade 3 | cost: 1B"
-metadata/name = "ManualInputUpgrade3"
-metadata/tooltip_text = "Increases the base amount of score generated during each manual input by 1."
-metadata/SinglePurchace = true
-metadata/BasePrice = 1e+09
-
-[node name="ManualInputUpgrade4" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
-visible = false
-custom_minimum_size = Vector2(358, 31)
-layout_mode = 2
-theme = ExtResource("2_vhmeu")
-text = "Manual Input Upgrade 4 | cost: 1T"
-metadata/name = "ManualInputUpgrade4"
-metadata/tooltip_text = "Increases the base amount of score generated during each manual input by 1."
-metadata/SinglePurchace = true
-metadata/BasePrice = 1e+12
+metadata/SinglePurchace = false
+metadata/BasePrice = 10.0
+metadata/PriceGrowthRate = 2.0
 
 [node name="AutoNode1" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
