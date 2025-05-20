@@ -465,6 +465,17 @@ metadata/tooltip_text = "The output will be multiplied by 1.15x."
 metadata/BasePrice = 50
 metadata/SinglePurchace = true
 
+[node name="ManualInputMultiplier" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
+visible = false
+custom_minimum_size = Vector2(358, 31)
+layout_mode = 2
+theme = ExtResource("2_vhmeu")
+text = "Manual Input Multiplier | cost: 100"
+metadata/name = "ManualInputMultiplier"
+metadata/tooltip_text = "Enables manual input multiplier"
+metadata/BasePrice = 100
+metadata/SinglePurchace = true
+
 [node name="Tooltip" type="Control" parent="."]
 visible = false
 anchors_preset = 0

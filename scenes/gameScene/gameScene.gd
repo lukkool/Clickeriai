@@ -33,6 +33,8 @@ func _ready() -> void:
 var upgrades = {
 	"ManualInputUpgrade": 0,
 	
+	"ManualInputMultiplier": false,
+	
 	"AutoInputNode1": false,
 	"AutoInputNode2": false,
 	"AutoInputNode3": false,

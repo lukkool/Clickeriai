@@ -16,6 +16,9 @@ var multiplier_color = Color(1, 0, 0)
 var input_sound = preload("res://scenes/gameScene/nodes/inputNode/input_sound.ogg")
 
 @onready var progress_bar: TextureProgressBar = get_node("/root/GameScene/ProgressBar")
+@onready var game_scene = get_tree().root.get_node("GameScene")
+@onready var multiplier_unlocked = game_scene.upgrades["ManualInputMultiplier"]
+
 
 const CLICK_LIMIT:int = 18
 var click_limit_counter:int = 0
@@ -47,13 +50,13 @@ func _on_pressed() -> void:
 	click_limit_counter += 1
 	if click_limit_counter > CLICK_LIMIT: return
 	
+	multiplier_unlocked = game_scene.upgrades["ManualInputMultiplier"]
 	
 	
-	
-	if not multiplier_active:
+	if not multiplier_active and multiplier_unlocked:
 		click_streak += 1
 		progress_bar.value += 1
-	if(click_streak >= needed_threshold):
+	if(click_streak >= needed_threshold and multiplier_unlocked):
 		multiplier *= 2
 		click_streak = 0
 		multiplier_active = true

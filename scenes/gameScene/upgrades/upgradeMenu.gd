@@ -161,6 +161,9 @@ func update_upgrade_buttons():
 		if i == 1:
 			get_node("Panel/ScrollContainer/VBoxContainer/OutputMultiplier" + str(i)).visible = true
 
+	if not game_scene.upgrades["ManualInputMultiplier"]:
+		get_node("Panel/ScrollContainer/VBoxContainer/ManualInputMultiplier").visible = true
+		
 func hide_tooltip():
 	tooltip.hide_tooltip()
 	tooltip_active = false
