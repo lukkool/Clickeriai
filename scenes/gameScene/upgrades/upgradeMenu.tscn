@@ -305,66 +305,66 @@ visible = false
 custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
-text = "Convolutional Layer | cost: 500"
+text = "Convolutional Layer | cost: 1K"
 metadata/name = "ConvolutionalNode1"
 metadata/tooltip_text = "Raise bits coming from left nodes to the power of 2"
 metadata/SinglePurchace = true
-metadata/BasePrice = 500.0
+metadata/BasePrice = 1000.0
 
 [node name="ConvolutionalNode2" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
 custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
-text = "Convolutional Second Node | cost: 500"
+text = "Convolutional Second Node | cost: 50K"
 metadata/name = "ConvolutionalNode2"
 metadata/tooltip_text = "Raise bits coming from left nodes to the power of 2"
 metadata/SinglePurchace = true
-metadata/BasePrice = 500.0
+metadata/BasePrice = 50000.0
 
 [node name="ConvolutionalNode3" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
 custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
-text = "Convolutional Third Node | cost: 500"
+text = "Convolutional Third Node | cost: 250K"
 metadata/name = "ConvolutionalNode3"
 metadata/tooltip_text = "Raise bits coming from left nodes to the power of 2"
 metadata/SinglePurchace = true
-metadata/BasePrice = 500.0
+metadata/BasePrice = 250000.0
 
 [node name="ConvolutionalNode4" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
 custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
-text = "Convolutional Fourth Node | cost: 500"
+text = "Convolutional Fourth Node | cost: 5M"
 metadata/name = "ConvolutionalNode4"
 metadata/tooltip_text = "Raise bits coming from left nodes to the power of 2"
 metadata/SinglePurchace = true
-metadata/BasePrice = 500.0
+metadata/BasePrice = 5e+06
 
 [node name="ConvolutionalNode5" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
 custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
-text = "Convolutional Fifth Node | cost: 500"
+text = "Convolutional Fifth Node | cost: 5B"
 metadata/name = "ConvolutionalNode5"
 metadata/tooltip_text = "Raise bits coming from left nodes to the power of 2"
 metadata/SinglePurchace = true
-metadata/BasePrice = 500.0
+metadata/BasePrice = 5e+09
 
 [node name="ConvolutionalNode6" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
 custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
-text = "Convolutional Sixth Node | cost: 500"
+text = "Convolutional Sixth Node | cost: 5T"
 metadata/name = "ConvolutionalNode6"
 metadata/tooltip_text = "Raise bits coming from left nodes to the power of 2"
 metadata/SinglePurchace = true
-metadata/BasePrice = 500.0
+metadata/BasePrice = 5e+12
 
 [node name="RecurrentNode1" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
