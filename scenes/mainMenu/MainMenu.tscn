@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://11mllv7cxnte"]
+[gd_scene load_steps=8 format=3 uid="uid://11mllv7cxnte"]
 
 [ext_resource type="Script" path="res://scenes/mainMenu/MainMenu.gd" id="1_pyhf2"]
 [ext_resource type="Texture2D" uid="uid://l5uix5tb341v" path="res://scenes/mainMenu/menubackground.png" id="2_l5pn0"]
 [ext_resource type="Theme" uid="uid://38q5to2imxny" path="res://Button_theme.tres" id="2_uwodh"]
 [ext_resource type="FontFile" uid="uid://4w522yxomrte" path="res://scenes/mainMenu/Ethnocentric Rg.otf" id="4_f7ixq"]
+[ext_resource type="AudioStream" uid="uid://cagqjep1njwv" path="res://scenes/gameScene/misc/music/ItsRainingNeurons.wav" id="5_c38l6"]
+[ext_resource type="Script" path="res://scenes/gameScene/misc/music/background_music_player.gd" id="6_0yr6k"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_27h22"]
 font = ExtResource("4_f7ixq")
@@ -106,6 +108,12 @@ grow_vertical = 2
 text = "AI Clicker"
 label_settings = SubResource("LabelSettings_27h22")
 metadata/_edit_use_anchors_ = true
+
+[node name="BackgroundMusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_c38l6")
+autoplay = true
+max_polyphony = 2
+script = ExtResource("6_0yr6k")
 
 [connection signal="pressed" from="ButtonContinue" to="." method="_on_button_continue_pressed"]
 [connection signal="pressed" from="ButtonStart" to="." method="_on_button_start_pressed"]
