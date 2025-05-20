@@ -12,3 +12,4 @@ AI Clicker - tai 2D spaudinėjimo tipo žaidimas, skirtas vienam žaidėjui. Ža
 
 Pagrindinis projekto techninis reikalavimas - sukurti pilnai veikiantį 2D žaidimą, kuriame žaidėjas galėtų rinkti taškus spaudinėdamas mygtuką, atsirakinti pagerinimus ir pasiekti "ascension".
 
+Pagrinde žaidimas yra skirstomas į scenas, ir daugiausia veiksmo vyksta vadinamoje "Main game scene". Kitos (ne visos) scenos yra "Options", "Leaderboard" ir "Ascension". Kai kintamuosius reikia saugoti tarp scenų, yra panaudojami "Global script'ai", prie kurių turi prieigą visos scenos.
