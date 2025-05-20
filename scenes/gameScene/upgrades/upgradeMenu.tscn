@@ -232,7 +232,7 @@ text = "Batch Normalization Sixth Node | cost: 750B"
 metadata/name = "BatchNormalizationNode6"
 metadata/tooltip_text = "Add a base value to all values incoming from the input nodes"
 metadata/SinglePurchace = true
-metadata/BasePrice = 7.5e+12
+metadata/BasePrice = 7.5e+10
 
 [node name="DenseNode1" type="Button" parent="Panel/ScrollContainer/VBoxContainer" groups=["upgrade_buttons"]]
 visible = false
@@ -426,7 +426,7 @@ visible = false
 custom_minimum_size = Vector2(358, 31)
 layout_mode = 2
 theme = ExtResource("2_vhmeu")
-text = "Recurrent Layer | cost: 1000"
+text = "Recurrent Layer | cost: 1.5T"
 metadata/name = "RecurrentNode6"
 metadata/tooltip_text = "Emit values from left nodes"
 metadata/BasePrice = 1500000000
