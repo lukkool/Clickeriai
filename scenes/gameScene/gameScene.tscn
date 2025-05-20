@@ -331,7 +331,6 @@ texture_progress = ExtResource("18_5kyb7")
 metadata/_edit_use_anchors_ = true
 
 [node name="PauseMenu" parent="." instance=ExtResource("19_60wk5")]
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -387,6 +386,15 @@ offset_right = 129.876
 offset_bottom = 69.0
 theme = ExtResource("17_uwubf")
 text = "Save & exit game"
+
+[node name="SettingsButton" type="Button" parent="PauseMenu"]
+layout_mode = 0
+offset_left = 79.0
+offset_top = 405.0
+offset_right = 359.0
+offset_bottom = 505.0
+theme = ExtResource("17_uwubf")
+text = "Settings"
 
 [node name="BackgroundMusicPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("17_rls6l")
